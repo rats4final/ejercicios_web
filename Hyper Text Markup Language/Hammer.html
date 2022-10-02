@@ -494,5 +494,57 @@ La imagen flotara a la derecha del texto con la propiedad de css float
       <li>Auto</li>
       <li>Helicoptero</li>
     </ol>
+    <dl>
+      Esta es una lista detallada
+      <dt>Coca Cola</dt>
+      <dd>-bebida comercial</dd>
+      <dt>Malta</dt>
+      <dd>-bebida energizante</dd>
+      <dt>Lechita</dt>
+      <dd>-bebida nutritiva</dd><!--supongo que nadie usa estas emes de dl-->
+    </dl>
+    <h2>Listas desordenadas con estilos</h2>
+    <p>Los tipos de viñetas que pueden haber son square, disc, circle y none</p>
+    <ul style="list-style-type: square;">
+      <li>cafe</li>
+      <li>ague</li>
+      <li>gatorade</li>
+    </ul>
+    <p>Tambien pueden existir listas dentro de otras</p>
+    <ul>
+      <li>Daniel</li>
+      <li>Jose</li>
+      <ul>
+        <li>Balon</li>
+        <li>Gorra</li>
+      </ul>
+    </ul>
+    <p>Listas horizontales</p>
+    <ul style="list-style-type: none;">
+    <li style="float: left;">Lorem, ipsum.</li>
+    <li style="float: left;">Lorem, ipsum.</li>
+    <li style="float: left;">Lorem, ipsum.</li>
+    </ul><br>
+    <p>Para hacer listas horizontales, usamos float:left en el li y el list-style-type:none en 
+      el ul
+    </p>
+    <h2>Listas ordenadas con (modificaciones) y estilos</h2>
+    <ol type="A">
+      <li>Faraon</li>
+      <li>Papa</li>
+      <li>Presidente</li>
+    </ol>
+    <p>se puede usar el atributo type y los valores 1,A,a,I,i para que se ordene la lista
+      por numeros, letras, o numeros romanos, siendo 1 el default
+    </p>
+    <ol start="33">
+      <li>Moldavia</li>
+      <li>Rusia</li>
+      <li>Ucrania</li>
+    </ol>
+    <p>y con el atributo start podemos decidir desde que numero empezara la lista</p>
+    <p>al igual que en ul, se pueden poner listas ordenadas dentro de otras, pero ya lo
+      vimos en el anterior ejemplo
+    </p>
 </body>
 </html>
