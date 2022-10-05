@@ -23,6 +23,9 @@
     tr:nth-child(even){
       background-color: aqua;
     }
+    .ejemplo-clase{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
 
   </style>
 </head>
@@ -546,5 +549,37 @@ La imagen flotara a la derecha del texto con la propiedad de css float
     <p>al igual que en ul, se pueden poner listas ordenadas dentro de otras, pero ya lo
       vimos en el anterior ejemplo
     </p>
+    <h1>Block e inline</h1>
+    <p>Basicamente los elementos en bloque crean una nueva linea cada vez que se usan</p>
+    <p>En cambio los elementos en linea se usan principalmente para aparecer al lado de texto</p>
+    <h2>Los principales son div y span</h2>
+    <div>
+      El poderoso DIV sirve para muchas cosas que casi podria reemplazar a la mayoria de otros tags
+      sin embargo, por las semanticas no seria muy recomendable
+    </div>
+    <p>En cambio <span><b>SPAN</b></span> diria que sirve mas para testear cosas en el texto</p>
+    <h1>Clases</h1>
+    <p>El atributo class sirve para darles diferentes estilos a etiquetas HTML</p>
+    <p>Multiples tags pueden usar una misma clase y se pueden usar</p>
+    <p>Y tecnicamente se pueden usar y combinar clases en un elemento sin limites</p>
+    <p class="ejemplo-clase">Este parrafo usa la clase ejemplo-clase</p>
+    <p>Las clases principalmente se definen en css con un punto seguido del nombre de la clase</p>
+    <pre>
+      .ejemplo-clase{
+        font-family: sans;
+      }
+    </pre>
+    <h1>IDs</h1>
+    <p>Las ids a diferencia de las clases solo se pueden usar 1 por etiqueta html</p>
+    <p>estas usan el atributo id=""</p>
+    <p>para crearlas en css, usamos # en vez de .</p>
+    <p>Los nombres son case sensitive, deben contener al menos 1 caracter y no pueden empezar con un numero</p>
+    <p>Las id se usan principalmente en conjunto de JS para crear funcionalidad en un pagina</p>
+    <p>aunque tambien pueden ser usadas como indice para llevar a cierta parte de la pagina</p>
+    <h1>iFrames</h1>
+    <p>Del nombre inline frame</p>
+    <p>Nos permiten mostrar una pagina web dentro de otras</p>
+    <iframe src="https://keepcoding.io/blog/la-etiqueta-iframe-en-html/" width=400 height=300>"No es posible visualizar el contenido"</iframe><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/HgzGwKwLmgM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>
