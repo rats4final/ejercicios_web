@@ -1,63 +1,82 @@
 <!DOCTYPE html>
 <!--Pa identificar que es un html, atte: Browsers-->
-<html lang="es-BO"> <!--idioma-PAIS-->
+<html lang="es-BO">
+  <!--idioma-PAIS-->
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="description" content="Demo page" />
-  <title>Repasando HTML</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Demo page" />
+    <title>Repasando HTML</title>
 
-  <link rel="icon" href="/Hyper Text Markup Language/img/js_favicon.ico" type="image/x-icon">
+    <link
+      rel="icon"
+      href="/Hyper Text Markup Language/img/js_favicon.ico"
+      type="image/x-icon"
+    />
 
-  <style>
-    .clasesita{
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      color: blueviolet;
-      font-size: larger;
-    }
-    table, tr, td, th {
-      border: 2px solid green;
-      border-collapse: collapse;
-      border-style: dotted;
-    }
-    tr:nth-child(even){
-      background-color: aqua;
-    }
-    .ejemplo-clase{
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
+    <style>
+      .clasesita {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: blueviolet;
+        font-size: larger;
+      }
 
-  </style>
-</head>
+      table,
+      tr,
+      td,
+      th {
+        border: 2px solid green;
+        border-collapse: collapse;
+        border-style: dotted;
+      }
 
-<body>
-  <h1>Hello this is a html page</h1>
-  <p>This is a little paragraph</p>
-  <div>
-    <p>wrapped with div</p>
-  </div>
-  <h2>los clasicos h1 al h6 para headers</h2>
-  <a href="https://www.w3schools.com">The good old anchor to go to another page</a>
-  <img src="/Hyper Text Markup Language/img/small-memory-lp-1366x768.jpg" alt="no se muestra la imagen" width="200" height="200" />
-  <p style="color: aqua">This paragraph is color aqua</p>
-  <p title="using title attribute">Paragraph with a tooltip</p>
-  <p title="Nick 'Dillon' ">Atributos con "" dentro de ' ' o viceversa</p>
+      tr:nth-child(even) {
+        background-color: aqua;
+      }
 
-  <h3>Browsers use headings as well as meta</h3>
-  <h4>There's a default spacing between headers</h4>
-  <p style="font-family: sans-serif;">anything can be changed with CSS</p>
-  <p>html also sets a default spacing between paragraphs</p>
-  <p>Browsers won't render spaces       and will change number of line breaks in a 
-    paragraph automatically
-  </p>
-  <h5>The good ol br and hr</h5>
-  <p>this is a <br>line break alongside a hr</p>
-  <hr> <!--horizontal rule-->
-  <p>The poem problem
-      even if in the source code this is formatted
-      html will render it in a single line
-  </p>
-  <pre>
+      .ejemplo-clase {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Hello this is a html page</h1>
+    <p>This is a little paragraph</p>
+    <div>
+      <p>wrapped with div</p>
+    </div>
+    <h2>los clasicos h1 al h6 para headers</h2>
+    <a href="https://www.w3schools.com"
+      >The good old anchor to go to another page</a
+    >
+    <img
+      src="/Hyper Text Markup Language/img/small-memory-lp-1366x768.jpg"
+      alt="no se muestra la imagen"
+      width="200"
+      height="200"
+    />
+    <p style="color: aqua">This paragraph is color aqua</p>
+    <p title="using title attribute">Paragraph with a tooltip</p>
+    <p title="Nick 'Dillon' ">Atributos con "" dentro de ' ' o viceversa</p>
+
+    <h3>Browsers use headings as well as meta</h3>
+    <h4>There's a default spacing between headers</h4>
+    <p style="font-family: sans-serif">anything can be changed with CSS</p>
+    <p>html also sets a default spacing between paragraphs</p>
+    <p>
+      Browsers won't render spaces and will change number of line breaks in a
+      paragraph automatically
+    </p>
+    <h5>The good ol br and hr</h5>
+    <p>this is a <br />line break alongside a hr</p>
+    <hr />
+    <!--horizontal rule-->
+    <p>
+      The poem problem even if in the source code this is formatted html will
+      render it in a single line
+    </p>
+    <pre>
     The solution!
     Using the pre tag
     Like This
@@ -67,421 +86,567 @@
     uses courier font
 
             Emojis 😎
-  </pre>
-  <hr>
-  <h1 style="color: brown;">I'm brown</h1>
-  <p style="font-size: 50px">I'M BIG</p>
+  </pre
+    >
+    <hr />
+    <h1 style="color: brown">I'm brown</h1>
+    <p style="font-size: 50px">I'M BIG</p>
 
-  <div style="background-color: lightcoral;">
-    <p>This div is using a custom color with the style attribute(usings as well CSS attributes)</p>
-    <p style="font-family: 'Times New Roman', Times, serif;">so everyhting nested inside this wil have this background color</p>
-  </div>
+    <div style="background-color: lightcoral">
+      <p>
+        This div is using a custom color with the style attribute(usings as well
+        CSS attributes)
+      </p>
+      <p style="font-family: 'Times New Roman', Times, serif">
+        so everyhting nested inside this wil have this background color
+      </p>
+    </div>
 
-  <p style="text-align: center;">YOU CAN EVEN SET THE ALIGNMENT</p>
+    <p style="text-align: center">YOU CAN EVEN SET THE ALIGNMENT</p>
 
-  <p><b>Bold text</b></p>
-  <p><i>italic text</i></p>
-  <p><strong>Important text</strong></p>
-  <p><em>emphasized text</em></p>
-  <p><mark>marked text</mark></p>
-  <p><small>small text</small></p>
-  <p><del>deleted text</del></p>
-  <p><ins>inserted text</ins></p>
-  <p><sub>subindice</sub></p>
-  <p><sup>superindice</sup></p>
+    <p><b>Bold text</b></p>
+    <p><i>italic text</i></p>
+    <p><strong>Important text</strong></p>
+    <p><em>emphasized text</em></p>
+    <p><mark>marked text</mark></p>
+    <p><small>small text</small></p>
+    <p><del>deleted text</del></p>
+    <p><ins>inserted text</ins></p>
+    <p><sub>subindice</sub></p>
+    <p><sup>superindice</sup></p>
 
-<hr>
+    <hr />
 
-<div id="C40">
-  <h3>Capitulo 40</h3>
-  <p>Aqui comienza</p>
-</div>
+    <div id="C40">
+      <h3>Capitulo 40</h3>
+      <p>Aqui comienza</p>
+    </div>
 
-<p>Bloques de citacion(para APA por ejemplo)</p>
-<blockquote cite="https://www.google.com">Este texto fue citado desde mi casa, usa el atributo cite</blockquote>
-<br>
-<p>En vez de usar la comillas "", puedes usar el tag q de quote</p>
-<p><q>Este texto esta entre comillas</q></p>
-<p>Luego tenemos el abbr que sirve para poner abreviaciones y que los navegadores las usen</p>
-<p><abbr title="JavaScript">JS</abbr> Esta abreviacion usa el atributo title para ubicar el titulo sin abreviar</p>
+    <p>Bloques de citacion(para APA por ejemplo)</p>
+    <blockquote cite="https://www.google.com">
+      Este texto fue citado desde mi casa, usa el atributo cite
+    </blockquote>
+    <br />
+    <p>En vez de usar la comillas "", puedes usar el tag q de quote</p>
+    <p><q>Este texto esta entre comillas</q></p>
+    <p>
+      Luego tenemos el abbr que sirve para poner abreviaciones y que los
+      navegadores las usen
+    </p>
+    <p>
+      <abbr title="JavaScript">JS</abbr> Esta abreviacion usa el atributo title
+      para ubicar el titulo sin abreviar
+    </p>
 
-<p>Luego una no tan usada que seria address para cosas del footer por ejemplo</p>
-<p><address>
-  <pre>
+    <p>
+      Luego una no tan usada que seria address para cosas del footer por ejemplo
+    </p>
+    <address>
+      <pre>
     Bienvenido a 
     Doc tops
     Usa italic
-  </pre>
-</address></p>
+  </pre
+      >
+    </address>
 
-<p>Tenemos cite para citar el titulo de una obra</p>
-<p><cite>La Pagina</cite> por David Antezana, 2022</p>
+    <p>Tenemos cite para citar el titulo de una obra</p>
+    <p><cite>La Pagina</cite> por David Antezana, 2022</p>
 
-<p>usamos bdo bydirectional override para cambiar el sentido del texto</p>
-<p><bdo dir="rtl">Texto de derecha a izquierda con el atributo dir y valor rtl</bdo></p>
+    <p>usamos bdo bydirectional override para cambiar el sentido del texto</p>
+    <p>
+      <bdo dir="rtl"
+        >Texto de derecha a izquierda con el atributo dir y valor rtl</bdo
+      >
+    </p>
 
-<h4>Comentarios</h4>
-<!-- Este es un comentario que no puedes ver XD -->
-<p>Hay texto <!--comentado--> escondido aqui</p>
+    <h4>Comentarios</h4>
+    <!-- Este es un comentario que no puedes ver XD -->
+    <p>
+      Hay texto
+      <!--comentado-->
+      escondido aqui
+    </p>
 
-<hr>
-<h3 style="background-color: dodgerblue;">Colores en HTML</h3>
-<p>El color de fondo se cambia con background-color</p>
-<p style="color: red;">En cambio el color de las letra solo con color</p>
+    <hr />
+    <h3 style="background-color: dodgerblue">Colores en HTML</h3>
+    <p>El color de fondo se cambia con background-color</p>
+    <p style="color: red">En cambio el color de las letra solo con color</p>
 
-<h4 style="border: 2px solid green;">Luego tenemos el color del borde con la propiedad border</h4>
+    <h4 style="border: 2px solid green">
+      Luego tenemos el color del borde con la propiedad border
+    </h4>
 
-<p>La web usa o bien rgb(RedGreenblue), hex(hexadecimal) y HSL(hue-saturation-lightness)</p>
-<p>y tambien las variaciones alpha como rgba y hsla para definir la transparencia</p>
+    <p>
+      La web usa o bien rgb(RedGreenblue), hex(hexadecimal) y
+      HSL(hue-saturation-lightness)
+    </p>
+    <p>
+      y tambien las variaciones alpha como rgba y hsla para definir la
+      transparencia
+    </p>
 
-<h1 style="background-color:rgb(255, 99, 71);">RGB</h1>
-<h1 style="background-color:#ff6347;">HEX</h1>
-<h1 style="background-color:hsl(9, 100%, 64%);">HSL</h1>
+    <h1 style="background-color: rgb(255, 99, 71)">RGB</h1>
+    <h1 style="background-color: #ff6347">HEX</h1>
+    <h1 style="background-color: hsl(9, 100%, 64%)">HSL</h1>
 
-<h1 style="background-color:rgba(255, 99, 71, 0.5);">RGBA</h1>
-<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">HSLA</h1>
+    <h1 style="background-color: rgba(255, 99, 71, 0.5)">RGBA</h1>
+    <h1 style="background-color: hsla(9, 100%, 64%, 0.5)">HSLA</h1>
 
-<p>rgba define la intensidad de dichos colores, aceptando 4 parametros en su "funcion"</p>
-<p>hex es lo mismo pero usando el sistema hexadecimal para los valores del 0 al 16 en colores</p>
-<p>hsl es una forma mas intuitiva de poner colores</p>
+    <p>
+      rgba define la intensidad de dichos colores, aceptando 4 parametros en su
+      "funcion"
+    </p>
+    <p>
+      hex es lo mismo pero usando el sistema hexadecimal para los valores del 0
+      al 16 en colores
+    </p>
+    <p>hsl es una forma mas intuitiva de poner colores</p>
 
-<h1>CSS</h1>
-<p>css sirve para darle estilos a la pagina</p>
-<p>se puede agregar en linea con el atributo style</p>
-<p>en el head con la etiqueta style </p>
-<p>o externamente con la etiqueta link</p>
+    <h1>CSS</h1>
+    <p>css sirve para darle estilos a la pagina</p>
+    <p>se puede agregar en linea con el atributo style</p>
+    <p>en el head con la etiqueta style</p>
+    <p>o externamente con la etiqueta link</p>
 
-<div class="clasesita">
-  usando una clase hecha en css cambiamos el estilo de este div
-</div>
+    <div class="clasesita">
+      usando una clase hecha en css cambiamos el estilo de este div
+    </div>
 
-<p style="border: 5px solid yellow;">
-  la propiedad border define el borde de un elemento
-</p>
-<p style="border: 3px solid black; padding: 25px;">
-  el padding(relleno) es el espcio entre el texto y el borde
-</p>
-<p style="border: 3px solid crimson; margin: 50px;">
-  El margin(margen) define un espacio fuera del borde
-</p>
-<p>
-  para referenciar estilos hay 3 formas en el atributo rel de la etiqueta link:
-  <pre>
+    <p style="border: 5px solid yellow">
+      la propiedad border define el borde de un elemento
+    </p>
+    <p style="border: 3px solid black; padding: 25px">
+      el padding(relleno) es el espcio entre el texto y el borde
+    </p>
+    <p style="border: 3px solid crimson; margin: 50px">
+      El margin(margen) define un espacio fuera del borde
+    </p>
+    <p>
+      para referenciar estilos hay 3 formas en el atributo rel de la etiqueta
+      link:
+    </p>
+    <pre>
     -mediante una url completa  https://www.google.com
     -mediante una ruta relativa /html/sytles.css
     -poniendo el nombre del archivo si se encuntra en la misma carpeta que el html styles.css
-  </pre>
-</p>
+  </pre
+    >
 
-<h2>Links o Hyperlinks</h2>
-<p>para ello usamos el tag a (anchor) con el atributo href</p>
-<a href="https://www.w3schools.com">w3schools</a>
-<p>por default los links seran subrayados y con letra azul</p>
-<p>un link activo es rojo</p>
-<p>un link visitado es purpura</p>
-<p>igualment por default el link se abrira en la misma ventana</p>
+    <h2>Links o Hyperlinks</h2>
+    <p>para ello usamos el tag a (anchor) con el atributo href</p>
+    <a href="https://www.w3schools.com">w3schools</a>
+    <p>por default los links seran subrayados y con letra azul</p>
+    <p>un link activo es rojo</p>
+    <p>un link visitado es purpura</p>
+    <p>igualment por default el link se abrira en la misma ventana</p>
 
-<p>para eso usamos el atributo target</p>
-<p>
-  <a href="https://www.w3schools.com" target="_self">_self se abrira en la misma ventana</a>
-</p>
-<p>
-  <a href="https://www.w3schools.com" target="_blank">_blank se abrira en otra ventana</a>
-</p>
-<p>
-  <a href="https://www.w3schools.com" target="_parent">_parent abre el link en el recuadro (frame) </a>
-</p>
-<p>
-  <a href="https://www.w3schools.com" target="_top">_top abre el link en toda la ventana si el link se encuentra en un frame</a>
-</p>
+    <p>para eso usamos el atributo target</p>
+    <p>
+      <a href="https://www.w3schools.com" target="_self"
+        >_self se abrira en la misma ventana</a
+      >
+    </p>
+    <p>
+      <a href="https://www.w3schools.com" target="_blank"
+        >_blank se abrira en otra ventana</a
+      >
+    </p>
+    <p>
+      <a href="https://www.w3schools.com" target="_parent"
+        >_parent abre el link en el recuadro (frame)
+      </a>
+    </p>
+    <p>
+      <a href="https://www.w3schools.com" target="_top"
+        >_top abre el link en toda la ventana si el link se encuentra en un
+        frame</a
+      >
+    </p>
 
-<p>rutas relativas vs absolutas</p>
-<p>
-<a href="https://www.w3schools.com" target="_self">la ruta absoluta usa la direccion completa</a>
-</p>
-<p>
-<a href="/Hyper Text Markup Language/otro.html" target="_self">la relativa abre un documento dentro del mismo
-  proyecto, carpeta, etc.
-</a>
-</p>
+    <p>rutas relativas vs absolutas</p>
+    <p>
+      <a href="https://www.w3schools.com" target="_self"
+        >la ruta absoluta usa la direccion completa</a
+      >
+    </p>
+    <p>
+      <a href="/Hyper Text Markup Language/otro.html" target="_self"
+        >la relativa abre un documento dentro del mismo proyecto, carpeta, etc.
+      </a>
+    </p>
 
-<p>se puede usar un anchor en varios elementos html, como una imagen</p>
+    <p>se puede usar un anchor en varios elementos html, como una imagen</p>
 
-<a href="https://www.w3schools.com" target="_self">
-  <img 
-  src="/Hyper Text Markup Language/img/small-memory-lp-1366x768.jpg" 
-  alt="hola"
-  style="width: 200px;height: 100px;" >
-</a>
+    <a href="https://www.w3schools.com" target="_self">
+      <img
+        src="/Hyper Text Markup Language/img/small-memory-lp-1366x768.jpg"
+        alt="hola"
+        style="width: 200px; height: 100px"
+      />
+    </a>
 
-<p>tambien podemos usar un link para que se abra un correo para enviar a una direccion definida</p>
-<a href="mailto:rats4final@gmail.com">Email a mi!</a>
+    <p>
+      tambien podemos usar un link para que se abra un correo para enviar a una
+      direccion definida
+    </p>
+    <a href="mailto:rats4final@gmail.com">Email a mi!</a>
 
-<p><button onclick="document.location='https://w3schools.com'">Boton como link</button></p>
+    <p>
+      <button onclick="document.location='https://w3schools.com'">
+        Boton como link
+      </button>
+    </p>
 
-<p>finalmente tenemos un titulo que se muestra al pasar el mouse encima del link</p>
-<a href="http://www.google.com" title="El buscador mas popular">google</a>
+    <p>
+      finalmente tenemos un titulo que se muestra al pasar el mouse encima del
+      link
+    </p>
+    <a href="http://www.google.com" title="El buscador mas popular">google</a>
 
-<p>el color de los links y sus diferentes formas puede ser cambiado con css</p>
-<a href="http://www.google.com" style="color: green; background-color: aliceblue; text-decoration: none;">Link a google</a>
-<p>o puede ser estilizado como un boton</p>
+    <p>
+      el color de los links y sus diferentes formas puede ser cambiado con css
+    </p>
+    <a
+      href="http://www.google.com"
+      style="color: green; background-color: aliceblue; text-decoration: none"
+      >Link a google</a
+    >
+    <p>o puede ser estilizado como un boton</p>
 
-<h5>Marcadores(como los de los libros)</h5>
-<p>para que un link te lleve a una parte especifica de una pagina usando el id del elemento 
-  junto a un # numeral
-</p>
-<a href="#C40">Capitulo 40</a>
-<a target="_blank" href="/Hyper Text Markup Language/otro.html#C4">A otra pagina, cap 4</a>
+    <h5>Marcadores(como los de los libros)</h5>
+    <p>
+      para que un link te lleve a una parte especifica de una pagina usando el
+      id del elemento junto a un # numeral
+    </p>
+    <a href="#C40">Capitulo 40</a>
+    <a target="_blank" href="/Hyper Text Markup Language/otro.html#C4"
+      >A otra pagina, cap 4</a
+    >
 
-<h4>Imagenes</h4>
+    <h4>Imagenes</h4>
 
-<div style="text-align: center">
-  <img style="width: 500px;height: 250px;" src="/Hyper Text Markup Language/img/city.jpg" alt="city">
-  <p>esto ya los sabes, src es para la direccion de la imageb</p>
-  <p>alt para mostrar el texto alternativo si la imagen no carga</p>
-  <strong><p>Lo recomendable es usar style y dentro de este width y height</p></strong>
-  <br>
-  <img src="/Hyper Text Markup Language/img/homer.gif" alt="homero">
-  <p>tambien se aceptan gifs</p>
-</div>
+    <div style="text-align: center">
+      <img
+        style="width: 500px; height: 250px"
+        src="/Hyper Text Markup Language/img/city.jpg"
+        alt="city"
+      />
+      <p>esto ya los sabes, src es para la direccion de la imageb</p>
+      <p>alt para mostrar el texto alternativo si la imagen no carga</p>
+      <strong>
+        <p>Lo recomendable es usar style y dentro de este width y height</p>
+      </strong>
+      <br />
+      <img src="/Hyper Text Markup Language/img/homer.gif" alt="homero" />
+      <p>tambien se aceptan gifs</p>
+    </div>
 
-<h4>imagen flotante</h4>
-<p><img src="/Hyper Text Markup Language/img/gun.png" alt="gun" style="float: right; width: 25px; height: 25px;">
-La imagen flotara a la derecha del texto con la propiedad de css float
-</p>
+    <h4>imagen flotante</h4>
+    <p>
+      <img
+        src="/Hyper Text Markup Language/img/gun.png"
+        alt="gun"
+        style="float: right; width: 25px; height: 25px"
+      />
+      La imagen flotara a la derecha del texto con la propiedad de css float
+    </p>
 
-<h1>Mapas de Imagen</h1>
-<p>basicamente un mapa de imagen permite definir regiones clickeables en una imagen</p>
-<img style="height: 450px;width: 300px;" src="/Hyper Text Markup Language/img/IT_icons.jpg" alt="icons" usemap="#desktop">
-<map name="desktop">
-  <area shape="rect" coords="50,50,100,100" href="/Hyper Text Markup Language/otro.html" alt="pc">
-</map>
+    <h1>Mapas de Imagen</h1>
+    <p>
+      basicamente un mapa de imagen permite definir regiones clickeables en una
+      imagen
+    </p>
+    <img
+      style="height: 450px; width: 300px"
+      src="/Hyper Text Markup Language/img/IT_icons.jpg"
+      alt="icons"
+      usemap="#desktop"
+    />
+    <map name="desktop">
+      <area
+        shape="rect"
+        coords="50,50,100,100"
+        href="/Hyper Text Markup Language/otro.html"
+        alt="pc"
+      />
+    </map>
 
+    <h3>Imagenes de fondo</h3>
+    <div
+      style="background-image: url(/Hyper\ Text\ Markup\ Language/img/gun.png)"
+    >
+      <p>hola pianola</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
 
-<h3>Imagenes de fondo</h3>
-<div style="background-image: url(/Hyper\ Text\ Markup\ Language/img/gun.png);">
-<p>hola pianola</p>
-<p>Lorem ipsum dolor sit amet.</p>
-<p>Lorem ipsum dolor sit amet.</p>
-<p>Lorem ipsum dolor sit amet.</p>
-<p>Lorem ipsum dolor sit amet.</p>
-<p>Lorem ipsum dolor sit amet.</p>
-</div>
+    <p>si la imagen es pequenia, se repetira en el contenido</p>
 
-<p>si la imagen es pequenia, se repetira en el contenido</p>
+    <div
+      style="
+        background-image: url(/Hyper\ Text\ Markup\ Language/img/gun.png);
+        background-repeat: no-repeat;
+      "
+    >
+      <p>hola pianola</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
 
-<div style="background-image: url(/Hyper\ Text\ Markup\ Language/img/gun.png); background-repeat: no-repeat;">
-  <p>hola pianola</p>
-  <p>Lorem ipsum dolor sit amet.</p>
-  <p>Lorem ipsum dolor sit amet.</p>
-</div>
+    <p>
+      para evitar que se repita, usamos la propieda no-repeat del atributo
+      background-repeat
+    </p>
 
-<p>para evitar que se repita, usamos la propieda no-repeat del atributo background-repeat</p>
+    <div
+      style="
+        background-image: url(/Hyper\ Text\ Markup\ Language/img/gun.png);
+        background-size: 100% 100%;
+      "
+    >
+      <p>hola pianola</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <p>
+      y para que cubra todo el ancho del elemento usamos background-size: 100%
+      100%
+    </p>
 
-<div style="background-image: url(/Hyper\ Text\ Markup\ Language/img/gun.png); background-size: 100% 100%;">
-  <p>hola pianola</p>
-  <p>Lorem ipsum dolor sit amet.</p>
-  <p>Lorem ipsum dolor sit amet.</p>
-</div>
-<p>y para que cubra todo el ancho del elemento usamos background-size: 100% 100%</p>
+    <h3>El tag Picture</h3>
 
-<h3>El tag Picture</h3>
+    <picture>
+      <source
+        media="(min-width:650px )"
+        srcset="/Hyper Text Markup Language/img/city.jpg"
+      />
+      <source
+        media="(min-width:360px )"
+        srcset="/Hyper Text Markup Language/img/small-memory-lp-1366x768.jpg"
+      />
+      <img src="/Hyper Text Markup Language/img/gun.png" alt="gun" />
+    </picture>
 
-<picture>
-  <source media="(min-width:650px )" srcset="/Hyper Text Markup Language/img/city.jpg">
-  <source media="(min-width:360px )" srcset="/Hyper Text Markup Language/img/small-memory-lp-1366x768.jpg">
-  <img src="/Hyper Text Markup Language/img/gun.png" alt="gun">
-</picture>
+    <p>
+      Con el tag picture se muestran diferentes imagenes segun el ancho de la
+      pagina
+    </p>
+    <p>o tambien si un formato no esta disponible</p>
 
-<p>Con el tag picture se muestran diferentes imagenes segun el ancho de la pagina</p>
-<p>o tambien si un formato no esta disponible</p>
+    <h2>Favicon</h2>
+    <p>Es el logito que va en la esquina de la pestania</p>
+    <p>se inserta en un link en el head</p>
+    <p>
+      <a href="https://www.favicon.cc/"
+        >Aqui podemos crear nuestro propio favicon</a
+      >
+    </p>
 
-<h2>Favicon</h2>
-<p>Es el logito que va en la esquina de la pestania</p>
-<p>se inserta en un link en el head</p>
-<p><a href="https://www.favicon.cc/">Aqui podemos crear nuestro propio favicon</a></p>
+    <h2>Tablitas</h2>
 
-<h2>Tablitas</h2>
+    <table>
+      <tr>
+        <td>Pais</td>
+        <td>Ciudad</td>
+        <td>Continente</td>
+      </tr>
+      <tr>
+        <td>Alemania</td>
+        <td>Alemania</td>
+        <td>Alemania</td>
+      </tr>
+    </table>
 
-<table>
-  <tr>
-    <td>Pais</td>
-    <td>Ciudad</td>
-    <td>Continente</td>
-  </tr>
-  <tr>
-    <td>Alemania</td>
-    <td>Alemania</td>
-    <td>Alemania</td>
-  </tr>
-</table>
+    <p>Como ya sabes tr es para table row y td para table data</p>
+    <p>Todasd estas tablas pueden tener las variaciones que desees</p>
 
-<p>Como ya sabes tr es para table row y td para table data</p>
-  <p>Todasd estas tablas pueden tener las variaciones que desees</p>
+    <p>
+      <b
+        >Al usar th, table header, dicha fila se convierte en cabecera de la
+        tabla</b
+      >
+    </p>
+    <p>reemplaza al td por th en esa fila para volverla cabecera</p>
+    <table>
+      <tr>
+        <th>Sede</th>
+        <th>Hora</th>
+      </tr>
+      <tr>
+        <td>La Paz</td>
+        <td>18:00</td>
+      </tr>
+    </table>
+    <p>usar border collapse: collapse para evitar borde dobles en las tablas</p>
+    <p>tambien border-style para el estilo de los bordes de las tablas</p>
+    <p>aunque eso para cualquier borde de un elemento con css</p>
 
-  <p><b>Al usar th, table header, dicha fila se convierte en cabecera de la tabla</b></p>
-  <p>reemplaza al td por th en esa fila para volverla cabecera</p>
-<table>
-  <tr>
-    <th>Sede</th>
-    <th>Hora</th>
-  </tr>
-  <tr>
-    <td>La Paz</td>
-    <td>18:00</td>
-  </tr>
-</table>
-  <p>usar border collapse: collapse para evitar borde dobles en las tablas</p>
-  <p>tambien border-style para el estilo de los bordes de las tablas</p>
-  <p>aunque eso para cualquier borde de un elemento con css</p>
+    <h2>Tamaños de celdas, columnas o filas</h2>
+    <table style="width: 70%">
+      <tr style="height: 200px">
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th style="width: 50%">Fabricante</th>
+      </tr>
+      <tr>
+        <td>Lorem, ipsum dolor.</td>
+        <td>Lorem, ipsum dolor.</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+    </table>
+    <p>Para editar el tamaño de una fila, columna o de la misma tabla</p>
+    <p>usamos el atributo style con los valores que querramos modificar</p>
+    <p>ya sea a tr, td, th, table, etc.</p>
+    <h2>Miscelanea de las tablas</h2>
+    <table style="width: 80%">
+      <caption>
+        Esta es un texto que describe la tabla
+      </caption>
+      <tr>
+        <th colspan="2">Nombres</th>
+        <th>Edad</th>
+      </tr>
+      <tr>
+        <th>Juan</th>
+        <td>Daniel</td>
+        <td>18</td>
+      </tr>
+    </table>
+    <p>para que una fila ocupe mas de una columna usamos colspan="#cols"</p>
+    <p>caption siempre va despues del tag table de apertura</p>
+    <p>
+      para usar un th vertical, el primer item dentro del tr debe ser th y luego
+      los td
+    </p>
 
-  <h2>Tamaños de celdas, columnas o filas</h2>
-  <table style="width: 70%;">
-    <tr style="height: 200px;">
-      <th>Marca</th>
-      <th>Modelo</th>
-      <th style="width: 50%;">Fabricante</th>
-    </tr>
-    <tr>
-      <td>Lorem, ipsum dolor.</td>
-      <td>Lorem, ipsum dolor.</td>
-      <td>Lorem, ipsum dolor.</td>
-    </tr>
-  </table>
-  <p>Para editar el tamaño de una fila, columna o de la misma tabla</p>
-  <p>usamos el atributo style con los valores que querramos modificar</p>
-  <p>ya sea a tr, td, th, table, etc.</p>
-  <h2>Miscelanea de las tablas</h2>
-  <table style="width: 80%;">
-    <caption>Esta es un texto que describe la tabla</caption>
-    <tr>
-      <th colspan="2">Nombres</th>
-      <th>Edad</th>
-    </tr>
-    <tr>
-      <th>Juan</th>
-      <td>Daniel</td>
-      <td>18</td>
-    </tr>
-  </table>
-  <p>para que una fila ocupe mas de una columna usamos colspan="#cols"</p>
-  <p>caption siempre va despues del tag table de apertura</p>
-  <p>para usar un th vertical, el primer item dentro del tr debe ser th y luego los td</p>
+    <table style="border-spacing: 10px">
+      <caption>
+        Tabla con padding de 15px y spacing de 10 entre celdas
+      </caption>
+      <tr>
+        <td style="padding: 15px">Lorem ipsum dolor sit amet.</td>
+        <td style="padding: 15px">Lorem ipsum dolor sit amet.</td>
+        <td style="padding: 15px">Lorem ipsum dolor sit amet.</td>
+      </tr>
+      <tr>
+        <td style="padding: 15px">Lorem ipsum dolor sit amet.</td>
+        <td style="padding: 15px">Lorem ipsum dolor sit amet.</td>
+        <td style="padding: 15px">Lorem ipsum dolor sit amet.</td>
+      </tr>
+      <tr>
+        <td style="padding: 15px">Lorem ipsum dolor sit amet.</td>
+        <td style="padding: 15px">Lorem ipsum dolor sit amet.</td>
+        <td style="padding: 15px">Lorem ipsum dolor sit amet.</td>
+      </tr>
+    </table>
+    <p>el border-spacing solo se nota si no hay border-collapse: collapse</p>
 
-  <table style="border-spacing: 10px;">
-    <caption>Tabla con padding de 15px y spacing de 10 entre celdas</caption>
-    <tr>
-      <td style="padding: 15px;">Lorem ipsum dolor sit amet.</td>
-      <td style="padding: 15px;">Lorem ipsum dolor sit amet.</td>
-      <td style="padding: 15px;">Lorem ipsum dolor sit amet.</td>
-    </tr>
-    <tr>
-      <td style="padding: 15px;">Lorem ipsum dolor sit amet.</td>
-      <td style="padding: 15px;">Lorem ipsum dolor sit amet.</td>
-      <td style="padding: 15px;">Lorem ipsum dolor sit amet.</td>
-    </tr>
-    <tr>
-      <td style="padding: 15px;">Lorem ipsum dolor sit amet.</td>
-      <td style="padding: 15px;">Lorem ipsum dolor sit amet.</td>
-      <td style="padding: 15px;">Lorem ipsum dolor sit amet.</td>
-    </tr>
-  </table>
-  <p>el border-spacing solo se nota si no hay border-collapse: collapse</p>
+    <h2>Rowspan y Colspan</h2>
 
-  <h2>Rowspan y Colspan</h2>
+    <table>
+      <caption>
+        Tabla con colspan
+      </caption>
+      <tr>
+        <th colspan="2">Personas</th>
+        <th>Edad</th>
+      </tr>
+      <tr>
+        <td>Lorem, ipsum dolor.</td>
+        <td>Lorem, ipsum dolor.</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+      <tr>
+        <td>Lorem, ipsum dolor.</td>
+        <td>Lorem, ipsum dolor.</td>
+        <td>Lorem, ipsum dolor.</td>
+      </tr>
+    </table>
+    <br /><br />
+    <table>
+      <caption>
+        Tabla con rowspan
+      </caption>
+      <tr>
+        <th>Pais</th>
+        <td rowspan="2">Monaco</td>
+        <td>Canada</td>
+      </tr>
+      <tr>
+        <th>Ciudad</th>
+        <td>Vancouver</td>
+      </tr>
+      <tr>
+        <th>Año</th>
+        <td>2022</td>
+        <td>2014</td>
+      </tr>
+    </table>
 
-  <table>
-    <caption>Tabla con colspan</caption>
-    <tr>
-      <th colspan="2">Personas</th>
-      <th>Edad</th>
-    </tr>
-    <tr>
-      <td>Lorem, ipsum dolor.</td>
-      <td>Lorem, ipsum dolor.</td>
-      <td>Lorem, ipsum dolor.</td>
-    </tr>
-    <tr>
-      <td>Lorem, ipsum dolor.</td>
-      <td>Lorem, ipsum dolor.</td>
-      <td>Lorem, ipsum dolor.</td>
-    </tr>
-  </table>
-  <br><br>
-  <table>
-    <caption>Tabla con rowspan</caption>
-    <tr>
-      <th>Pais</th>
-      <td rowspan="2">Monaco</td>
-      <td>Canada</td>
-    </tr>
-    <tr>
-      <th>Ciudad</th>
-      <td>Vancouver</td>
-    </tr>
-    <tr>
-      <th>Año</th>
-      <td>2022</td>
-      <td>2014</td>
-    </tr>
-  </table>
+    <p>Estilos en las tablas</p>
+    <table>
+      <tr>
+        <td>Lorem, ipsum.</td>
+        <td>Lorem, ipsum.</td>
+      </tr>
+      <tr>
+        <td>Lorem, ipsum.</td>
+        <td>Lorem, ipsum.</td>
+      </tr>
+      <tr>
+        <td>Lorem, ipsum.</td>
+        <td>Lorem, ipsum.</td>
+      </tr>
+      <tr>
+        <td>Lorem, ipsum.</td>
+        <td>Lorem, ipsum.</td>
+      </tr>
+    </table>
 
-  <p>Estilos en las tablas</p>
-  <table>
-    <tr>
-      <td>Lorem, ipsum.</td>
-      <td>Lorem, ipsum.</td>
-    </tr>
-    <tr>
-      <td>Lorem, ipsum.</td>
-      <td>Lorem, ipsum.</td>
-    </tr>
-    <tr>
-      <td>Lorem, ipsum.</td>
-      <td>Lorem, ipsum.</td>
-    </tr>
-    <tr>
-      <td>Lorem, ipsum.</td>
-      <td>Lorem, ipsum.</td>
-    </tr>
-  </table>
+    <h3>Colgroups en tablas</h3>
+    <p>Los colgroups estilizan solo las columnas seleccionadas de la tabla</p>
 
-  <h3>Colgroups en tablas</h3>
-  <p>Los colgroups estilizan solo las columnas seleccionadas de la tabla</p>
-
-  <table>
-    <caption>Tabla con colgroup</caption>
-    <colgroup>
-      <col span="2" style="background-color: greenyellow;">
-      <col span="1" style="background-color: pink;">
-    </colgroup>
-    <tr>
-      <td>LUN</td>
-      <td>MAR</td>
-      <td>MIE</td>
-      <td>JUE</td>
-    </tr>
-    <tr>
-      <td>MMI</td>
-      <td>MDA</td>
-      <td>PGM</td>
-      <td>PSE</td>
-    </tr>
-  </table>
-  <p>Solo las propiedades 
+    <table>
+      <caption>
+        Tabla con colgroup
+      </caption>
+      <colgroup>
+        <col span="2" style="background-color: greenyellow" />
+        <col span="1" style="background-color: pink" />
+      </colgroup>
+      <tr>
+        <td>LUN</td>
+        <td>MAR</td>
+        <td>MIE</td>
+        <td>JUE</td>
+      </tr>
+      <tr>
+        <td>MMI</td>
+        <td>MDA</td>
+        <td>PGM</td>
+        <td>PSE</td>
+      </tr>
+    </table>
+    <p>Solo las propiedades</p>
     <pre>
       width
       visibility
       background
       border
     </pre>
-    funcionaran
-  </p>
-  <p>Se puede usar mas de un tag col dentro un colgroup</p>
-  <p>Para editar las columnas del medio, se puede poner un col sin estilo 
-    y luego otro para la cantidad de columnas que querramos estilizar</p>
-  
-  <h1>Listas</h1>
+    <p>funcionaran</p>
+
+    <p>Se puede usar mas de un tag col dentro un colgroup</p>
+    <p>
+      Para editar las columnas del medio, se puede poner un col sin estilo y
+      luego otro para la cantidad de columnas que querramos estilizar
+    </p>
+
+    <h1>Listas</h1>
     <p>En HTMl existen listas ordenas, desordenadas y detalladas</p>
     <ul>
       Esta es una lista desordenada
@@ -504,11 +669,12 @@ La imagen flotara a la derecha del texto con la propiedad de css float
       <dt>Malta</dt>
       <dd>-bebida energizante</dd>
       <dt>Lechita</dt>
-      <dd>-bebida nutritiva</dd><!--supongo que nadie usa estas emes de dl-->
+      <dd>-bebida nutritiva</dd>
+      <!--supongo que nadie usa estas emes de dl-->
     </dl>
     <h2>Listas desordenadas con estilos</h2>
     <p>Los tipos de viñetas que pueden haber son square, disc, circle y none</p>
-    <ul style="list-style-type: square;">
+    <ul style="list-style-type: square">
       <li>cafe</li>
       <li>ague</li>
       <li>gatorade</li>
@@ -523,13 +689,15 @@ La imagen flotara a la derecha del texto con la propiedad de css float
       </ul>
     </ul>
     <p>Listas horizontales</p>
-    <ul style="list-style-type: none;">
-    <li style="float: left;">Lorem, ipsum.</li>
-    <li style="float: left;">Lorem, ipsum.</li>
-    <li style="float: left;">Lorem, ipsum.</li>
-    </ul><br>
-    <p>Para hacer listas horizontales, usamos float:left en el li y el list-style-type:none en 
-      el ul
+    <ul style="list-style-type: none">
+      <li style="float: left">Lorem, ipsum.</li>
+      <li style="float: left">Lorem, ipsum.</li>
+      <li style="float: left">Lorem, ipsum.</li>
+    </ul>
+    <br />
+    <p>
+      Para hacer listas horizontales, usamos float:left en el li y el
+      list-style-type:none en el ul
     </p>
     <h2>Listas ordenadas con (modificaciones) y estilos</h2>
     <ol type="A">
@@ -537,49 +705,169 @@ La imagen flotara a la derecha del texto con la propiedad de css float
       <li>Papa</li>
       <li>Presidente</li>
     </ol>
-    <p>se puede usar el atributo type y los valores 1,A,a,I,i para que se ordene la lista
-      por numeros, letras, o numeros romanos, siendo 1 el default
+    <p>
+      se puede usar el atributo type y los valores 1,A,a,I,i para que se ordene
+      la lista por numeros, letras, o numeros romanos, siendo 1 el default
     </p>
     <ol start="33">
       <li>Moldavia</li>
       <li>Rusia</li>
       <li>Ucrania</li>
     </ol>
-    <p>y con el atributo start podemos decidir desde que numero empezara la lista</p>
-    <p>al igual que en ul, se pueden poner listas ordenadas dentro de otras, pero ya lo
-      vimos en el anterior ejemplo
+    <p>
+      y con el atributo start podemos decidir desde que numero empezara la lista
+    </p>
+    <p>
+      al igual que en ul, se pueden poner listas ordenadas dentro de otras, pero
+      ya lo vimos en el anterior ejemplo
     </p>
     <h1>Block e inline</h1>
-    <p>Basicamente los elementos en bloque crean una nueva linea cada vez que se usan</p>
-    <p>En cambio los elementos en linea se usan principalmente para aparecer al lado de texto</p>
+    <p>
+      Basicamente los elementos en bloque crean una nueva linea cada vez que se
+      usan
+    </p>
+    <p>
+      En cambio los elementos en linea se usan principalmente para aparecer al
+      lado de texto
+    </p>
     <h2>Los principales son div y span</h2>
     <div>
-      El poderoso DIV sirve para muchas cosas que casi podria reemplazar a la mayoria de otros tags
-      sin embargo, por las semanticas no seria muy recomendable
+      El poderoso DIV sirve para muchas cosas que casi podria reemplazar a la
+      mayoria de otros tags sin embargo, por las semanticas no seria muy
+      recomendable
     </div>
-    <p>En cambio <span><b>SPAN</b></span> diria que sirve mas para testear cosas en el texto</p>
+    <p>
+      En cambio <span><b>SPAN</b></span> diria que sirve mas para testear cosas
+      en el texto
+    </p>
     <h1>Clases</h1>
-    <p>El atributo class sirve para darles diferentes estilos a etiquetas HTML</p>
+    <p>
+      El atributo class sirve para darles diferentes estilos a etiquetas HTML
+    </p>
     <p>Multiples tags pueden usar una misma clase y se pueden usar</p>
-    <p>Y tecnicamente se pueden usar y combinar clases en un elemento sin limites</p>
+    <p>
+      Y tecnicamente se pueden usar y combinar clases en un elemento sin limites
+    </p>
     <p class="ejemplo-clase">Este parrafo usa la clase ejemplo-clase</p>
-    <p>Las clases principalmente se definen en css con un punto seguido del nombre de la clase</p>
+    <p>
+      Las clases principalmente se definen en css con un punto seguido del
+      nombre de la clase
+    </p>
     <pre>
       .ejemplo-clase{
         font-family: sans;
       }
     </pre>
     <h1>IDs</h1>
-    <p>Las ids a diferencia de las clases solo se pueden usar 1 por etiqueta html</p>
+    <p>
+      Las ids a diferencia de las clases solo se pueden usar 1 por etiqueta html
+    </p>
     <p>estas usan el atributo id=""</p>
     <p>para crearlas en css, usamos # en vez de .</p>
-    <p>Los nombres son case sensitive, deben contener al menos 1 caracter y no pueden empezar con un numero</p>
-    <p>Las id se usan principalmente en conjunto de JS para crear funcionalidad en un pagina</p>
-    <p>aunque tambien pueden ser usadas como indice para llevar a cierta parte de la pagina</p>
+    <p>
+      Los nombres son case sensitive, deben contener al menos 1 caracter y no
+      pueden empezar con un numero
+    </p>
+    <p>
+      Las id se usan principalmente en conjunto de JS para crear funcionalidad
+      en un pagina
+    </p>
+    <p>
+      aunque tambien pueden ser usadas como indice para llevar a cierta parte de
+      la pagina
+    </p>
     <h1>iFrames</h1>
     <p>Del nombre inline frame</p>
     <p>Nos permiten mostrar una pagina web dentro de otras</p>
-    <iframe src="https://keepcoding.io/blog/la-etiqueta-iframe-en-html/" width=400 height=300>"No es posible visualizar el contenido"</iframe><br>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/HgzGwKwLmgM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</body>
+    <iframe
+      src="https://keepcoding.io/blog/la-etiqueta-iframe-en-html/"
+      width="400"
+      height="300"
+      >"No es posible visualizar el contenido"</iframe
+    ><br />
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/HgzGwKwLmgM"
+      title="YouTube video player Dont Stop me Now"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <p>
+      Los iframes cuentan con varios atributos dependiendo de las api que lo
+      establezcan
+    </p>
+    <p>El atributo title, describe el contenido del iframe</p>
+    <p>
+      Se puede cambiar el tamaño ya sea con los atributos width y heigth o con
+      css
+    </p>
+    <p>
+      Finalmente los iframes pueden ser targets de un link apuntando al atributo
+      name
+    </p>
+    <iframe
+      name="ucrania"
+      height="500px"
+      width="1200px"
+      src="https://es.wikipedia.org/wiki/Invasi%C3%B3n_rusa_de_Ucrania_de_2022"
+      frameborder="0"
+    ></iframe>
+    <p>
+      <a
+        href="https://es.wikipedia.org/wiki/Invasi%C3%B3n_rusa_de_Ucrania_de_2022"
+        target="ucrania"
+        >Ucrania</a
+      >
+    </p>
+    <h1>JavaScript</h1>
+    <p>JavaScript es el lenguaje que permite interactuar con la web</p>
+    <p>
+      usamos el tag <code>script</code> y ahi dentro ponemos nuestro codigo JS
+    </p>
+    <p>
+      tambien podemos usar el tag <code>noscript</code> para poner algo si por
+      alguna vez el JavaScript fallara
+    </p>
+    <h3>Ejemplo JS</h3>
+    <input type="button" value="Presioname!" onclick="texto();" />
+    <p id="hola"></p>
+    <p>JavaScript puede cambiar estilos, atributos y muchas otras cosas</p>
+    <h1>Rutas de archivos</h1>
+    <p>
+      En html existen varias formas de llamar archivos(principalmente para el
+      atributo src)
+    </p>
+    <ul>
+      <li>
+        img src="picture.jpg" La imagen esta dentro de la misma carpeta que el
+        archivo html
+      </li>
+      <li>
+        img src="images/picture.jpg" La imagen esta dentro de la carpeta images,
+        la cual esta en el mismo directorio que el html
+      </li>
+      <li>
+        img src="/images/picture.jpg" La imagen esta dentro de la carpeta
+        images, EN EL DIRECTORIO RAIZ DEL SERVIDOR
+      </li>
+      <li>
+        img src="../picture.jpg" La imagen se encuentra una carpeta un nivel
+        anterior a la carpeta actual del html
+      </li>
+    </ul>
+    <p>Las rutas absolutas apuntan a la url completa del archivo</p>
+    <p>
+      Las rutas relativas apuntan a un archivo <strong>relativo</strong> a la
+      pagina actual
+    </p>
+    <h1>La etiqueta head(y miscelanea)</h1>
+    <script>
+      function texto() {
+        document.getElementById("hola").style.color = "red";
+        document.getElementById("hola").innerHTML = "Bienvenido a la web";
+      }
+    </script>
+  </body>
 </html>
