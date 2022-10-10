@@ -5,7 +5,11 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Demo page" />
+    <meta name="description" content="Repasando HTML5" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="rats4final" />
+    <meta name="keywords" content="HTML, CSS, JS" />
+
     <title>Repasando HTML</title>
 
     <link
@@ -863,6 +867,165 @@
       pagina actual
     </p>
     <h1>La etiqueta head(y miscelanea)</h1>
+    <p>En la etiqueta head, se pueden poner varios tags de utilidad</p>
+    <p>
+      Tenemos el tag style , que sirve para poner css directamente dentro la
+      pagina
+    </p>
+    <p>
+      Le sigue el tag link, donde principalmente ponemos estilos css de otro
+      sitio o carpeta
+    </p>
+    <p>Aunque tambien sirve para iconos y otrs recursos menos usados</p>
+    <p>Luego un tag muy importante el meta(donde van los metadatos</p>
+    <p>
+      Los metadatos son leidos por el navegador y contienen informacion varia y
+      relevante
+    </p>
+    <p>podemos tener</p>
+    <pre>
+      meta charset="utf-8"
+      meta name="keyword" content="HTML, CSS, JS"
+      meta name="description" content="Repasando HTML5"
+      meta name="author" content="rats4final"
+      meta http-equiv="refresh" content="30" (para refrescar el contenido cada 30s)
+      meta name="viewport" content="width=device-width, initial-scale=1.0" (para ajustar el sitio y que se vea bien en todos los dispositivos)
+    </pre>
+    <p>El tag script tambien puede estar dentro del head</p>
+    <p>Finalmente un tag no muy conocido es el tag base</p>
+    <p>
+      Dicho tag define la direccion principal para todas las rutas relativas del
+      html
+    </p>
+    <p>Ademas solo puede haber un tag base!</p>
+    <h1>Diseño HTML</h1>
+    <p>
+      Una buena practica y se sugiere que en html se usen los tags de diseño
+      predeterminados
+    </p>
+    <p>
+      Ya que al usar divs se pierde la semantica, ademas de que usar esos tags,
+      ayuda a los buscadores y navegadores
+    </p>
+    <p>Los tags son:</p>
+    <pre>
+      header que define la cabecera de una pagina o documento
+      nav que define una serie de links de navegacion(aqui usualmente va el navbar o sidebar)
+      section define una seccion en un documento(relacionado a un tema concreto)
+      article define un contenido independiente y que se contiene a si mismo
+      aside define otro contenido aparte del principal(puede ser un sidebar)
+      footer define la parte inferior de la pagina o documento
+      details define detalles que el usuario puede abrir o cerrar
+      summary define el resumen de lo que hay dentro del detalle
+    </pre>
+    <p>Ejemplo de detalles</p>
+    <details>
+      <summary>Adentro hay mas infor</summary>
+      <p>Hola aqui presentamos: LA INFO</p>
+    </details>
+    <p>
+      Finalmente las tres formas principales de diseñar y acomodar los elementos
+      de un html son:
+    </p>
+    <ol>
+      <li>Frameworks CSS</li>
+      <li>Usando la propiedad float de CSS(aunque no es muy usada)</li>
+      <li>Usando la propiedad flex de CSS</li>
+      <li>Usando la propiedad grid de CSS</li>
+    </ol>
+    <h2>Notas sobre diseño responsivo</h2>
+    <p>
+      Responsivo significa que la pagina debe verse bien en todos los
+      dispositivos
+    </p>
+    <p>Es preferible usar porcentajes para los width y height</p>
+    <p>Ajustar el viewport en el tag meta</p>
+    <p>Usar la unidad vw para el tamaño del texto</p>
+    <p>Usar consultas multimedia</p>
+    <p>Usar frameworks CSS</p>
+    <h2>Mostrar codigo</h2>
+    <p>
+      Existen ciertos tags que sirven para "diferenciar" el texto normal de
+      codigo
+    </p>
+    <p>Tenemos el tag <code>codigo: x=y+z</code></p>
+    <p>El tag <kbd>keyboard: entrada de teclado</kbd></p>
+    <p>El tag <samp>sample output: codigo de salida</samp></p>
+    <p>
+      El tag var, que hace que el texto simule una variable?(solo lo pone en
+      cursiva) <var>Altura</var>
+    </p>
+    <h1>Semantica en HTML</h1>
+    <p>
+      Como ya se hablo previamente, es preferible usar los tags correspondientes
+      para x cosa en html
+    </p>
+    <p>Ademas de usar buenas practicas a la hora editar y crear un html</p>
+    <p>
+      Un elemento semantico describe a simple vista su significado, tanto al
+      programador como al navegador
+    </p>
+    <p>un tag article puede tener varios section dentro de si</p>
+    <p>o tambien ub tag section puede tener varios article dentro de si</p>
+    <p>En el header van los titulos, presentaciones, navs, etc</p>
+    <p>
+      Y en el footer van normalmente la informacion de contacto, copyright,
+      docuementos, etc
+    </p>
+    <p>En el nav es una buena practica que solo vayan los links principales</p>
+    <p>Esto debido a los lectores de pantallas para personas discapacitadas</p>
+    <p>
+      El aside es un tag que debe ir indirectamente relacionado con x contenido
+      en la pagina
+    </p>
+    <p>
+      Finalmente los tag figure y figcaption definen una imagen, ilustracion,
+      grafico, etc
+    </p>
+    <p>
+      donde la imagen es definida con el tag img, y su pie de pagina con
+      figcaption
+    </p>
+    <figure>
+      <img
+        width="500"
+        height="200"
+        src="/Hyper Text Markup Language/img/city.jpg"
+        alt="figcaption"
+      />
+      <figcaption>Esta es una imagen</figcaption>
+    </figure>
+    <h1>Entidades</h1>
+    <p>
+      Los caracteres reservados en html deben ser escritos con entidades
+      especiales
+    </p>
+    <p>Estos se pueden escribir con &nombre_entidad; o &numero_entidad;</p>
+    <p>He aqui algunos ejemplos</p>
+    <p>&nbsp;&nbsp;&lt;&nbsp;&gt;&reg;&race;&amacr;&amp;</p>
+    <p>Tambien se pueden agregar acentos o sombreros a letras de esta forma</p>
+    <p>a&#768; matemáticas o matema&#769;ticas</p>
+    <p>
+      Igualmente se pueden agregar todo tipo de simbolos que no estan en un
+      teclado normal
+    </p>
+    <p>-4 &notin; a los numeros reales</p>
+    <p>
+      Igual podemos agregar emojis de esta forma pero con la codificacion utf-8
+    </p>
+    <p>Si utf-8 no esta definido en el meta, igualmente estara por default</p>
+    <p style="font-size: 50px">&#128516;</p>
+    <span>E igualmente pueden ser modificados con CSS</span>
+    <h3>Charset</h3>
+    <p>
+      html acepta diferentes tipos de codificacion de caracteres como ASCII,
+      ANSI, etc
+    </p>
+    <p>
+      que se definen en el meta, aunque el recomendable para usar siempre es
+      utf-8
+    </p>
+    <h2>XHTML</h2>
     <script>
       function texto() {
         document.getElementById("hola").style.color = "red";
