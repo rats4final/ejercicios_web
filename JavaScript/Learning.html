@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es-BO">
+  <head>
+    <script>
+      console.log("Script en el head");
+    </script>
+    <meta charset="UTF-8" />
+    <title>Aprendiendo JS</title>
+  </head>
+  <body>
+    <h1>Aprendiendo JavaScript</h1>
+    <p>JavaScript sirve para cambiar el contenido HTML y hacerlo interactivo</p>
+    <p>JS sirve para todo lo que te puedas imaginar de desarrollo web</p>
+    <p>
+      Puede cambiar atributos, valores, estilos, ocultar, mostrar y mucho mas
+    </p>
+    <h2>El tag script</h2>
+    <p>El codigo js va dentro del tag script</p>
+    <p>
+      En este caso el codigo ejecuta una funcion cuando ocurre un evento(clicar
+      el boton)
+    </p>
+    <p id="script"></p>
+    <input type="button" onclick="saludar()" value="Pulsame" />
+    <p>
+      El tag script puede ser puesto en cualquier lugar del documento, aunque lo
+      recomendable es al final del body o en el head
+    </p>
+    <p>Podemos llamar js externo con el atributo src del tag script</p>
+    <h2>Salidas o Mostar info en JS</h2>
+    <p>Js puede mostrar datos de las siguientes maneras</p>
+    <ul>
+      <li>Escribiéndolo en un html usando <code>.innerHTML</code></li>
+      <li>
+        Escribiendo directamente al HTML usando <code>document.write()</code>
+      </li>
+      <li>Escribiendo al alert box con: <code>window.alert()</code></li>
+      <li>Y la clasica a la consola con <code>console.log()</code></li>
+    </ul>
+    <h3>Usando innerHTML</h3>
+    <p id="inner"></p>
+    <input type="button" value="inner" onclick="inner()">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script src="js/externo.js"></script>
+    <script src="js/learning.js"></script>
+    <script>
+      function saludar() {
+        document.getElementById("script").innerHTML = "Bienvenido a JS";
+      }
+    </script>
+  </body>
+</html>

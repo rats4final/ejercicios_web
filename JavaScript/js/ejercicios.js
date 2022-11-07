@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 let hoy = new Date();
-const dias_semana = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+const dias_semana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sabado"];
 
 let dia = dias_semana[hoy.getDay()];
 let horas = hoy.getHours();
@@ -24,7 +24,7 @@ function area_triangulo() {
 
     let area = (base * altura) / 2;
 
-    document.getElementById('triangulo').innerHTML = area;
+    document.getElementById('triangulo').innerHTML = String(area);
 }
 
 function areaTrianguloLados() {
@@ -36,7 +36,7 @@ function areaTrianguloLados() {
 
     let areaTri = Math.sqrt((semiperimetro) * (semiperimetro - lado1) * (semiperimetro - lado2) * (semiperimetro - lado3));
 
-    document.getElementById('res_tri').innerHTML = areaTri;
+    document.getElementById('res_tri').innerHTML = String(areaTri);
 }
 
 function anioBisiesto() {
@@ -90,7 +90,7 @@ function diasNavidad() {
     //otra forma es usando array.reduce, pero meh
     let resta_mes_actual = dias_navidad[0]-dia_actual;
     let numero_dias_navidad = navidad.getDate();
-    // tambien puede ser resta_navidad = 31-25;
+    // también puede ser resta_navidad = 31-25;
     dias_navidad[0]= resta_mes_actual;
     dias_navidad[dias_navidad.length-1] = numero_dias_navidad;
 

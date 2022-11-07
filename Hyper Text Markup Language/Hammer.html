@@ -1026,6 +1026,99 @@
       utf-8
     </p>
     <h2>XHTML</h2>
+    <p>E<strong>X</strong>tensible HTML</p>
+    <p>Es una forma mas estricta de usar HTML</p>
+    <p>Siendo las principales diferencias(a parte de las buenas practicas)</p>
+    <ul>
+      <li>Que el doctype es obligatorio</li>
+      <li>El atributo xmlns de la etiqueta html es obligatorio</li>
+      <li>Los tags: head, title y body son obligatorios</li>
+      <li>
+        Los elementos de un solo tag deben ser igualmente cerrados
+        &lt;br&#8725;&gt;
+      </li>
+      <li>La minificacion de atributos esta prohibida</li>
+    </ul>
+    <p>
+      Un ejemplo de la minificacion seria que pongo solo el atributo disabled o
+      required a un tag
+    </p>
+    <p>
+      pero en cambio en xhtml deberia ponerlo asi: disabled="disables" o
+      required="required"
+    </p>
+    <p>Una opcion util para validar estas cosas es el w3c html validator.</p>
+
+    <h1>FORMULARIOS</h1>
+    <p>Llegamos a la parte fundamental de html, sus formularios</p>
+    <p>
+      Donde usaremos estos para recibir y posteriormente procesar la informacion
+      que nos da el usuario
+    </p>
+    <p>
+      Definimos el formulario con el tag form y dentro de este iran
+      principalmente los inputs y buttons
+    </p>
+    <form action="">
+      <label for="name">Nombre</label><br />
+      <input type="text" id="name" name="name" />
+    </form>
+    <p>Existen diferentes tipos de inputs</p>
+    <p>
+      El label o (rotulo, etiqueta) sirve para estar asociado a un input con el
+      atributo for
+    </p>
+    <p>El cual debe ser igual al <strong>id</strong> del input</p>
+    <p>
+      Usar label sirve para los lectores de pantallas, buena semantica y tambien
+      para
+    </p>
+    <p>
+      pantallas pequeñas, ya que si el usuario toca el label, activara el input
+      relacionado
+    </p>
+    <p>El atributo name de los inputs sirve para agarrar los datos y usarlos</p>
+    <p>Si no se cuenta con el atributo name, no se enviara nada !!!</p>
+    <form action="">
+      <label for="texto">Texto</label><br />
+      <input type="text" name="texto" id="texto" /><br />
+      <label for="radio">Radio</label><br />
+      <input type="radio" name="radio" id="radio" /><br />
+      <p>radio solo deja seleccionar 1 de varias opciones</p>
+      <label for="caja">Caja</label><br />
+      <input type="checkbox" name="caja" id="caja" /><br />
+      <label for="caja2">Caja2</label><br />
+      <input type="checkbox" name="caja2" id="caja2" /><br />
+      <p>checkbox deja seleccionar varias opciones</p>
+      <input type="button" value="Enviar" />
+      <p>El button se explica a si mismo</p>
+    </form>
+    <h4>Atributos de los forms</h4>
+    <p>Los forms tienen varios atributos utiles</p>
+    <p>
+      El atributo action, define una accion que va a ser ejecutada cuando se
+      envie el formulario
+    </p>
+    <p>
+      usualmente aqui se pone una ruta, direccion de un archivo o url a donde
+      seran enviados los datos
+    </p>
+    <p>
+      El atributo target, es igual al del tag anchor, ahi defininimos si al
+      enviar el formulario se abrira otra ventana, se mostrara en el frame
+      padre, etc
+    </p>
+    <p>El atributo method define con que metodo http enviaremos los datos</p>
+    <p>El default es GET</p>
+    <p>y los unicos validos(en html) son el metodo GET y POST</p>
+    <p>El atributo autocomplete define si se permiten o no las sugerencias del navegador en los inputs</p>
+    <p>Ej: autocomplete="on" o autocomplete="off"</p>
+    <p>Finalmente el atributo novalidate sirve para que cuando este este presente, no se validen los inputs del formulario</p>
+    <p>Un atributo muy importante que no se menciona mucho es el enctype</p>
+    <p>Este solo se usa si tambien se esta usando el metodo post</p>
+    <p>dicho atributo especifica como deberia ser codificada la data al enviarla a x lado</p>
+    <p>Esto es importante al subir archivos, ya que debemos usar el atributo enctype + el valor:</p>
+    <p>enctype="multipart/form-data"</p>
     <script>
       function texto() {
         document.getElementById("hola").style.color = "red";
