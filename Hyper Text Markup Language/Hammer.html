@@ -147,7 +147,7 @@
     </p>
     <address>
       <pre>
-    Bienvenido a 
+    Bienvenido a
     Doc tops
     Usa italic
   </pre
@@ -1111,14 +1111,186 @@
     <p>El atributo method define con que metodo http enviaremos los datos</p>
     <p>El default es GET</p>
     <p>y los unicos validos(en html) son el metodo GET y POST</p>
-    <p>El atributo autocomplete define si se permiten o no las sugerencias del navegador en los inputs</p>
+    <p>
+      El atributo autocomplete define si se permiten o no las sugerencias del
+      navegador en los inputs
+    </p>
     <p>Ej: autocomplete="on" o autocomplete="off"</p>
-    <p>Finalmente el atributo novalidate sirve para que cuando este este presente, no se validen los inputs del formulario</p>
+    <p>
+      Finalmente el atributo novalidate sirve para que cuando este este
+      presente, no se validen los inputs del formulario
+    </p>
     <p>Un atributo muy importante que no se menciona mucho es el enctype</p>
     <p>Este solo se usa si tambien se esta usando el metodo post</p>
-    <p>dicho atributo especifica como deberia ser codificada la data al enviarla a x lado</p>
-    <p>Esto es importante al subir archivos, ya que debemos usar el atributo enctype + el valor:</p>
+    <p>
+      dicho atributo especifica como deberia ser codificada la data al enviarla
+      a x lado
+    </p>
+    <p>
+      Esto es importante al subir archivos, ya que debemos usar el atributo
+      enctype + el valor:
+    </p>
     <p>enctype="multipart/form-data"</p>
+    <h4>Elementos dentro de los forms</h4>
+    <p>Los elementos que pueden estar dentro de los forms son:</p>
+    <ul>
+      <li>
+        <label for="casa">Inputs(varian segun el type)</label>
+        <input type="color" name="casa" />
+      </li>
+      <li><label for="xd">Labels(etiquetas)</label></li>
+      <li>
+        <label for="opciones"
+          >Selects(para seleccionar una o varias opciones de una lista)</label
+        >
+        <select name="opciones" id="">
+          <option value="1">Volvo</option>
+          <option value="2">Suzuki</option>
+          <option value="3">Aston Martin</option>
+          <option value="4">Ferrari</option>
+        </select>
+        <p>Existen algunos atributos para el tag select</p>
+        <p>
+          Por ejemplo el atributo size para ajustar el numero de opciones que se
+          van a mostrar en la lista
+        </p>
+        <p>
+          Luego tenemos el atributo multiple, que nos deja seleccionar multiples
+          opciones
+        </p>
+        <p>
+          Para el tag option, tenemos el atributo selected que define cual
+          opcion es la default
+        </p>
+      </li>
+      <li>
+        <label for="tarea">Textareas</label>
+        <textarea name="tarea" cols="30" rows="5"></textarea>
+        <p>
+          El textarea es un input que permite introducir texto con saltos de
+          linea
+        </p>
+        <p>
+          Tiene como atributos el cols y rows para definir que tan grande sera
+          el textarea
+        </p>
+      </li>
+      <li>
+        <label for="boton">El boton</label>
+        <button type="button">WENAS</button>
+        <p>Sirve para ejecutar acciones cuando es presionado</p>
+        <p>Tiene varios atributos interesantes pero los mas importantes son:</p>
+        <p>
+          type, que define si el boton es de tipo button, reset, submit o menu
+        </p>
+        <p>
+          autofocus para que se vaya automaticamente al boton al cargar la
+          pagina
+        </p>
+        <p>
+          Es buena practica siempre poner el type='tipo' para sobreescribir el
+          default de los navegadores
+        </p>
+        <p>
+          Dentro del button pueden haber otros tags, lo cual no es posible con
+          el input type button
+        </p>
+      </li>
+      <li>
+        <label for="set_de_campos">Los fieldset y legend</label>
+        <fieldset>
+          <legend>Educacion</legend>
+          <label>Colegio</label>
+          <input type="text" />
+        </fieldset>
+        <fieldset>
+          <legend>Familia</legend>
+          <label>Padres</label>
+          <input type="text" />
+        </fieldset>
+        <p>
+          Los fieldset sirven para agrupar contenido(semanticamente) dentro de
+          un form
+        </p>
+        <p>y el legend sirve como su descripcion</p>
+      </li>
+      <li>
+        <label for="listadatos">datalists</label>
+        <input list="ciudades" />
+        <datalist id="ciudades">
+          <option value="La Paz"></option>
+          <!--segun el ejemplo en w3, el tag de cierre cuando un option se encuentra dentro de un datalist no es necesario-->
+        </datalist>
+        <p>
+          muestra un listado de opciones predefinidas, aunque el usuario puede
+          poner la suya de igual forma
+        </p>
+      </li>
+      <li>
+        <label for="salida">outputs</label>
+        <output>124</output>
+        <p>Finalmente un lugar donde poner las salidas de tu codigo JS</p>
+      </li>
+    </ul>
+    <h4>Tipos de input</h4>
+    <p>Existen un chingo de de tipos de inputs, he aqui la lista</p>
+    <pre>
+      input type="button"
+      input type="checkbox"
+      input type="color"
+      input type="date"
+      input type="datetime-local"
+      input type="email"
+      input type="file"
+      input type="hidden"
+      input type="image"
+      input type="month"
+      input type="number"
+      input type="password"
+      input type="radio"
+      input type="range"
+      input type="reset"
+      input type="search"
+      input type="submit"
+      input type="tel"
+      input type="text"
+      input type="time"
+      input type="url"
+      input type="week"
+    </pre>
+    <h4>Atributos de los inputs</h4>
+    <p>
+      Existen muchos atributos que sirven para validar y/o restringir los
+      valores que se puedan ingresar en los distintos tipos de inputs
+    </p>
+    <ul>
+      <li>value: el valor por defecto que tendra dicho input</li>
+      <li>readonly: que el input es solo de lectura y no se puede editar, pero su valor si sera enviado</li>
+      <li>disables: el input esta desabilitado, no se puede usar y su valor no sera enviado</li>
+      <li>size: el largo de la caja del input</li>
+      <li>maxlength: el maximo de caracteres que un input permite escribir</li>
+      <li>min y max: para definir rangos en los inputs: number, range, date, datetime-local, month, time y week</li>
+      <li>multiple: para poder enviar mas de un dato, sirve para los tipos email y file</li>
+      <li>pattern: define una expresion regular para tener una validacion mas exacta</li>
+      <li>placeholder: un texto que se muestra dentro del input como guia o sugerencia de lo que se puede poner dentro de este</li>
+      <li>required: el input es obligatorio</li>
+      <li>autocomplete: (on o off) si se muestra el autocompletado de los navegadores dentro del input</li>
+      <li>step: especifica los intervalos posibles para el input</li>
+    </ul>
+    <h4>Atributos form* de los inputs</h4>
+    <p>Estos atributos son mas que todo para los inputs submit e image</p>
+    <p>Permiten sobreescribir los atributos de los forms donde se encuentran</p>
+    <p>Estos son</p>
+    <ul>
+      <li>formenctype</li>
+      <li>form(este permite poner un input fuera de un form) y puede apuntar a cualquier form que se desee segun su id</li>
+      <li>formaction</li>
+      <li>formmethod</li>
+      <li>formtarget</li>
+      <li>formnovalidate</li>
+    </ul>
+    <h2>Canvas</h2>
+    <h2>SVG</h2>
     <script>
       function texto() {
         document.getElementById("hola").style.color = "red";
