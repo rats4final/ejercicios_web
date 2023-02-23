@@ -40,17 +40,58 @@
     <h3>Usando innerHTML</h3>
     <p id="inner"></p>
     <input type="button" value="inner" onclick="inner()">
-
-
-
-
-
-
-
-
-
-
-
+    <h3>Usando document.write</h3>
+    <p>El uso de document.write solo deberia ser con propositos de hallar 
+      errores o demostrativos, ya que si se llama a document.write luego de
+      que se haya cargado todo el HTML, entonces se borrara todo el html
+      y solo quedara el document.write
+    </p>
+    <p>Para solucionar eso se puede usar el tag script:</p>
+    <script>
+      document.write("HOLA PIANOLA")
+    </script>
+    <h3>Usando window.alert</h3>
+    <p>Esto mostrara la salida en una ventana en la parte superior del
+      navegador
+    </p>
+    <input type="button" value="VENTANA" onclick="ventana();">
+    <h3>Usando la vieja confiable</h3>
+    <p>El buen console.log nos mostrara la salida en la consola del navegador</p>
+    <p>:)</p>
+    <input type="button" value="Ve la consola" onclick="consola()">
+    <p>No existe un print como en otros lenguajes asi que usa estas opciones
+      mostradas
+    </p>
+    <h2>Declaraciones</h2>
+    <p>Las declaraciones en JavaScript estan compuests de valores, operadores
+      expresiones, comentarios y palabras clave o reservadas
+    </p>
+    <h3>Punto y coma ;</h3>
+    <p>Segun tengo entendido, usar puntos y comas en JS es buena practica
+      ya que en versiones superiores de ECMAScript el uso de estas es opcional
+      aunque eso puede derivar en problemas a la hora de debuggear
+    </p>
+    <h3>Espacios en blanco</h3>
+    <p>JavaScript ignora los espacios en blanco asi que estos pueden ser
+      usados para darle una mayor apariencia y redactabilidad al codigo
+    </p>
+    <h3>Bloques de codigo</h3>
+    <p>Lineas de codigo pueden ser agrupadas dentro de funciones, permitiendo
+      asi ejecutarlas cuando se las necesite
+    </p>
+    <h3>Palabras reservadas</h3>
+    <p>Las principales palabras reservadas son:</p>
+    <ul>
+      <li>var</li>
+      <li>ley</li>
+      <li>const</li>
+      <li>if</li>
+      <li>switch</li>
+      <li>for</li>
+      <li>function</li>
+      <li>return</li>
+      <li>try</li>
+    </ul>
 
   
     <script src="js/externo.js"></script>
