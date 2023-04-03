@@ -7,6 +7,7 @@
     <meta charset="UTF-8" />
     <title>Aprendiendo JS</title>
   </head>
+
   <body>
     <h1>Aprendiendo JavaScript</h1>
     <p>JavaScript sirve para cambiar el contenido HTML y hacerlo interactivo</p>
@@ -39,45 +40,53 @@
     </ul>
     <h3>Usando innerHTML</h3>
     <p id="inner"></p>
-    <input type="button" value="inner" onclick="inner()">
+    <input type="button" value="inner" onclick="inner()" />
     <h3>Usando document.write</h3>
-    <p>El uso de document.write solo deberia ser con propositos de hallar 
-      errores o demostrativos, ya que si se llama a document.write luego de
-      que se haya cargado todo el HTML, entonces se borrara todo el html
-      y solo quedara el document.write
+    <p>
+      El uso de document.write solo deberia ser con propositos de hallar errores
+      o demostrativos, ya que si se llama a document.write luego de que se haya
+      cargado todo el HTML, entonces se borrara todo el html y solo quedara el
+      document.write
     </p>
     <p>Para solucionar eso se puede usar el tag script:</p>
     <script>
-      document.write("HOLA PIANOLA")
+      document.write("HOLA PIANOLA");
     </script>
     <h3>Usando window.alert</h3>
-    <p>Esto mostrara la salida en una ventana en la parte superior del
-      navegador
+    <p>
+      Esto mostrara la salida en una ventana en la parte superior del navegador
     </p>
-    <input type="button" value="VENTANA" onclick="ventana();">
+    <input type="button" value="VENTANA" onclick="ventana();" />
     <h3>Usando la vieja confiable</h3>
-    <p>El buen console.log nos mostrara la salida en la consola del navegador</p>
+    <p>
+      El buen console.log nos mostrara la salida en la consola del navegador
+    </p>
     <p>:)</p>
-    <input type="button" value="Ve la consola" onclick="consola()">
-    <p>No existe un print como en otros lenguajes asi que usa estas opciones
+    <input type="button" value="Ve la consola" onclick="consola()" />
+    <p>
+      No existe un print como en otros lenguajes asi que usa estas opciones
       mostradas
     </p>
     <h2>Declaraciones</h2>
-    <p>Las declaraciones en JavaScript estan compuests de valores, operadores
+    <p>
+      Las declaraciones en JavaScript estan compuests de valores, operadores
       expresiones, comentarios y palabras clave o reservadas
     </p>
     <h3>Punto y coma ;</h3>
-    <p>Segun tengo entendido, usar puntos y comas en JS es buena practica
-      ya que en versiones superiores de ECMAScript el uso de estas es opcional
-      aunque eso puede derivar en problemas a la hora de debuggear
+    <p>
+      Segun tengo entendido, usar puntos y comas en JS es buena practica ya que
+      en versiones superiores de ECMAScript el uso de estas es opcional aunque
+      eso puede derivar en problemas a la hora de debuggear
     </p>
     <h3>Espacios en blanco</h3>
-    <p>JavaScript ignora los espacios en blanco asi que estos pueden ser
-      usados para darle una mayor apariencia y redactabilidad al codigo
+    <p>
+      JavaScript ignora los espacios en blanco asi que estos pueden ser usados
+      para darle una mayor apariencia y redactabilidad al codigo
     </p>
     <h3>Bloques de codigo</h3>
-    <p>Lineas de codigo pueden ser agrupadas dentro de funciones, permitiendo
-      asi ejecutarlas cuando se las necesite
+    <p>
+      Lineas de codigo pueden ser agrupadas dentro de funciones, permitiendo asi
+      ejecutarlas cuando se las necesite
     </p>
     <h3>Palabras reservadas</h3>
     <p>Las principales palabras reservadas son:</p>
@@ -92,14 +101,552 @@
       <li>return</li>
       <li>try</li>
     </ul>
+    <h2>Sintaxis</h2>
+    <p>Hay dos tipos de valores en JavaScript</p>
+    <p>Los fijos y los variables</p>
+    <p>Los valores fijos llamados literales, son principalmente 2:</p>
+    <p>
+      Los numeros, ya sea con o sin punto decimal, y las cadenas entre comillas
+      dobles o simples
+    </p>
+    <ul>
+      <li>123 13434 1.324 345.34</li>
+      <li>"David" 'antezana'</li>
+    </ul>
+    <h3>Variables</h3>
+    <p>
+      Las variables sirven para almacenar datos y como su nombre lo dice estos
+      datos pueden cambiar ya que son pues variables
+    </p>
+    <p>Las palabras reservadas para las variables son let, var o const</p>
+    <p>A const se le asigna un valor pero este es inmutable</p>
+    <p>
+      <code>let x = 5</code>
+      la variable x ahora tiene el valor de cinco, es decir, que x es igual a 5
+    </p>
+    <h3>Operadores</h3>
+    <p>
+      Luego tenemos a los operadores aritmeticos de toda la vida que nos sirven
+      para realizar dichas operaciones entre las variables, y estas se llaman
+      expresiones
+    </p>
+    <p>+ - / % *</p>
+    <h3>Expresiones</h3>
+    <p>
+      Una expresion es una combinacion de valores, variables y/o operadores que
+      computa un valor, esa computacion es llamada una <b>evaluacion</b>
+    </p>
+    <pre>
+        5*8
+        x*12
+      </pre
+    >
+    <!--pre no puede estar dentro de p al parecer-->
+    <p>
+      Los valores tambien pueden ser de otros tipos aparte de numeros como
+      cadenas de texto por ejemplo
+    </p>
+    <pre>
+      "David"+'Dinamarca'
+    </pre>
+    <h3>Comentarios</h3>
+    <p>
+      Los comentarios sirven para aniadir explicaciones al codigo y no se
+      ejecutan en el codigo
+    </p>
+    <p>
+      Ademas sirven para debuggear y prevenir la ejecucion de una parte del
+      codigo cuando se este programando
+    </p>
+    <p>Estos pueden ser de una sola linea //</p>
+    O de multiples:
+    <pre>
+      /*
+          Comentario multilinea
 
-  
+      */
+    </pre>
+    <h3>Nombres o Identificadores</h3>
+    <p>
+      Los nombres sirven pues para identificar una variable o una funcion de
+      otra ademas de dar informacion de lo que hace o que se trata la variable o
+      funcion
+    </p>
+    <p>
+      En JavaScript se pueden usar las letras a-z tanto mayusculas como
+      minusculas
+    </p>
+    <p>
+      Tambien se pueden usar los simbolos $ y _ pero no asi espacios blancos,
+      guiones palabras reservadas del lenguaje, operadores, etc
+    </p>
+    <p>
+      Se pueden usar numeros en los nombres de las variables, pero no al
+      principio del nombre
+    </p>
+    <h3>Case Sensitive</h3>
+    <p>
+      JavaScript es case sensitive, lo que quiere decir que Hola, no es lo mismo
+      que hola y son diferentes variables
+    </p>
+    <p>
+      ademas de que las palabras reservadas siempre se escriben con minuscula y
+      JavaScript no reconocera por ejemplo Let o VAR
+    </p>
+    <h3>Formas de nombrar variables</h3>
+    <p>La convencion mas usada en js es el camelCase</p>
+    <p>
+      Donde la primera letra de la palabra del nombre de la variable es en
+      minuscula y las demas en mayuscula
+    </p>
+    <ul>
+      <li>casaRodante</li>
+      <li>visorDeCuentasBancarias</li>
+    </ul>
+    <p>
+      Tambien se puede usar PascalCase o snake_case pero no kebab-case ya que en
+      JavaScript el guion es el operador de resta
+    </p>
+    <h2>JavaScript Let</h2>
+    <p>let fue introducido en ES6 en 2015</p>
+    <p>Principalmente lo que debes saber de let es:</p>
+    <ul>
+      <li>Las variables definidas con let <b>no pueden ser redeclarada</b></li>
+      <li>
+        Las variables definidas con let
+        <b>siempre deben ser declaradas antes de ser usadas</b> generando asi
+        buenas practicas
+      </li>
+      <li>
+        Las variables definidas con let tienen enfoque dentro de bloques{}
+      </li>
+    </ul>
+    <h3>No pueden ser redeclaradas</h3>
+    <p>lo que significa que esto es un error</p>
+    <pre>
+      let z = "Manuel";
+      let z = 2;
+    </pre>
+    <h3>Enfoque de bloques</h3>
+    <p>
+      Lo que significa que variables declaradas con let dentro de un bloque solo
+      pueden ser accedidas dentro del mismo bloque y no afuera de este
+    </p>
+    <pre>
+      // no se puede usar aqui
+      {
+        // se puede usar aqui
+        let $$ = 24;
+      }
+    </pre>
+    <h3>Elevacion de Let</h3>
+    <p>
+      Las variables definidas con let son elevadas al inicio del bloque,
+      <b>pero no son inicializadas</b>
+    </p>
+
+    <pre>
+        nombreAuto = 'Mazda';
+        let nombreAuto = 'Nissan';
+        // esto tirara un error de referencia
+    </pre>
+
+    <h3>Diferencias con var</h3>
+    <ul>
+      <li>Variables declaradas con var pueden ser redeclaradas</li>
+      <li>
+        Variables declaradas con var no tienen enfoque de bloques, lo que
+        significa que se puede acceder a ellas fuera de un bloque de codigo lo
+        que tambien significa que si declaramos una variable con var fuera de un
+        bloque, y luego la redeclaramos dentro de un bloque, este cambio
+        afectara tambien fuera del bloque
+      </li>
+      <li>
+        Una ventaja de var es que cuando declaramos con var, se eleva
+        automaticamente al inicio del bloque lo que significa que podemos usar
+        una variable antes de declararla y puede ser inicializada en cualquier
+        momento
+      </li>
+    </ul>
+    <h2>JavaScript Const</h2>
+    <p>Al igual que let, const fue introducido en ES6</p>
+    <p>sus principales caracteristicas son:</p>
+    <ul>
+      <li>Su valor no puede ser redeclarado</li>
+      <li>Su valor no puede ser reasignado</li>
+      <li>Tiene enfoque de bloques</li>
+    </ul>
+    <h3>No se puede reasignar</h3>
+    <p>
+      Es decir que el valor que de esta no puede ser reasignado mas tarde en el
+      codigo
+    </p>
+
+    <pre>
+        const e = 2.8787;
+        e = 2.9;
+        // esto tirara un error
+    </pre>
+
+    <h3>Siempre se el debe asignar un valor al declararlo</h3>
+
+    <pre>
+        const PI = 3; // Forma correcta
+    </pre>
+    <pre>
+        const PI;
+        PI = 3.14;
+    </pre>
+
+    <h3>Cuando usar const</h3>
+    <ul>
+      <li>Cuando se declara un Arreglo</li>
+      <li>Cuando se declara un Objeto</li>
+      <li>Cuando se declara una funcion</li>
+      <li>Cuando se declara una Expresion Regular</li>
+    </ul>
+    <h3>Consideraciones Importantes en Arreglos y Objetos</h3>
+    <p>
+      la palabra const no define un valor constante, define una referencia
+      constante a un valor
+    </p>
+    <p>Esto quiere decir que:</p>
+    <ul>
+      <li>No puedes reasignar una valor, objeto o arreglo constante</li>
+    </ul>
+    <p>Pero si se permite</p>
+    <ul>
+      <li>Cambiar los elementos de un arreglo constante</li>
+      <li>Cambiar los elementos de un objeto constante</li>
+    </ul>
     <script src="js/externo.js"></script>
-    <script src="js/learning.js"></script>
+    <p>
+      Basicamente puedes añadir, eliminar o modificar los valores de un arreglo
+      u objeto, pero no puedes reasignarlo como tal
+    </p>
+    <h2>Operadores en JavaScript</h2>
+    <p>
+      Principalmente tenemos a los operadores de toda la vida que suman, restan,
+      multiplican, asignan, etc
+    </p>
+    <p>
+      Aunque existen otros tipos de operadores mas complejos o solo usados en
+      JavaScript
+    </p>
+    <h3>Tipos de Operadores</h3>
+    <p>Existen varios tipos de operadores en JavaScript</p>
+    <ul>
+      <li>Operadores Aritmeticos</li>
+      <li>Operadores de Asignacion</li>
+      <li>Operadores de Comparacion</li>
+      <li>Operadores de Cadenas</li>
+      <li>Operadores Logicos</li>
+      <li>Operadores bit a bit</li>
+      <li>Operadores Ternarios</li>
+      <li>Operadores de Tipo</li>
+    </ul>
+    <h4>Operadores Aritmeticos</h4>
+    <p>Los operadores aritmeticos de toda la vida</p>
+    <ul>
+      <li>+ Adicion</li>
+      <li>- Substraccion</li>
+      <li>* Multiplicacion</li>
+      <li>/ Division</li>
+      <li>** Exponenciacion</li>
+      <li>% Modulo o Residuo</li>
+      <li>++ Incremento</li>
+      <li>-- Decremento</li>
+    </ul>
+    <h4>Operadores de Asignacion</h4>
+    <p>Estos operadores asignan valores a las variables</p>
+
+    <pre>
+        let f = "respetos"; // f se le ha asignado el valor de "respetos"
+        let i = 25;
+        i+=8;// se le ha sumado 8 al valor de i, en este caso 25, lo que nos daria 33
+        // basicamente i+=8 es lo mismo que escribir i = i+8;
+    </pre>
+
+    <p>
+      Usando el operador de asignacion, podemos usar los operadores aritmeticos
+      para combinar los valores de literales o variables, etc
+    </p>
+    <ul>
+      <li>=</li>
+      <li>+=</li>
+      <li>-=</li>
+      <li>*=</li>
+      <li>/=</li>
+      <li>%=</li>
+      <li>**=</li>
+    </ul>
+    <h4>Operadores de Comparacion</h4>
+    <ul>
+      <li>== es igual a</li>
+      <li>=== es igual en valor y en tipo</li>
+      <li>!= no es igual a(es diferente)</li>
+      <li>!== no es igual ni en valor ni en tipo</li>
+      <li>&gt; es mayor a</li>
+      <li>&lt; es menor a</li>
+      <li>&gt;= es mayor o igual a</li>
+      <li>&lt;= es menor o igual a</li>
+      <li>? operador ternario</li>
+    </ul>
+    <h4>Comparacion de cadenas</h4>
+    <p>
+      Todos los operadores de comparacion anteriores, tambien pueden ser usados
+      en las cadenas de texto
+    </p>
+    <p>Las cadenas son comparadas en orden alfabetico</p>
+    <p>
+      Tambien se pueden usar el operador de asignacion += y el operador
+      aritmetico + para concatenar cadenas
+    </p>
+
+    <pre>
+        let textito = "corta";
+        let texto2 = "-uñas";
+        let concat = textito + texto2
+        // salida: corta-uñas
+    </pre>
+
+    <h4>Sumando numeros y cadenas</h4>
+    <p>Cuando sumas un numero con un numero, el resultado es otro numero</p>
+    <p>Pero al sumar un numero y una cadena, el resultado es una cadena</p>
+    <button id="numStringButton">Ejemplo</button>
+    <p id="numAndString"></p>
+    <h4>Operadores Logicos</h4>
+    <p>Evaluan las condiciones logicas y devuelven un valor boolean</p>
+    <ul>
+      <li>&& Y logico(AND)</li>
+      <li>|| O logico(OR)</li>
+      <li>! NO logicot(NOT)</li>
+    </ul>
+    <h4>Operadores de Tipo</h4>
+    <p>
+      Estos devuelven el tipo de dato de un valor,y el otro devuelve verdadero
+      si un objeto es una instansia de un tipo objeto
+    </p>
+    <ul>
+      <li>typeof</li>
+      <li>instanceof</li>
+    </ul>
+    <h2>Consideraciones en Operadores Aritmeticos</h2>
+    <h3>Operadores y Operandos</h3>
+    <p>
+      Los operadores son los simbolos que usamos para realizar operaciones
+      aritmeticas, y los operandos son los numeros
+    </p>
+    <h2>Orden de operadores</h2>
+    <p>
+      Al igual que en las matematicas convencionales, las operaciones
+      aritmeticos de multiplicacion y division tienen mayor precedencia que los
+      de suma o resta, esta precedencia se puede alterar, poniendo las operacion
+      que queremos que se computen primero dentro de un parentesis. Y si hay
+      opeaciones de la misma jerarquia en un computo, pues se ejecutan de
+      izquierda a derecha
+    </p>
+    <p>El orden en este caso seria asi:</p>
+
+    <pre>
+        ()
+        **
+        */%
+        +-
+    </pre>
+
+    <h2>Operadores de Asignacion</h2>
+    <p>TODO:Entender mejor esta parte</p>
+    <h2>Tipos de Datos</h2>
+    <p>JavaScript tiene 8 tipos de datos</p>
+    <ol>
+      <li>Cadenas</li>
+      <li>Numeros</li>
+      <li>Enteros Grandes</li>
+      <li>Booleanos</li>
+      <li>No definidos</li>
+      <li>Nulo</li>
+      <li>Simbolos</li>
+      <li>Objetos</li>
+    </ol>
+    <p>El dato de tipo objeto puede contener</p>
+    <ol>
+      <li>Un objeto</li>
+      <li>Un arreglo</li>
+      <li>Una fecha</li>
+    </ol>
+    <h3>El concepto de tipos de datos</h3>
+    <p>
+      Es importante poder diferenciar texto de numeros, u otros valores que se
+      usen en la programacion para asi no cometer errores al juntar tipos de
+      datos
+    </p>
+    <h3>JavaScript usa tipos de datos dinamicos</h3>
+    <p>
+      Esto significa que la misma variable puede ser usada para almacenar
+      diferentes tipos de datos
+    </p>
+    <p>
+      Ademas en JavaScript no se ponen los nombres de los tipos de datos al
+      declarar la variable, ya que el lenguaje hace eso por nosotros
+    </p>
+    <h4>Cadenas</h4>
+    <p>
+      Una cadena es una sucesion de caracteres que forman texto, palabras,
+      frases, etc
+    </p>
+    <p>Las cadenas son escritas con comillas, ya sean simples o dobles</p>
+    <p>
+      Adicionalmente se pueden usar comillas dentro de las cadenas siempre y
+      cuando no sean iguales a las que se usaron para escribir la misma
+    </p>
+
+    <pre>
+        var celular = "Sony";
+        const basur = 'es "OperaGX"';
+    </pre>
+
+    <h4>Numeros</h4>
+    <p>
+      Los numeros de toda la vida con los que contamos, realizamos operaciones,
+      etc
+    </p>
+    <p>Todos los numeros en JavaScript son guardados como numeros decimales</p>
+    <p>Los numeros pueden ser escritos con o sin decimales</p>
+    <p>
+      Mas aun, se puede usar notacion cientifica para escribir numeros extra
+      pequeños o largos
+    </p>
+
+    <pre>
+        let $u$ = 123e5;
+        let mogus = 1234e-15;
+    </pre>
+
+    <p>
+      Los numeros en JavaScript siempre son del tipo double de 64 bits de coma
+      flotante
+    </p>
+    <h4>BigInt</h4>
+    <p>
+      BigInt es un nuevo tipo de dato introducido en ES2020 y como dice su
+      nombre es usado para guardar numeros que son demasiado grandes para ser
+      representados por un numero de JavaScript normal
+    </p>
+
+    <pre>
+        const google = BigInt("1245364684756247895273");
+    </pre>
+
+    <p>
+      No se pueden realizar operaciones entre numeros y bigints, ademas bigint
+      no puede tener decimales
+    </p>
+    <h4>Booleanos</h4>
+    <p>
+      Los booleanos son valores que solo pueden tener valores de verdadero o
+      falso
+    </p>
+    <p>Y son usados normalmente en pruebas condicionales</p>
+    <p>En JS pueden tener los valores de true o false</p>
+    <h4>Arreglos</h4>
+    <p>
+      Los arreglos son una estructura de datos que permiten almacenar varios
+      valores dentro de una variable
+    </p>
+    <p>
+      Podria decirse que son como una lista de valores que tienen posicion y a
+      la cual podemos acceder
+    </p>
+    <p>
+      En JavaScript se pueden almacenar valores de diferentes tipos en un mismo
+      Arreglo aunque es recomendable mantener un mismo tipo de valores
+      almacenados para evitar confusiones
+    </p>
+
+    <pre>
+        const cables = ["usb", "vga", "hdmi"];
+    </pre>
+
+    <p>Los indices(posiciones) de los arreglos empiezan en 0</p>
+    <h4>Objetos de JavaScript</h4>
+    <p>Los objetos en JavaScript se escriben con llaves{}</p>
+    <p>
+      Un objeto en JavaScript es un tipo de dato que permite almacenar
+      colecciones en pares de nombre-valor
+    </p>
+    <p>Puedes pensar en un objeto como un contenedor para datos relacionados, donde cada cada
+      dato es guardado como una propiedad del objeto con un identificador unico para acceder a el
+    </p>
+    <pre>
+      const laptop = {
+        name: "elitebook",
+        color: 'black',
+        isOn: true,
+        serialNumber: 123434
+      }
+    </pre>
+    <h4>El operador typeof(Tipo de)</h4>
+    <p>El operador typeof sirve para conocer el tipo de dato de una variable</p>
+    <p>Cabe recalcar que el operador typeof en una palabra clave y no una funcion y por eso no se escribe la
+      variable a evaluar dentro de parentesis
+    </p>
+
+    <h4>Undefined(no definido)</h4>
+    <p>En JavaScript una variable sin valor se le es asignada el tipo de dato undefined</p>
+    <p>que significa que el valor aun no esta definido</p>
+    <pre>
+      let letters; //la variable es undefined
+    </pre>
+    <p>Ademas de puede asignar el valor undefined a una variable para vaciarla</p>
+    <h4>Valores vacios</h4>
+    <p>Este es un tema un poco mas complejo de lo que se explica en w3</p>
+    <!-- TODO: Definir valores vacios y sus diferencias y similitudes con undefined -->
+    <h2>Funciones</h2>
+    <p>Una funcion es un bloque de codigo que ejecuta una accion en particular</p>
+    <p>Una funcion se ejecuta cuando algo la llama(invoca)</p>
+    <pre>
+      function saludo(){
+        console.log("HOLA AMIGOS");
+      }
+    </pre>
+    <h3>Sintaxis de las funciones</h3>
+    <p>Una funcion se define con la palabra reservada function, seguido del nombre de la funcion y despues parentesis
+      y luego llaves donde se pondra el codigo a ejecutarse
+    </p>
+    <p>Los nombres de las funciones siguen las mismas reglas que las variables</p>
+    <p>Los parentesis pueden contener parametros separados por comas</p>
+    <pre>
+      function nombre(parametro1, parametro2, parametro3){
+        // codigo a ser ejecutado
+      }
+    </pre>
+    <p>Los parametros son listados como se dijo, dentro de los parentesis</p>
+    <p>Los argumentos son los valores recibidos por la funcion cuando es invocada</p>
+    <p>Dentro de la funcion, los argumentos(parametros) se comportan como variables locales</p>
+    <h3>Invocacion de funciones</h3>
+    <p>Como ya se dijo, una funcion ejecuta el codigo dentro de ella, cuando algo la invoca o llama a la funcion</p>
+    <p>Algunos casos de esta invocacion son:</p>
+    <ul>
+      <li>Cuando ocurre un evento(por ejemplo cuando se presiona un boton)</li>
+      <li>Cuando se la llama desde el mismo codigo de JavaScript</li>
+      <li>Automaticament(Cuando se auto invoca)</li>
+    </ul>
+    <h3>Retornables de una funcion </h3>
+    <p>Cuando JavaScript alcance a una declaracion de la palabra reservada return, entonces la funcion se dejara de ejecutar</p>
+    <p></p>
+    
+    
+    
+    
+    
+    
     <script>
       function saludar() {
         document.getElementById("script").innerHTML = "Bienvenido a JS";
       }
     </script>
+    <script src="js/learning.js"></script>
+    <!-- no dejar tus scripts en otros lugares que no sean el head o al final del body -->
   </body>
 </html>
