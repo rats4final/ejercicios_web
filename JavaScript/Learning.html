@@ -634,13 +634,104 @@
     </ul>
     <h3>Retornables de una funcion </h3>
     <p>Cuando JavaScript alcance a una declaracion de la palabra reservada return, entonces la funcion se dejara de ejecutar</p>
-    <p></p>
-    
-    
-    
-    
-    
-    
+    <p>Si la funcion fue invocada desde una declaracion, JavaScript retornara a ejecutar el codigo despues de
+      declaracion invocadora
+    </p>
+    <p>Las funciones normalmente computan un valor para retornar, el valor es retornado o devuelto al llamador
+      , es decir, devuelve el valor computado a ese algo que lo llamo
+    </p>
+    <pre>
+      let xz = miFuncion(4,3);// la funcion es llamada, el valor devuelto sera guardado en la variable xz
+      function miFuncion(x,z){
+        return x*z; // La funcion retorna el producto de x*z
+      }
+    </pre>
+    <h3>¿Porque usar funciones?</h3>
+    <p>Las funciones se usan para usar un pedazo de codigo multiples veces</p>
+    <p>Puedes usar la funcion con diferentes argumentos, para obtener diferentes resultados</p>
+    <p>Por ejemplo, una funcion que convierta grados farenheit a celcius</p>
+    <pre>
+      function aCelsius(fahrenheit) {
+        return (5/9) * (fahrenheit-32);
+      }
+      document.getElementById("demo").innerHTML = aCelsius(77);
+    </pre>
+    <h3>El Operedor () invoca a la funcion</h3>
+    <p>Cuando queremos usar, llamar o invocar a una funcion usamos el nombre de esta, seguido de () para que nos retorne un
+      resultado, ejecute un bloque de codigo, etc. Ademas de que como ya vimos podemos poner parametros dentro de los parentesis
+    </p>
+    <p>Acceder a la funcion sin usar los (), nos retornara el objeto de la funcion, en vez del resultado de la funcion</p>
+    <p>Basicamente nos retornara como se ve el codigo dentro de la funcion si no usamos parentesis</p>
+    <h4>Usos de invocar a una funcion sin ()</h4>
+    <p>Cuando llamamos a una funcion sin los parentesis, podemos asignar la funcion a una variable, objeto, etc</p>
+    <p>Pero tambien podemos usar el llamado sin () para pasar una funcion como argumento a otra funcion!</p>
+    <p>Por ejemplo:</p>
+    <pre>
+      function saludar(nombre){
+        console.log(`Hola ${nombre} !`);
+      }
+      let decirNombre = saludar;
+      saludar("Maria");
+      decirNombre("David");
+    </pre>
+    <pre>
+      function sumar(x,y){
+        return a+b;
+      }
+      function restar(x,y){
+        return a-b;
+      }
+      function calcular(x,y,operacion){
+        return operacion(x,y);
+      }
+      console.log("10,5,sumar");// salida 15
+      //en este ejemplo se ve como creamos la funcion calcular, que acepta como 3er parametro una funcion para ver que operacion hara
+    </pre>
+    <h3>Funciones usadas como valores variables</h3>
+    <p>En JavaScript las funciones son consideradas ciudadanos de primera-clase, lo que signifca que pueden ser tratadas como cualquier
+      otro valor, como una cadena o numero. Esto signifca que las funciones pueden ser usadas de la misma forma en que las variables son
+      usadas para guardar datos.
+    </p>
+    <p>He aqui 2 ejemplos</p>
+    <pre>
+      let x = aCelsius(25);
+      console.log('La temperatura es '+x+' grados celcius')
+      /* 
+      en vez de usar una variable para guardar el resultado devuelto de la funcion, podemos usar la funcion 
+      directamente como un valor variable 
+      */
+    </pre>
+    <pre>
+      function multiplicar(a,b){
+        return a*b;
+      }
+      const funcionesMatematicas = {
+        funcionDeMultiplicar: multiplicar
+      }
+      console.log(funcionesMatematicas.funcionDeMultiplicar(10*5));
+    </pre>
+    <p>Las ventajas del segundo ejemplo son que podemos usar la funcion globalmente, ya que si las declaramos directamente dentro
+      del objeto, habria que referenciar al objeto tambien.
+    </p>
+    <p>Ademas, todo depende de que tan grande sean las funciones, ya que si son pequeñas podriamos ponerlas directamente dentro
+      del objeto, pero si son mas grandes, seria mejor hacer lo que se muestra en el segundo ejemplo y asi hacer nuestro codigo
+      mas legible, organizado y facil de usar
+    </p>
+    <p>Inclusive, el segundo ejemplo podria ser mejorado usando funciones flecha, ya sea para acortar la sintaxis de la funcion
+      multiplicar o directamente escribirla en el mismo objeto
+    </p>
+    <pre>
+      const funcionesMatematicas = {
+        multiplicar: (a,b) =&gt; a*b;
+      }
+    </pre>
+    <p>Luego entraremos mas a fondo a las funciones flecha</p>
+    <h3>Variables Locales</h3>
+    <p>Variables declaradas dentro de una funcion, solo pueden ser usadas dentro de la funcion y no asi globalmente.</p>
+    <p>Esto significa que podemos usar los mismos nombres para variables dentro de diferentes funciones</p>
+    <p>La misma regla aplica tambien para los nombres de los parametros</p>
+    <p>Cabe resaltar que las variables son creadas cuando la funcion se inicializa y destruidas cuando la funcion es completada.</p>
+    <h2>Objetos</h2>
     <script>
       function saludar() {
         document.getElementById("script").innerHTML = "Bienvenido a JS";
