@@ -732,6 +732,86 @@
     <p>La misma regla aplica tambien para los nombres de los parametros</p>
     <p>Cabe resaltar que las variables son creadas cuando la funcion se inicializa y destruidas cuando la funcion es completada.</p>
     <h2>Objetos</h2>
+    <p>Los objetos estan en todas partes, ya hemos aprendido que las variables son contenedores para valores de datos</p>
+    <p>
+      Los objetos tambien son variables, pero los objetos pueden contener muchos valores
+    </p>
+    <pre>
+      const avion = {tipo: "civil", modelo:"500", color: "azul"}
+    </pre>
+    <p>Los valores son escritos como pares de nombre:valor y cada nombre y valor separado por una coma</p>
+    <p>Ademas como ya vimos, es buena practica declarar un objeto con const, ya que el nombre del objeto siempre
+      sera el mismo, pero sus elementos dentro de el pueden cambiar
+    </p>
+    <h3>Definir un objeto</h3>
+    <p>Como ya vimos, puedes definir(y crear) un objeto con un literal de objeto</p>
+    <pre>
+      const telefono = {
+        modelo: "F2 PRO",
+        marca: "xiaomi",
+        so: "Android 12"
+      }
+    </pre>
+    <p>Los espacios y saltos de linea no importan, ya que la definicion de un objeto puede ocupar varias lineas</p>
+    <h3>Propiedades de los Objetos</h3>
+    <p>Los pares de nombre:valor son llamados propiedades</p>
+    <h3>Acceder a las propiedades de un Objeto</h3>
+    <p>
+      Hay dos formas de acceder a una propiedad de un objeto
+    </p>
+    <pre>
+      nombreObjeto.nombrePropiedad;
+      telefono.modelo;
+    </pre>
+    <pre>
+      nombreObjeto["nombrePropiedad"];
+      telefono["modelo"];
+    </pre>
+    <h3>Metodos de un objeto</h3>
+    <p>Los objetos tambien pueden tener metodos</p>
+    <p>Los metodos son acciones que pueden ser realizadas en objetos</p>
+    <p>Los metodos son guardados en las propiedades como definiciones de funciones, es decir, un metodo es una funcion guardada como 
+      una propiedad
+    </p>
+    <pre>
+      const celular = {
+        marca: "xiaomi",
+        llamar: function(){// funcion anonima
+          console.log("llamando desde "+this.marca);
+        }
+      }
+    </pre>
+    <h3>Que es esto? ¿What is this in js?</h3>
+    <p>En JavaScript la palabra reservada this, hace referencia a un objeto, ahora, a que objeto se refiere, depende de varios factores</p>
+    <p>Basicamente se refiere a un objeto, pero al objeto al que se refiere depende de como es invocado</p>
+    <ul>
+      <li>Cuando se usa this en un metodo dentro de un objeto, this se refiere al mismo objeto</li>
+      <li>Por si solo, this se refiere al objeto global, o sea a window, o a undefined si se usa el modo estricto</li>
+      <li>Dentro de una funcion, this se refiere al objeto global</li>
+      <li>En una funcion en modo estricto, this es indefinido</li>
+      <li>En un evento, this se refiere al elemento que recibio el evento</li>
+      <li>Metodos como call(), apply() y bind() pueden hacer que this se refiera a cualquier objeto</li>
+    </ul>
+    <h3>La palabra reservada <b>this</b></h3>
+    <p>En la definicion de funciones, this se refiere al dueño de la funcion</p>
+    <p>Como en el ejemplo anterior this se refire al objeto celular que es dueña de la funcion llamar</p>
+    <p>Es decir que this.marca ser refiere a la propiedad marca de este mismo objeto</p>
+    <p>Para cuestiones de objetos esto es practicamente simple</p>
+    <p>Usando metodos built-in o funciones flecha, el scope de this puede cambiar segun como se lo invoque
+      asi que estar atentos a eso y los errores que podria traer
+    </p>
+    <p>Repasar this mas luego</p>
+    <h3>Accediendo a los metodos de los objetos</h3>
+    <p>Se hace de la siguiente manera</p>
+    <pre>
+      nombreObjeto.nombreMetodo();
+    </pre>
+    <p>Y al igual que las funciones, si no usamos los parentesis(), accederemos al objeto de la funcion como tal y su definicion</p>
+    <h3>Declarando Cadenas, Numeros y Booleanos como objetos</h3>
+    <p>Al parecer no es recomendable hacerlo</p>
+    <a href="https://stackoverflow.com/questions/24620666/when-is-it-advisable-to-declare-string-number-and-boolean-as-objects-in-javascr">
+      Explicacion de boolanos, strings y numbers como objetos
+    </a>
     <script>
       function saludar() {
         document.getElementById("script").innerHTML = "Bienvenido a JS";
