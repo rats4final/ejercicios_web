@@ -812,6 +812,65 @@
     <a href="https://stackoverflow.com/questions/24620666/when-is-it-advisable-to-declare-string-number-and-boolean-as-objects-in-javascr">
       Explicacion de boolanos, strings y numbers como objetos
     </a>
+    <h2>Eventos</h2>
+    <p>Los eventos en html, son cosas que le pasan a los elementos de html</p>
+    <p>JavaScript puede reaccionar a estos eventos</p>
+    <h3>Eventos HTML</h3>
+    <p>Como ya vimos, los eventos en html son cosas que el navegador o el usuario puede hacer</p>
+    <p>Por ejemplo:</p>
+    <ul>
+      <li>Una pagina ha terminado de cargar</li>
+      <li>Se cambio la entrada en un campo</li>
+      <li>Un boton fue presionado</li>
+    </ul>
+    <p>Generalmente cuando un evento sucede, tu quedras hacer algo</p>
+    <p>JavaScript te deja ejecutar codigo cuando algun evento es detectado</p>
+    <p>HTML permite atributos gestionadores de eventos, con codigo JavaScript, para ser añadidos a elementos html</p>
+    <pre>
+      &lt;elemento evento="Codigo JavaScript"&gt;
+      // ya sea con comillas simples o dobles
+    </pre>
+    <pre>
+      &lt;button onclick="document.getElementById('demo').innerHTML = Date()"&gt;El tiempo actual es&lt;/button&gt;
+      // en este ejemplo el codigo cambia el contenido del elemento con el id demo para mostrar el tiempo actual
+    </pre>
+    <pre>
+      &lt;button onclick="this.innerHTML = Date()"&gt;El tiempo actual es&lt;/button&gt;
+      //en este ejemplo el codigo cambia el contenido del elemento actual usando la palabra reservada this
+    </pre>
+    <p>JavaScript ocupa a menudo varias lineas de codigo, asi que es mas comun ver atributos de tipo evento
+      llamando a funciones
+    </p>
+    <pre>
+      &lt;button onclick="mostrarFecha()"&gt;El tiempo actual es&lt;/button&gt;
+    </pre>
+    <h3>Eventos comunes de HTML</h3>
+    <ul>
+      <li>onchange: un elemento ha sido cambiado</li>
+      <li>onclick: un usuario le da click a un elemento</li>
+      <li>onmouseover: un usuario mueve el cursor hacia un elemento</li>
+      <li>onmouseout: un usuario mueve el cursor fuera de un elemento</li>
+      <li>onkeydown: un usuario pulsa una tecla</li>
+      <li>onload: el navegador ha terminado de cargar la pagina</li>
+    </ul>
+    <p>Existen muchisimos mas y deberian ser revisados para futura referencia</p>
+    <h3>Gestionadores de Eventos en JavaScript</h3>
+    <p>Los gestionadores de eventos pueden ser usados para administrar, manejar y verificar
+      entradas del usuario, acciones del usuario y acciones del navegador
+    </p>
+    <ul>
+      <li>Cosas que deberian ser hechas cada vez que carga la pagina</li>
+      <li>Cosas que deberian ser hechas cuando la pagina se cierra</li>
+      <li>Acciones que deberian realizarse cuando un usuario presiona un boton</li>
+      <li>Contenido que debe ser verificado cuando un usuario introduce datos,etc</li>
+    </ul>
+    <p>Hay diferentes metodos que pueden ser usados para permitir a JavaScript trabajar con eventos</p>
+    <ul>
+      <li>Atributos HTML de tipo evento pueden ejecutar codigo directamente</li>
+      <li>Atributos HTML de tipo evento pueden llamar a funciones</li>
+      <li>Puedes asignar tus propias funciones manejadoras a elementos HTML(con addEventListener por ej)</li>
+      <li>Puedes evitar que eventos sean enviados o manejados, etc</li>
+    </ul>
     <script>
       function saludar() {
         document.getElementById("script").innerHTML = "Bienvenido a JS";
