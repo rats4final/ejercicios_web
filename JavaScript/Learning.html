@@ -871,6 +871,426 @@
       <li>Puedes asignar tus propias funciones manejadoras a elementos HTML(con addEventListener por ej)</li>
       <li>Puedes evitar que eventos sean enviados o manejados, etc</li>
     </ul>
+    <h2>Cadenas</h2>
+    <p>Como ya vimos las cadenas en JavaScript sirven para guardar y manipular basicamente texto</p>
+    <p>Una cadena en JavaScript es cero o mas caracteres escritos entre comillas, y como vimos se pueden usar
+      comillas dobles o simples
+    </p>
+    <p>A su vez podemos usar comillas dentro de una cadena siempre y cuando no sean las mismas con las que
+      encerramos el texto
+    </p>
+    <h3>Longitud de una cadena</h3>
+    <p>Para hallar la longitud de una cadena, usamos la propiedad incorporada: length</p>
+    <pre>
+      let texto = "Hola Pianola";
+      let longitud = texto.length;
+    </pre>
+    <h3>Caracteres de Escape</h3>
+    <p>Cuando queremos escribir si o si comillas con comillas o usar backslashes dentro de una cadena,
+      usamos el caracter de escape \ que nos permite escribir caracteres especiales dentro de cadenas
+    </p>
+    <pre>
+      var mensaje = "El es el \"elegido\" de la tribu";
+      let slash = "Este es el caracter: \\ backslash"
+    </pre>
+    <p>Existen otros 6 caracteres de escape validos en JavaScript</p>
+    <ul>
+      <li>\b backspace o borrar</li>
+      <li>\f form feed o alimentar el formulario?</li>
+      <li>\n new linea o nuevo salto de linea</li>
+      <li>\r carriage return o retorno del carro</li>
+      <li>\t horizontal tabulator o tabulacion horizontal</li>
+      <li>\v vertical tabulator o tabulacion vertical</li>
+    </ul>
+    <p>Puede que reconozcas estos caracteres de otros lenguajes, sin embargo no tienen ningun sentido en HTML
+      ya que fueron creados para controlar maquinas de escribir
+    </p>
+    <h3>Separar largas lineas de codigo</h3>
+    <p>Para mejor legibilidad es buena practica dar un nuevo salto de linea si la linea actual
+      supera los 80 caracteres
+    </p>
+    <p>Si una declaracion de JavaScript no cabe en una linea, lo recomendable es pasar a la siguiente
+      despues de un operador
+    </p>
+    <pre>
+      document.getElementById("demo").innerHTML =
+      "Hello Dolly!";
+    </pre>
+    <p>Tambien puedes separar una linea de codigo dentro de una cadena usando el caracter \</p>
+    <pre>
+      document.getElementById("demo").innerHTML = "Hello \
+      Dolly!";
+    </pre>
+    <p>Sin embargo el metodo de usar un backslash no es recomendable ya que puede no tener soporte
+      universal ya que algunos navegadores no permiten espacios antes del caracter \
+    </p>
+    <p>Un mejor manera de separar una cadena es usar concatenacion</p>
+    <pre>
+      document.getElementById("demo").innerHTML = "Hello"+
+      "Dolly!";
+    </pre>
+    <p>Ademas no se puede separar una lina de codigo con un backslash</p>
+    <h3>Cadenas como Objetos</h3>
+    <p>Normalmente las cadenas en JavaScript son valores primitivos creados desde literales</p>
+    <p>Pero las cadenas tambien pueden ser definidas como objetos usando la palabra clave new</p>
+    <pre>
+      let ds = new String("JavaScript");
+    </pre>
+    <p>Como ya vimos anteriormente, no se deben crear objetos de tipo cadena</p>
+    <p>La palabra clave new complica el codigo y ralentiza el tiempo de ejecucion</p>
+    <p>Ademas objetos de tipo cadena pueden producir resultados inesperados</p>
+    <pre>
+      let x = 'Joel';
+      let y = new String("Joel");
+      console.log(x==y);
+      //En este caso sera true ya que son iguales en contenido
+    </pre>
+    <pre>
+      let x = 'Joel';
+      let y = new String("Joel");
+      console.log(x===y);
+      //Sin embargo aqui sera false ya que son del mismo tipo y por lo tanto no pueden ser comparados de manera segura
+    </pre>
+    <p>Al igual que si comparamos dos objetos cadenas</p>
+    <pre>
+      let x = new String("David");
+      ley z = new String("David");
+      console.log(x==z);
+      // el resultado siempre sera false ya sea si usamos == o === ya que los objetos no pueden ser comparados entre si
+    </pre>
+    <p>Es mejor dejarlo en primitivos ya que ademas JavaScript convierte
+      momentaneamente las cadenas a objetos cuando usamos sus metodos.
+    </p>
+    <h2>Metodos de cadenas</h2>
+    <p>Estos son todos los metodos de cadenas:</p>
+    <pre>
+      String length
+      String slice()
+      String substring()
+      String substr()
+      String replace()
+      String replaceAll()
+      String toUpperCase()
+      String toLowerCase()
+      String concat()
+      String trim()
+      String trimStart()
+      String trimEnd()
+      String padStart()
+      String padEnd()
+      String charAt()
+      String charCodeAt()
+      String split()
+    </pre>
+    <p>Excepto supongo length ya que esa es una propiedad y no un metodo</p>
+    <h3>Length</h3>
+    <p>Simple, esta propiedad retorna la longitud de una cadea</p>
+    <pre>
+      let zzz = "12345";
+      let otro = zzz.length
+      //nos retorna un valor numerico
+    </pre>
+    <h3>Extrayendo partes de una cadena</h3>
+    <p>Hay 3 formas de extrar una parte de una cadena</p>
+    <h4>Slice()</h4>
+    <p>El metodo slice() nos permite extraer parte de una cadena y nos devuelve
+      la cadena extraida en una nueva cadena
+    </p>
+    <p>El metodo acepta dos parametros, la posicion inicial y final donde hacer
+      el corte
+    </p>
+    <pre>
+      text.slice(7,13);
+    </pre>
+    <p>JavaScript cuenta las posiciones desde 0</p>
+    <p>Si se omite el segundo parametro, se cortara la cadena hasta el final de esta</p>
+    <p>Si un parametro es negativo, la posicion es contada desde el final de la cadena</p>
+    <pre>
+      texto.slice(-14,-7);
+      // basicamente se va contando hacia el lado positivo desde la posicion final, es decir -14,-13,etc
+    </pre>
+    <h4>Substring()</h4>
+    <p>substring() es similar a slice()</p>
+    <p>La diferencia radica en que basicamente no podemos introducir valores negativos
+      , ya que estos seran tratados como ceros por el metodo substring()
+    </p>
+    <p>E igualmente si se omite el segundo parametro, se cortara el resto de la cadena</p>
+    <pre>
+      libro.substring(5,7);
+    </pre>
+    <h4>Substr()</h4>
+    <p>Finalmente tenemos substr()</p>
+    <p>Es similar a slice(), pero la diferencia es que el segundo parametro dice la cantidad
+      de caracteres que se van a cortar, es decir la longitud de la parte a cortar
+    </p>
+    <p>Si omitimos el segundo parametro substr() cortara hasta el final de la cadena</p>
+    <p>Y si el primer parametro es negativo, se empezara a contar desde el final de la cadena</p>
+    <pre>
+      gg.substr(-2,5);
+    </pre>
+    <h3>Reemplazando contenido de una cadena</h3>
+    <p>El metodo replace() reemplaza un valor especificado con otro dentro de una cadena</p>
+    <pre>
+      let gpt = "Microsoft es una corporacion malevola";
+      let google = gpt.replace("Microsoft","Google");
+      // google = 'Google es una corporacion malevola';
+    </pre>
+    <p>Cabe resaltar que el metod replace() no cambia la cadena donde es llamado</p>
+    <p>El metodo replace() retorna una nueva cadena</p>
+    <p>El metodo solo reemplaza la primera coincidencia</p>
+    <p>Se puede usar una expresion regular con la bandera global /g puesta para reemplazar todas las coincidencia</p>
+    <p>Por defecto, replace() es sensible a mayusculas y minusculas</p>
+    <p>Para que no distinga entre mayusculas y minusculas debemos usar la bandera /i dentro de la expresion regular
+      (i de insensitive) , estas flags son aplicadas al primer argumento del metodo, que se refiere a la parte de 
+      la cadena que queremos reemplazar
+    </p>
+    <pre>
+      let coca = "me gusta la coca cola y la coca de mascar";
+      let papas = coca.replace(/coca/g,"papa");
+      // al usar /g, se reemplazan todas las coincidencias
+      // las expresiones regulares no van dentro de comillas
+    </pre>
+    <pre>
+      let uni = "por favor dale 5 estrellas a Unifranz";
+      let umsa = uni.replace(/UNIFRANZ/i,"Umsa");
+      // el uso de la bandera /i convierte a replace en insensitivo a mayusculas o minusculas
+    </pre>
+    <h3>JavaScript replaceAll()</h3>
+    <p>Pues es mas que obvio que usando replaceAll() se nos permitira reemplazar todas 
+      las coincidencias, aunque este sigue siendo case sensitive
+    </p>
+    <p>Ademas replaceAll() nos deja poner como en replace() una expresion regular en lugar
+      de una cadena, aunque en este caso siempre debemos usar la bandera global /g
+      para evitar errores.
+    </p>
+    <pre>
+      text = text.replaceAll(/Cats/g,"Dogs");
+    </pre>
+    <p>replaceAll() es una caracteristica de ES2021, por lo tanto no sirve en internet explorer
+      , pero a quien le importa eso XD, ademas tal vez babel pueda ser usable para eso
+    </p>
+    <h3>Convirtiendo a mayusculas o minusculas</h3>
+    <p>Esto es directo, para convertir una cadena a mayusculas, usamos: toUpperCase()</p>
+    <p>Y para convertir a minusculas usamos: toLowerCase();</p>
+    <p>Y como ya sabemos, esto retorna una nueva cadena, no modifica la original</p>
+    <h3>Concatenacion</h3>
+    <p>Usando el metodo concat(), se nos permite unir 2 o mas cadenas
+      y parece ser un buen reemplazo a +, ya que concat() nos permite unir infinitas cadenas
+      y + solo 2 a la vez
+    </p>
+    <pre>
+      let palabra1 = "Hola";
+      let palabra2 = " Pianola";
+      let miTexto = palabra1.concat(palabra2);
+      // Hola Pianola
+    </pre>
+    <pre>
+      text = "Hello" + " World!";
+      text = "Hello".concat("World!");
+    </pre>
+    <p>Podrias decir que + es mas facil de escribir, pero la ventaja de concat() es que siempre
+      retorna una nueva cadena y que ademas puedes concatenar cuantas cadenas como quieras
+    </p>
+    <h3>Consideraciones en cadenas</h3>
+    <p>Como vimos, todos los metodos retornan una nueva cadena y no modifican la cadena original,
+      es decir, las cadenas son inmutables, las cadenas no pueden ser cambiadas, solo reemplazadas
+    </p>
+    <h3>JavaScript trim(), trimStart() y trimEnd()</h3>
+    <p>El metodo trim() remueve los espacios en ambos lados de una cadena</p>
+    <p>Los metodos trimStart() y trimEnd() fueron agregados en ES2019 y pues
+      hacen lo que dice su nombre no?, remueven espacios al inicio y final de una cadena respectivamente
+    </p>
+    <p>Si quisieramos reemplzar los espacios entre palabras, podriamos usar replaceAll()</p>
+    <pre>
+      let str = "PB 10 CV 2662";
+      str = str.replaceAll(' ', '');
+    </pre>
+    <h3>Rellenado de Cadenas en JavaScript</h3>
+    <p>ES2017 agrego dos nuevos metodos para poder agregar "relleno" a las cadenas</p>
+    <p>El relleno basicamente concatena la cadena original con otra cadena que le digamos, hasta que 
+      la cadena sea del valor que igual pusimos dentro del metodo, si la cadena ya es de ese tamaño o 
+      mas grande, entonces no se agrega nada, y si no se especifica el segundo parametro, el valor por 
+      defecto es espacio.
+    </p>
+    <h4>padStart()</h4>
+    <p>padStart() como indica su nombre, nos permite rellenar una cadena
+      con otra que le digamos hasta que la longitud deseada sea alcanzada
+    </p>
+    <pre>
+      let cadena = "XD";
+      let nuevaCadena = cadena.padStart(5,"X");
+      // XXXXD
+    </pre>
+    <p>padStart() es un metodo de cadenas, para usar numeros, antes debemos
+      convertir el numero a una cadena
+    </p>
+    <pre>
+      let numerito = 25;
+      let cadenita = numerito.toString();
+      let relleno = cadenita.padStart(4,"0");
+      // 0025
+    </pre>
+    <p>padStart() y padEnd() son caracteristicas de ES2017
+      por lo tanto no funcionan en navegadores previos a esa version
+    </p>
+    <h4>padEnd()</h4>
+    <p>padEnd() es exactamente igual que padStart() solo que el relleno
+      se pone al final de la cadena
+    </p>
+    <pre>
+      let txt = "cadena";
+      let rellenada = txt.padEnd(7,"s");
+      //cadenas
+    </pre>
+    <h3>Extrayendo caracteres de una cadena</h3>
+    <p>Existen 3 formas de extraer un caracter de una cadena</p>
+    <ul>
+      <li>charAt(posicion)</li>
+      <li>charCodeAt(posicion)</li>
+      <li>Acceso con propiedad []</li>
+    </ul>
+    <h4>JavaScript charAt()</h4>
+    <p>Este metodo retorna un caracter en la posicion especificada</p>
+    <pre>
+      var txts = 'Hello Mundo';
+      let caracter = txts.charAt(0);
+      // H
+    </pre>
+    <h4>JavaScript charCodeAt()</h4>
+    <p>Este metodo nos devuelve el unicode del caracter en la posicion que
+      le especifiquemos
+    </p>
+    <p>EL metodo retorna un codigo en UTF-16</p>
+    <pre>
+      let x = 'HOLA'
+      let y = x.charCodeAt(0);
+      //72
+    </pre>
+    <h4>Usando el acceso a la propiedad de la cadena</h4>
+    <p>ES5 agrego el acceso a propiedades de la cadena con []</p>
+    <pre>
+      let texto = 'ARREGLO?'
+      let char = texto[0];
+    </pre>
+    <p>El acceso a la propiedad puede ser un poco impredecibel</p>
+    <p>Hace que las cadenas parezcan arreglos</p>
+    <p>Si no se encuentra ningun caracter, [] retoruna indefinido, mientras Que
+      charAt() retorna una cadena vacia
+    </p>
+    <p>El uso de [] es solo de lectura si intentamos usar un operador de asignacion
+      no tira un error, PERO OJO, aun asi no sirve
+    </p>
+    <pre>
+      let texto = 'BLA';
+      text[0] = 'A';
+      // no da error pero no funcionan
+      // esto es probablemente porque las cadenas son inmutables
+    </pre>
+    <h3>Convirtiendo una cadena en un arreglo</h3>
+    <h4>JavaScript split()</h4>
+    <p>Una cadena puede ser convertida a un arreglo con el metodo split()</p>
+    <pre>
+      texto.split(",")
+      texto.split(" ")
+      texto.split("|")
+    </pre>
+    <p>El argumento que acepta, son los separadores</p>
+    <p>Si el separador es omitido, el arreglo devuelto contendra toda la
+      caden en la posicion 0 del arreglo      
+    </p>
+    <input type="text" id="separadorCadena">
+    <button onclick="cadenaArreglo()">Mostrar conversion</button>
+    <p id="cadena"></p>
+    <p>split() funciona de la siguiente manera</p>
+    <p>Dentro del metodo podemos poner un parametro donde se recibe el separador
+      cabiendo resaltar que la cadema a separar debe contener por lo menos un
+      caracter igual al que usamos de separador, es decir, que si tenemos en nuestra
+      cadena original varias comas, podemos elegir usar las comas como separador al 
+      convertir la cadena en un arreglo. Basicamente el parametro que acepta split()
+      define el separador, ya sea espacios, comas, puntos o incluso una misma letra
+    </p>
+    <h2>Busqueda dentro de cadenas</h2>
+    <h3>JavaScript indexOf() y lastIndexOf()</h3>
+    <p>El metodo indexOf() retorna la posicion de la primera coincidencia especificada a 
+      buscar dentro de una cadena, indexOf se traduciria como indiceDe()
+    </p>
+    <pre>
+      var texto = 'encuentra la posicion de "encuentra"';
+      var posicion = texto.indexOf("posicion");
+    </pre>
+    <p>Como ya sabemos, JS cuenta posiciones desde 0</p>
+    <p>lastIndexOf() por otra parte retorna la posicion de la ultima ocurrencia especificada
+      a buscar dentro de una cadena
+    </p>
+    <p>Ambos indexOf() y lastIndexOf() retornan -1 si es texto a buscar no es encontrado</p>
+    <p>Ambos metodos aceptan un segundo parametro que indica desde que posicion empezar la busqueda</p>
+    <p>En el caso de lastIndexOf() se cuenta al reves, es decir, si se le especifica una posicion
+      de donde empezar la busqueda, entonces el metodo buscara desde esa posicion hasta el inicio de 
+      la cadena
+    </p>
+    <h3>JavaScript search()</h3>
+    <p>El metodo search() busca una cadena(o expresion regular) dentro de una cadena y retorna
+      la posicion de la coincidencia
+    </p>
+    <pre>
+      let teseracto = 'Glorious Purpose!!!';
+      let loki = teseracto.search("Glorious")
+      let lokiRegex = teseracto.search(/Glorious/);
+    </pre>
+    <p>La diferencia entre search() e indexOf() es que search acepta expresiones regulares, pero
+      no puede indicar una posicion desde donde emprezar a buscar, lo cual indexOf si puede hacer
+      pero no puede usar expresiones regulares.
+    </p>
+    <h3>JavaScript match()</h3>
+    <p>El metodo match() devuelve un arreglo que contiene todas las coincidencias resultantes
+    al buscar una cadena dentro de otra cadena</p>
+    <pre>
+      let texto = "Pablito clavo un clavito en la calva de un calvito";
+      texto.match("ito");
+    </pre>
+    <p>Tambien podemos usar expresiones regulares dentro de match
+    y cabe resaltar que match por si solo solo devuelve la primera coincidencia
+    , si queremos que devuelva todas las coincidencias, debemos usar al igual que en los metodos
+    anteriores, la bandera global, /g, e i/ si queremos que no distinga entre mayusculas y minusculas</p>
+    <pre>
+      let texto = "Pablito clavo un clavito en la calva de un calvito";
+      texto.match(/ito/g); //global sensible
+      texto.match(/ito/gi); //global insensible
+    </pre>
+    <h3>JavaScript matchAll()</h3>
+    <p>Introducido en ES2020, matchAll() hace lo que dice, devuelve todas las cadenas que coinciden con la
+    busqueda en un arreglo, y al igual que replaceAll() acepta expresiones regulares, y la bandera global
+    /g es obligatoria</p>
+    <pre>
+      let pablo = "Pablito clavo un clavito en la calva de un calvito";
+      let objetoIterable = pablo.matchAll("ito");
+      //TODO: verificar y comprender que es un iterador en JavaScript
+    </pre>
+    <p>matchAll() devuelve un iterador, no un arreglo</p>
+    <h3>JavaScript includes()</h3>
+    <p>El metodo includes() (incluye) retorna true si una cadena contiene un valor especificado
+    ademas tiene un segundo parametro que permite elegir la posicion desde la cual se empezara
+    a buscar, y al igual que en otros metodos, se puede usar numeros negativos para iniciar la busqueda
+    al rever</p>
+    <pre>
+      let text = "Hello world, welcome to the universe.";
+      text.includes("world", 12);
+    </pre>
+    <p>includes() es case sensitive, y fue agregado en ES6</p>
+    <h3>JavaScript startsWith() y endsWith()</h3>
+    <p>Estos metodos retornan true si una cadena empieza o termina con un valor especificado
+    respectivamente</p>
+    <p>Al igual que el anterior metodo, tienen un segundo parametro para indicar desde donde buscar
+    en el caso de startsWith() y hasta donde buscar en el caso de endsWith()</p>
+    <p>Igualmente son case sensitive y fueron agregados en ES6</p>
+    <pre>
+      let hola = "Hola Mundo Hola mundo mundoso";
+      let c1 = hola.startsWith("Hola");
+      let c2 = hola.startsWith("Hola",11);
+      let x1 = hola.endsWith("mundoso");
+      let x2 = hola.endsWith("mundo,20");
+    </pre>
+    <h2>JavaScript Plantillas de Cadenas</h2>
     <script>
       function saludar() {
         document.getElementById("script").innerHTML = "Bienvenido a JS";

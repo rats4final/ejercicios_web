@@ -73,3 +73,19 @@ const celular = {
     }
   }
 celular.llamar();
+
+
+
+function cadenaArreglo() {
+  let texto = "lambda, es, muy, buena funcion, total";
+  let separador = String(document.getElementById("separadorCadena").value);
+  let arregloConvertido = texto.split(separador);
+  document.getElementById("cadena").innerHTML = arregloConvertido;
+  console.log(arregloConvertido);
+  console.log(separador);
+}
+
+
+let pablo = "Pablito clavo un clavito en la calva de un calvito";
+let objetoIterable = pablo.matchAll("ito");
+console.log(objetoIterable.next());
