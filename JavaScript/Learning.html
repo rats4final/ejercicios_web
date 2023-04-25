@@ -575,8 +575,10 @@
       Un objeto en JavaScript es un tipo de dato que permite almacenar
       colecciones en pares de nombre-valor
     </p>
-    <p>Puedes pensar en un objeto como un contenedor para datos relacionados, donde cada cada
-      dato es guardado como una propiedad del objeto con un identificador unico para acceder a el
+    <p>
+      Puedes pensar en un objeto como un contenedor para datos relacionados,
+      donde cada cada dato es guardado como una propiedad del objeto con un
+      identificador unico para acceder a el
     </p>
     <pre>
       const laptop = {
@@ -588,22 +590,30 @@
     </pre>
     <h4>El operador typeof(Tipo de)</h4>
     <p>El operador typeof sirve para conocer el tipo de dato de una variable</p>
-    <p>Cabe recalcar que el operador typeof en una palabra clave y no una funcion y por eso no se escribe la
-      variable a evaluar dentro de parentesis
+    <p>
+      Cabe recalcar que el operador typeof en una palabra clave y no una funcion
+      y por eso no se escribe la variable a evaluar dentro de parentesis
     </p>
 
     <h4>Undefined(no definido)</h4>
-    <p>En JavaScript una variable sin valor se le es asignada el tipo de dato undefined</p>
+    <p>
+      En JavaScript una variable sin valor se le es asignada el tipo de dato
+      undefined
+    </p>
     <p>que significa que el valor aun no esta definido</p>
     <pre>
       let letters; //la variable es undefined
     </pre>
-    <p>Ademas de puede asignar el valor undefined a una variable para vaciarla</p>
+    <p>
+      Ademas de puede asignar el valor undefined a una variable para vaciarla
+    </p>
     <h4>Valores vacios</h4>
     <p>Este es un tema un poco mas complejo de lo que se explica en w3</p>
     <!-- TODO: Definir valores vacios y sus diferencias y similitudes con undefined -->
     <h2>Funciones</h2>
-    <p>Una funcion es un bloque de codigo que ejecuta una accion en particular</p>
+    <p>
+      Una funcion es un bloque de codigo que ejecuta una accion en particular
+    </p>
     <p>Una funcion se ejecuta cuando algo la llama(invoca)</p>
     <pre>
       function saludo(){
@@ -611,10 +621,14 @@
       }
     </pre>
     <h3>Sintaxis de las funciones</h3>
-    <p>Una funcion se define con la palabra reservada function, seguido del nombre de la funcion y despues parentesis
-      y luego llaves donde se pondra el codigo a ejecutarse
+    <p>
+      Una funcion se define con la palabra reservada function, seguido del
+      nombre de la funcion y despues parentesis y luego llaves donde se pondra
+      el codigo a ejecutarse
     </p>
-    <p>Los nombres de las funciones siguen las mismas reglas que las variables</p>
+    <p>
+      Los nombres de las funciones siguen las mismas reglas que las variables
+    </p>
     <p>Los parentesis pueden contener parametros separados por comas</p>
     <pre>
       function nombre(parametro1, parametro2, parametro3){
@@ -622,23 +636,37 @@
       }
     </pre>
     <p>Los parametros son listados como se dijo, dentro de los parentesis</p>
-    <p>Los argumentos son los valores recibidos por la funcion cuando es invocada</p>
-    <p>Dentro de la funcion, los argumentos(parametros) se comportan como variables locales</p>
+    <p>
+      Los argumentos son los valores recibidos por la funcion cuando es invocada
+    </p>
+    <p>
+      Dentro de la funcion, los argumentos(parametros) se comportan como
+      variables locales
+    </p>
     <h3>Invocacion de funciones</h3>
-    <p>Como ya se dijo, una funcion ejecuta el codigo dentro de ella, cuando algo la invoca o llama a la funcion</p>
+    <p>
+      Como ya se dijo, una funcion ejecuta el codigo dentro de ella, cuando algo
+      la invoca o llama a la funcion
+    </p>
     <p>Algunos casos de esta invocacion son:</p>
     <ul>
       <li>Cuando ocurre un evento(por ejemplo cuando se presiona un boton)</li>
       <li>Cuando se la llama desde el mismo codigo de JavaScript</li>
       <li>Automaticament(Cuando se auto invoca)</li>
     </ul>
-    <h3>Retornables de una funcion </h3>
-    <p>Cuando JavaScript alcance a una declaracion de la palabra reservada return, entonces la funcion se dejara de ejecutar</p>
-    <p>Si la funcion fue invocada desde una declaracion, JavaScript retornara a ejecutar el codigo despues de
-      declaracion invocadora
+    <h3>Retornables de una funcion</h3>
+    <p>
+      Cuando JavaScript alcance a una declaracion de la palabra reservada
+      return, entonces la funcion se dejara de ejecutar
     </p>
-    <p>Las funciones normalmente computan un valor para retornar, el valor es retornado o devuelto al llamador
-      , es decir, devuelve el valor computado a ese algo que lo llamo
+    <p>
+      Si la funcion fue invocada desde una declaracion, JavaScript retornara a
+      ejecutar el codigo despues de declaracion invocadora
+    </p>
+    <p>
+      Las funciones normalmente computan un valor para retornar, el valor es
+      retornado o devuelto al llamador , es decir, devuelve el valor computado a
+      ese algo que lo llamo
     </p>
     <pre>
       let xz = miFuncion(4,3);// la funcion es llamada, el valor devuelto sera guardado en la variable xz
@@ -648,7 +676,10 @@
     </pre>
     <h3>¿Porque usar funciones?</h3>
     <p>Las funciones se usan para usar un pedazo de codigo multiples veces</p>
-    <p>Puedes usar la funcion con diferentes argumentos, para obtener diferentes resultados</p>
+    <p>
+      Puedes usar la funcion con diferentes argumentos, para obtener diferentes
+      resultados
+    </p>
     <p>Por ejemplo, una funcion que convierta grados farenheit a celcius</p>
     <pre>
       function aCelsius(fahrenheit) {
@@ -657,14 +688,29 @@
       document.getElementById("demo").innerHTML = aCelsius(77);
     </pre>
     <h3>El Operedor () invoca a la funcion</h3>
-    <p>Cuando queremos usar, llamar o invocar a una funcion usamos el nombre de esta, seguido de () para que nos retorne un
-      resultado, ejecute un bloque de codigo, etc. Ademas de que como ya vimos podemos poner parametros dentro de los parentesis
+    <p>
+      Cuando queremos usar, llamar o invocar a una funcion usamos el nombre de
+      esta, seguido de () para que nos retorne un resultado, ejecute un bloque
+      de codigo, etc. Ademas de que como ya vimos podemos poner parametros
+      dentro de los parentesis
     </p>
-    <p>Acceder a la funcion sin usar los (), nos retornara el objeto de la funcion, en vez del resultado de la funcion</p>
-    <p>Basicamente nos retornara como se ve el codigo dentro de la funcion si no usamos parentesis</p>
+    <p>
+      Acceder a la funcion sin usar los (), nos retornara el objeto de la
+      funcion, en vez del resultado de la funcion
+    </p>
+    <p>
+      Basicamente nos retornara como se ve el codigo dentro de la funcion si no
+      usamos parentesis
+    </p>
     <h4>Usos de invocar a una funcion sin ()</h4>
-    <p>Cuando llamamos a una funcion sin los parentesis, podemos asignar la funcion a una variable, objeto, etc</p>
-    <p>Pero tambien podemos usar el llamado sin () para pasar una funcion como argumento a otra funcion!</p>
+    <p>
+      Cuando llamamos a una funcion sin los parentesis, podemos asignar la
+      funcion a una variable, objeto, etc
+    </p>
+    <p>
+      Pero tambien podemos usar el llamado sin () para pasar una funcion como
+      argumento a otra funcion!
+    </p>
     <p>Por ejemplo:</p>
     <pre>
       function saludar(nombre){
@@ -688,9 +734,11 @@
       //en este ejemplo se ve como creamos la funcion calcular, que acepta como 3er parametro una funcion para ver que operacion hara
     </pre>
     <h3>Funciones usadas como valores variables</h3>
-    <p>En JavaScript las funciones son consideradas ciudadanos de primera-clase, lo que signifca que pueden ser tratadas como cualquier
-      otro valor, como una cadena o numero. Esto signifca que las funciones pueden ser usadas de la misma forma en que las variables son
-      usadas para guardar datos.
+    <p>
+      En JavaScript las funciones son consideradas ciudadanos de primera-clase,
+      lo que signifca que pueden ser tratadas como cualquier otro valor, como
+      una cadena o numero. Esto signifca que las funciones pueden ser usadas de
+      la misma forma en que las variables son usadas para guardar datos.
     </p>
     <p>He aqui 2 ejemplos</p>
     <pre>
@@ -710,15 +758,21 @@
       }
       console.log(funcionesMatematicas.funcionDeMultiplicar(10*5));
     </pre>
-    <p>Las ventajas del segundo ejemplo son que podemos usar la funcion globalmente, ya que si las declaramos directamente dentro
-      del objeto, habria que referenciar al objeto tambien.
+    <p>
+      Las ventajas del segundo ejemplo son que podemos usar la funcion
+      globalmente, ya que si las declaramos directamente dentro del objeto,
+      habria que referenciar al objeto tambien.
     </p>
-    <p>Ademas, todo depende de que tan grande sean las funciones, ya que si son pequeñas podriamos ponerlas directamente dentro
-      del objeto, pero si son mas grandes, seria mejor hacer lo que se muestra en el segundo ejemplo y asi hacer nuestro codigo
-      mas legible, organizado y facil de usar
+    <p>
+      Ademas, todo depende de que tan grande sean las funciones, ya que si son
+      pequeñas podriamos ponerlas directamente dentro del objeto, pero si son
+      mas grandes, seria mejor hacer lo que se muestra en el segundo ejemplo y
+      asi hacer nuestro codigo mas legible, organizado y facil de usar
     </p>
-    <p>Inclusive, el segundo ejemplo podria ser mejorado usando funciones flecha, ya sea para acortar la sintaxis de la funcion
-      multiplicar o directamente escribirla en el mismo objeto
+    <p>
+      Inclusive, el segundo ejemplo podria ser mejorado usando funciones flecha,
+      ya sea para acortar la sintaxis de la funcion multiplicar o directamente
+      escribirla en el mismo objeto
     </p>
     <pre>
       const funcionesMatematicas = {
@@ -727,24 +781,44 @@
     </pre>
     <p>Luego entraremos mas a fondo a las funciones flecha</p>
     <h3>Variables Locales</h3>
-    <p>Variables declaradas dentro de una funcion, solo pueden ser usadas dentro de la funcion y no asi globalmente.</p>
-    <p>Esto significa que podemos usar los mismos nombres para variables dentro de diferentes funciones</p>
-    <p>La misma regla aplica tambien para los nombres de los parametros</p>
-    <p>Cabe resaltar que las variables son creadas cuando la funcion se inicializa y destruidas cuando la funcion es completada.</p>
-    <h2>Objetos</h2>
-    <p>Los objetos estan en todas partes, ya hemos aprendido que las variables son contenedores para valores de datos</p>
     <p>
-      Los objetos tambien son variables, pero los objetos pueden contener muchos valores
+      Variables declaradas dentro de una funcion, solo pueden ser usadas dentro
+      de la funcion y no asi globalmente.
+    </p>
+    <p>
+      Esto significa que podemos usar los mismos nombres para variables dentro
+      de diferentes funciones
+    </p>
+    <p>La misma regla aplica tambien para los nombres de los parametros</p>
+    <p>
+      Cabe resaltar que las variables son creadas cuando la funcion se
+      inicializa y destruidas cuando la funcion es completada.
+    </p>
+    <h2>Objetos</h2>
+    <p>
+      Los objetos estan en todas partes, ya hemos aprendido que las variables
+      son contenedores para valores de datos
+    </p>
+    <p>
+      Los objetos tambien son variables, pero los objetos pueden contener muchos
+      valores
     </p>
     <pre>
       const avion = {tipo: "civil", modelo:"500", color: "azul"}
     </pre>
-    <p>Los valores son escritos como pares de nombre:valor y cada nombre y valor separado por una coma</p>
-    <p>Ademas como ya vimos, es buena practica declarar un objeto con const, ya que el nombre del objeto siempre
-      sera el mismo, pero sus elementos dentro de el pueden cambiar
+    <p>
+      Los valores son escritos como pares de nombre:valor y cada nombre y valor
+      separado por una coma
+    </p>
+    <p>
+      Ademas como ya vimos, es buena practica declarar un objeto con const, ya
+      que el nombre del objeto siempre sera el mismo, pero sus elementos dentro
+      de el pueden cambiar
     </p>
     <h3>Definir un objeto</h3>
-    <p>Como ya vimos, puedes definir(y crear) un objeto con un literal de objeto</p>
+    <p>
+      Como ya vimos, puedes definir(y crear) un objeto con un literal de objeto
+    </p>
     <pre>
       const telefono = {
         modelo: "F2 PRO",
@@ -752,13 +826,14 @@
         so: "Android 12"
       }
     </pre>
-    <p>Los espacios y saltos de linea no importan, ya que la definicion de un objeto puede ocupar varias lineas</p>
+    <p>
+      Los espacios y saltos de linea no importan, ya que la definicion de un
+      objeto puede ocupar varias lineas
+    </p>
     <h3>Propiedades de los Objetos</h3>
     <p>Los pares de nombre:valor son llamados propiedades</p>
     <h3>Acceder a las propiedades de un Objeto</h3>
-    <p>
-      Hay dos formas de acceder a una propiedad de un objeto
-    </p>
+    <p>Hay dos formas de acceder a una propiedad de un objeto</p>
     <pre>
       nombreObjeto.nombrePropiedad;
       telefono.modelo;
@@ -770,8 +845,9 @@
     <h3>Metodos de un objeto</h3>
     <p>Los objetos tambien pueden tener metodos</p>
     <p>Los metodos son acciones que pueden ser realizadas en objetos</p>
-    <p>Los metodos son guardados en las propiedades como definiciones de funciones, es decir, un metodo es una funcion guardada como 
-      una propiedad
+    <p>
+      Los metodos son guardados en las propiedades como definiciones de
+      funciones, es decir, un metodo es una funcion guardada como una propiedad
     </p>
     <pre>
       const celular = {
@@ -782,23 +858,46 @@
       }
     </pre>
     <h3>Que es esto? ¿What is this in js?</h3>
-    <p>En JavaScript la palabra reservada this, hace referencia a un objeto, ahora, a que objeto se refiere, depende de varios factores</p>
-    <p>Basicamente se refiere a un objeto, pero al objeto al que se refiere depende de como es invocado</p>
+    <p>
+      En JavaScript la palabra reservada this, hace referencia a un objeto,
+      ahora, a que objeto se refiere, depende de varios factores
+    </p>
+    <p>
+      Basicamente se refiere a un objeto, pero al objeto al que se refiere
+      depende de como es invocado
+    </p>
     <ul>
-      <li>Cuando se usa this en un metodo dentro de un objeto, this se refiere al mismo objeto</li>
-      <li>Por si solo, this se refiere al objeto global, o sea a window, o a undefined si se usa el modo estricto</li>
+      <li>
+        Cuando se usa this en un metodo dentro de un objeto, this se refiere al
+        mismo objeto
+      </li>
+      <li>
+        Por si solo, this se refiere al objeto global, o sea a window, o a
+        undefined si se usa el modo estricto
+      </li>
       <li>Dentro de una funcion, this se refiere al objeto global</li>
       <li>En una funcion en modo estricto, this es indefinido</li>
       <li>En un evento, this se refiere al elemento que recibio el evento</li>
-      <li>Metodos como call(), apply() y bind() pueden hacer que this se refiera a cualquier objeto</li>
+      <li>
+        Metodos como call(), apply() y bind() pueden hacer que this se refiera a
+        cualquier objeto
+      </li>
     </ul>
     <h3>La palabra reservada <b>this</b></h3>
     <p>En la definicion de funciones, this se refiere al dueño de la funcion</p>
-    <p>Como en el ejemplo anterior this se refire al objeto celular que es dueña de la funcion llamar</p>
-    <p>Es decir que this.marca ser refiere a la propiedad marca de este mismo objeto</p>
+    <p>
+      Como en el ejemplo anterior this se refire al objeto celular que es dueña
+      de la funcion llamar
+    </p>
+    <p>
+      Es decir que this.marca ser refiere a la propiedad marca de este mismo
+      objeto
+    </p>
     <p>Para cuestiones de objetos esto es practicamente simple</p>
-    <p>Usando metodos built-in o funciones flecha, el scope de this puede cambiar segun como se lo invoque
-      asi que estar atentos a eso y los errores que podria traer
+    <p>
+      Usando metodos built-in o funciones flecha, el scope de this puede cambiar
+      segun como se lo invoque asi que estar atentos a eso y los errores que
+      podria traer
     </p>
     <p>Repasar this mas luego</p>
     <h3>Accediendo a los metodos de los objetos</h3>
@@ -806,17 +905,25 @@
     <pre>
       nombreObjeto.nombreMetodo();
     </pre>
-    <p>Y al igual que las funciones, si no usamos los parentesis(), accederemos al objeto de la funcion como tal y su definicion</p>
+    <p>
+      Y al igual que las funciones, si no usamos los parentesis(), accederemos
+      al objeto de la funcion como tal y su definicion
+    </p>
     <h3>Declarando Cadenas, Numeros y Booleanos como objetos</h3>
     <p>Al parecer no es recomendable hacerlo</p>
-    <a href="https://stackoverflow.com/questions/24620666/when-is-it-advisable-to-declare-string-number-and-boolean-as-objects-in-javascr">
+    <a
+      href="https://stackoverflow.com/questions/24620666/when-is-it-advisable-to-declare-string-number-and-boolean-as-objects-in-javascr"
+    >
       Explicacion de boolanos, strings y numbers como objetos
     </a>
     <h2>Eventos</h2>
     <p>Los eventos en html, son cosas que le pasan a los elementos de html</p>
     <p>JavaScript puede reaccionar a estos eventos</p>
     <h3>Eventos HTML</h3>
-    <p>Como ya vimos, los eventos en html son cosas que el navegador o el usuario puede hacer</p>
+    <p>
+      Como ya vimos, los eventos en html son cosas que el navegador o el usuario
+      puede hacer
+    </p>
     <p>Por ejemplo:</p>
     <ul>
       <li>Una pagina ha terminado de cargar</li>
@@ -825,7 +932,10 @@
     </ul>
     <p>Generalmente cuando un evento sucede, tu quedras hacer algo</p>
     <p>JavaScript te deja ejecutar codigo cuando algun evento es detectado</p>
-    <p>HTML permite atributos gestionadores de eventos, con codigo JavaScript, para ser añadidos a elementos html</p>
+    <p>
+      HTML permite atributos gestionadores de eventos, con codigo JavaScript,
+      para ser añadidos a elementos html
+    </p>
     <pre>
       &lt;elemento evento="Codigo JavaScript"&gt;
       // ya sea con comillas simples o dobles
@@ -838,8 +948,9 @@
       &lt;button onclick="this.innerHTML = Date()"&gt;El tiempo actual es&lt;/button&gt;
       //en este ejemplo el codigo cambia el contenido del elemento actual usando la palabra reservada this
     </pre>
-    <p>JavaScript ocupa a menudo varias lineas de codigo, asi que es mas comun ver atributos de tipo evento
-      llamando a funciones
+    <p>
+      JavaScript ocupa a menudo varias lineas de codigo, asi que es mas comun
+      ver atributos de tipo evento llamando a funciones
     </p>
     <pre>
       &lt;button onclick="mostrarFecha()"&gt;El tiempo actual es&lt;/button&gt;
@@ -853,41 +964,65 @@
       <li>onkeydown: un usuario pulsa una tecla</li>
       <li>onload: el navegador ha terminado de cargar la pagina</li>
     </ul>
-    <p>Existen muchisimos mas y deberian ser revisados para futura referencia</p>
+    <p>
+      Existen muchisimos mas y deberian ser revisados para futura referencia
+    </p>
     <h3>Gestionadores de Eventos en JavaScript</h3>
-    <p>Los gestionadores de eventos pueden ser usados para administrar, manejar y verificar
-      entradas del usuario, acciones del usuario y acciones del navegador
+    <p>
+      Los gestionadores de eventos pueden ser usados para administrar, manejar y
+      verificar entradas del usuario, acciones del usuario y acciones del
+      navegador
     </p>
     <ul>
       <li>Cosas que deberian ser hechas cada vez que carga la pagina</li>
       <li>Cosas que deberian ser hechas cuando la pagina se cierra</li>
-      <li>Acciones que deberian realizarse cuando un usuario presiona un boton</li>
-      <li>Contenido que debe ser verificado cuando un usuario introduce datos,etc</li>
+      <li>
+        Acciones que deberian realizarse cuando un usuario presiona un boton
+      </li>
+      <li>
+        Contenido que debe ser verificado cuando un usuario introduce datos,etc
+      </li>
     </ul>
-    <p>Hay diferentes metodos que pueden ser usados para permitir a JavaScript trabajar con eventos</p>
+    <p>
+      Hay diferentes metodos que pueden ser usados para permitir a JavaScript
+      trabajar con eventos
+    </p>
     <ul>
       <li>Atributos HTML de tipo evento pueden ejecutar codigo directamente</li>
       <li>Atributos HTML de tipo evento pueden llamar a funciones</li>
-      <li>Puedes asignar tus propias funciones manejadoras a elementos HTML(con addEventListener por ej)</li>
+      <li>
+        Puedes asignar tus propias funciones manejadoras a elementos HTML(con
+        addEventListener por ej)
+      </li>
       <li>Puedes evitar que eventos sean enviados o manejados, etc</li>
     </ul>
     <h2>Cadenas</h2>
-    <p>Como ya vimos las cadenas en JavaScript sirven para guardar y manipular basicamente texto</p>
-    <p>Una cadena en JavaScript es cero o mas caracteres escritos entre comillas, y como vimos se pueden usar
-      comillas dobles o simples
+    <p>
+      Como ya vimos las cadenas en JavaScript sirven para guardar y manipular
+      basicamente texto
     </p>
-    <p>A su vez podemos usar comillas dentro de una cadena siempre y cuando no sean las mismas con las que
-      encerramos el texto
+    <p>
+      Una cadena en JavaScript es cero o mas caracteres escritos entre comillas,
+      y como vimos se pueden usar comillas dobles o simples
+    </p>
+    <p>
+      A su vez podemos usar comillas dentro de una cadena siempre y cuando no
+      sean las mismas con las que encerramos el texto
     </p>
     <h3>Longitud de una cadena</h3>
-    <p>Para hallar la longitud de una cadena, usamos la propiedad incorporada: length</p>
+    <p>
+      Para hallar la longitud de una cadena, usamos la propiedad incorporada:
+      length
+    </p>
     <pre>
       let texto = "Hola Pianola";
       let longitud = texto.length;
     </pre>
     <h3>Caracteres de Escape</h3>
-    <p>Cuando queremos escribir si o si comillas con comillas o usar backslashes dentro de una cadena,
-      usamos el caracter de escape \ que nos permite escribir caracteres especiales dentro de cadenas
+    <p>
+      Cuando queremos escribir si o si comillas con comillas o usar backslashes
+      dentro de una cadena, usamos el caracter de escape \ que nos permite
+      escribir caracteres especiales dentro de cadenas
     </p>
     <pre>
       var mensaje = "El es el \"elegido\" de la tribu";
@@ -902,27 +1037,36 @@
       <li>\t horizontal tabulator o tabulacion horizontal</li>
       <li>\v vertical tabulator o tabulacion vertical</li>
     </ul>
-    <p>Puede que reconozcas estos caracteres de otros lenguajes, sin embargo no tienen ningun sentido en HTML
-      ya que fueron creados para controlar maquinas de escribir
+    <p>
+      Puede que reconozcas estos caracteres de otros lenguajes, sin embargo no
+      tienen ningun sentido en HTML ya que fueron creados para controlar
+      maquinas de escribir
     </p>
     <h3>Separar largas lineas de codigo</h3>
-    <p>Para mejor legibilidad es buena practica dar un nuevo salto de linea si la linea actual
-      supera los 80 caracteres
+    <p>
+      Para mejor legibilidad es buena practica dar un nuevo salto de linea si la
+      linea actual supera los 80 caracteres
     </p>
-    <p>Si una declaracion de JavaScript no cabe en una linea, lo recomendable es pasar a la siguiente
-      despues de un operador
+    <p>
+      Si una declaracion de JavaScript no cabe en una linea, lo recomendable es
+      pasar a la siguiente despues de un operador
     </p>
     <pre>
       document.getElementById("demo").innerHTML =
       "Hello Dolly!";
     </pre>
-    <p>Tambien puedes separar una linea de codigo dentro de una cadena usando el caracter \</p>
+    <p>
+      Tambien puedes separar una linea de codigo dentro de una cadena usando el
+      caracter \
+    </p>
     <pre>
       document.getElementById("demo").innerHTML = "Hello \
       Dolly!";
     </pre>
-    <p>Sin embargo el metodo de usar un backslash no es recomendable ya que puede no tener soporte
-      universal ya que algunos navegadores no permiten espacios antes del caracter \
+    <p>
+      Sin embargo el metodo de usar un backslash no es recomendable ya que puede
+      no tener soporte universal ya que algunos navegadores no permiten espacios
+      antes del caracter \
     </p>
     <p>Un mejor manera de separar una cadena es usar concatenacion</p>
     <pre>
@@ -931,13 +1075,21 @@
     </pre>
     <p>Ademas no se puede separar una lina de codigo con un backslash</p>
     <h3>Cadenas como Objetos</h3>
-    <p>Normalmente las cadenas en JavaScript son valores primitivos creados desde literales</p>
-    <p>Pero las cadenas tambien pueden ser definidas como objetos usando la palabra clave new</p>
+    <p>
+      Normalmente las cadenas en JavaScript son valores primitivos creados desde
+      literales
+    </p>
+    <p>
+      Pero las cadenas tambien pueden ser definidas como objetos usando la
+      palabra clave new
+    </p>
     <pre>
       let ds = new String("JavaScript");
     </pre>
     <p>Como ya vimos anteriormente, no se deben crear objetos de tipo cadena</p>
-    <p>La palabra clave new complica el codigo y ralentiza el tiempo de ejecucion</p>
+    <p>
+      La palabra clave new complica el codigo y ralentiza el tiempo de ejecucion
+    </p>
     <p>Ademas objetos de tipo cadena pueden producir resultados inesperados</p>
     <pre>
       let x = 'Joel';
@@ -958,7 +1110,8 @@
       console.log(x==z);
       // el resultado siempre sera false ya sea si usamos == o === ya que los objetos no pueden ser comparados entre si
     </pre>
-    <p>Es mejor dejarlo en primitivos ya que ademas JavaScript convierte
+    <p>
+      Es mejor dejarlo en primitivos ya que ademas JavaScript convierte
       momentaneamente las cadenas a objetos cuando usamos sus metodos.
     </p>
     <h2>Metodos de cadenas</h2>
@@ -993,56 +1146,87 @@
     <h3>Extrayendo partes de una cadena</h3>
     <p>Hay 3 formas de extrar una parte de una cadena</p>
     <h4>Slice()</h4>
-    <p>El metodo slice() nos permite extraer parte de una cadena y nos devuelve
+    <p>
+      El metodo slice() nos permite extraer parte de una cadena y nos devuelve
       la cadena extraida en una nueva cadena
     </p>
-    <p>El metodo acepta dos parametros, la posicion inicial y final donde hacer
+    <p>
+      El metodo acepta dos parametros, la posicion inicial y final donde hacer
       el corte
     </p>
     <pre>
       text.slice(7,13);
     </pre>
     <p>JavaScript cuenta las posiciones desde 0</p>
-    <p>Si se omite el segundo parametro, se cortara la cadena hasta el final de esta</p>
-    <p>Si un parametro es negativo, la posicion es contada desde el final de la cadena</p>
+    <p>
+      Si se omite el segundo parametro, se cortara la cadena hasta el final de
+      esta
+    </p>
+    <p>
+      Si un parametro es negativo, la posicion es contada desde el final de la
+      cadena
+    </p>
     <pre>
       texto.slice(-14,-7);
       // basicamente se va contando hacia el lado positivo desde la posicion final, es decir -14,-13,etc
     </pre>
     <h4>Substring()</h4>
     <p>substring() es similar a slice()</p>
-    <p>La diferencia radica en que basicamente no podemos introducir valores negativos
-      , ya que estos seran tratados como ceros por el metodo substring()
+    <p>
+      La diferencia radica en que basicamente no podemos introducir valores
+      negativos , ya que estos seran tratados como ceros por el metodo
+      substring()
     </p>
-    <p>E igualmente si se omite el segundo parametro, se cortara el resto de la cadena</p>
+    <p>
+      E igualmente si se omite el segundo parametro, se cortara el resto de la
+      cadena
+    </p>
     <pre>
       libro.substring(5,7);
     </pre>
     <h4>Substr()</h4>
     <p>Finalmente tenemos substr()</p>
-    <p>Es similar a slice(), pero la diferencia es que el segundo parametro dice la cantidad
-      de caracteres que se van a cortar, es decir la longitud de la parte a cortar
+    <p>
+      Es similar a slice(), pero la diferencia es que el segundo parametro dice
+      la cantidad de caracteres que se van a cortar, es decir la longitud de la
+      parte a cortar
     </p>
-    <p>Si omitimos el segundo parametro substr() cortara hasta el final de la cadena</p>
-    <p>Y si el primer parametro es negativo, se empezara a contar desde el final de la cadena</p>
+    <p>
+      Si omitimos el segundo parametro substr() cortara hasta el final de la
+      cadena
+    </p>
+    <p>
+      Y si el primer parametro es negativo, se empezara a contar desde el final
+      de la cadena
+    </p>
     <pre>
       gg.substr(-2,5);
     </pre>
     <h3>Reemplazando contenido de una cadena</h3>
-    <p>El metodo replace() reemplaza un valor especificado con otro dentro de una cadena</p>
+    <p>
+      El metodo replace() reemplaza un valor especificado con otro dentro de una
+      cadena
+    </p>
     <pre>
       let gpt = "Microsoft es una corporacion malevola";
       let google = gpt.replace("Microsoft","Google");
       // google = 'Google es una corporacion malevola';
     </pre>
-    <p>Cabe resaltar que el metod replace() no cambia la cadena donde es llamado</p>
+    <p>
+      Cabe resaltar que el metod replace() no cambia la cadena donde es llamado
+    </p>
     <p>El metodo replace() retorna una nueva cadena</p>
     <p>El metodo solo reemplaza la primera coincidencia</p>
-    <p>Se puede usar una expresion regular con la bandera global /g puesta para reemplazar todas las coincidencia</p>
+    <p>
+      Se puede usar una expresion regular con la bandera global /g puesta para
+      reemplazar todas las coincidencia
+    </p>
     <p>Por defecto, replace() es sensible a mayusculas y minusculas</p>
-    <p>Para que no distinga entre mayusculas y minusculas debemos usar la bandera /i dentro de la expresion regular
-      (i de insensitive) , estas flags son aplicadas al primer argumento del metodo, que se refiere a la parte de 
-      la cadena que queremos reemplazar
+    <p>
+      Para que no distinga entre mayusculas y minusculas debemos usar la bandera
+      /i dentro de la expresion regular (i de insensitive) , estas flags son
+      aplicadas al primer argumento del metodo, que se refiere a la parte de la
+      cadena que queremos reemplazar
     </p>
     <pre>
       let coca = "me gusta la coca cola y la coca de mascar";
@@ -1056,26 +1240,37 @@
       // el uso de la bandera /i convierte a replace en insensitivo a mayusculas o minusculas
     </pre>
     <h3>JavaScript replaceAll()</h3>
-    <p>Pues es más que obvio que usando replaceAll() se nos permitira reemplazar todas
-      las coincidencias, aunque este sigue siendo case sensitive
+    <p>
+      Pues es más que obvio que usando replaceAll() se nos permitira reemplazar
+      todas las coincidencias, aunque este sigue siendo case sensitive
     </p>
-    <p>Ademas replaceAll() nos deja poner como en replace() una expresion regular en lugar
-      de una cadena, aunque en este caso siempre debemos usar la bandera global /g
-      para evitar errores.
+    <p>
+      Ademas replaceAll() nos deja poner como en replace() una expresion regular
+      en lugar de una cadena, aunque en este caso siempre debemos usar la
+      bandera global /g para evitar errores.
     </p>
     <pre>
       text = text.replaceAll(/Cats/g,"Dogs");
     </pre>
-    <p>replaceAll() es una caracteristica de ES2021, por lo tanto no sirve en internet explorer, pero a quien le importa eso XD, ademas tal vez babel pueda ser usable para eso
+    <p>
+      replaceAll() es una caracteristica de ES2021, por lo tanto no sirve en
+      internet explorer, pero a quien le importa eso XD, ademas tal vez babel
+      pueda ser usable para eso
     </p>
     <h3>Convirtiendo a mayusculas o minusculas</h3>
-    <p>Esto es directo, para convertir una cadena a mayusculas, usamos: toUpperCase()</p>
+    <p>
+      Esto es directo, para convertir una cadena a mayusculas, usamos:
+      toUpperCase()
+    </p>
     <p>Y para convertir a minusculas usamos: toLowerCase();</p>
-    <p>Y como ya sabemos, esto retorna una nueva cadena, no modifica la original</p>
+    <p>
+      Y como ya sabemos, esto retorna una nueva cadena, no modifica la original
+    </p>
     <h3>Concatenacion</h3>
-    <p>Usando el metodo concat(), se nos permite unir 2 o mas cadenas
-      y parece ser un buen reemplazo a +, ya que concat() nos permite unir infinitas cadenas
-      y + solo 2 a la vez
+    <p>
+      Usando el metodo concat(), se nos permite unir 2 o mas cadenas y parece
+      ser un buen reemplazo a +, ya que concat() nos permite unir infinitas
+      cadenas y + solo 2 a la vez
     </p>
     <pre>
       let palabra1 = "Hola";
@@ -1087,40 +1282,56 @@
       text = "Hello" + " World!";
       text = "Hello".concat("World!");
     </pre>
-    <p>Podrias decir que + es mas facil de escribir, pero la ventaja de concat() es que siempre
-      retorna una nueva cadena y que ademas puedes concatenar cuantas cadenas como quieras
+    <p>
+      Podrias decir que + es mas facil de escribir, pero la ventaja de concat()
+      es que siempre retorna una nueva cadena y que ademas puedes concatenar
+      cuantas cadenas como quieras
     </p>
     <h3>Consideraciones en cadenas</h3>
-    <p>Como vimos, todos los metodos retornan una nueva cadena y no modifican la cadena original,
-      es decir, las cadenas son inmutables, las cadenas no pueden ser cambiadas, solo reemplazadas
+    <p>
+      Como vimos, todos los metodos retornan una nueva cadena y no modifican la
+      cadena original, es decir, las cadenas son inmutables, las cadenas no
+      pueden ser cambiadas, solo reemplazadas
     </p>
     <h3>JavaScript trim(), trimStart() y trimEnd()</h3>
     <p>El metodo trim() remueve los espacios en ambos lados de una cadena</p>
-    <p>Los metodos trimStart() y trimEnd() fueron agregados en ES2019 y pues
-      hacen lo que dice su nombre no?, remueven espacios al inicio y final de una cadena respectivamente
+    <p>
+      Los metodos trimStart() y trimEnd() fueron agregados en ES2019 y pues
+      hacen lo que dice su nombre no?, remueven espacios al inicio y final de
+      una cadena respectivamente
     </p>
-    <p>Si quisieramos reemplzar los espacios entre palabras, podriamos usar replaceAll()</p>
+    <p>
+      Si quisieramos reemplzar los espacios entre palabras, podriamos usar
+      replaceAll()
+    </p>
     <pre>
       let str = "PB 10 CV 2662";
       str = str.replaceAll(' ', '');
     </pre>
     <h3>Rellenado de Cadenas en JavaScript</h3>
-    <p>ES2017 agrego dos nuevos metodos para poder agregar "relleno" a las cadenas</p>
-    <p>El relleno basicamente concatena la cadena original con otra cadena que le digamos, hasta que 
-      la cadena sea del valor que igual pusimos dentro del metodo, si la cadena ya es de ese tamaño o 
-      mas grande, entonces no se agrega nada, y si no se especifica el segundo parametro, el valor por 
+    <p>
+      ES2017 agrego dos nuevos metodos para poder agregar "relleno" a las
+      cadenas
+    </p>
+    <p>
+      El relleno basicamente concatena la cadena original con otra cadena que le
+      digamos, hasta que la cadena sea del valor que igual pusimos dentro del
+      metodo, si la cadena ya es de ese tamaño o mas grande, entonces no se
+      agrega nada, y si no se especifica el segundo parametro, el valor por
       defecto es espacio.
     </p>
     <h4>padStart()</h4>
-    <p>padStart() como indica su nombre, nos permite rellenar una cadena
-      con otra que le digamos hasta que la longitud deseada sea alcanzada
+    <p>
+      padStart() como indica su nombre, nos permite rellenar una cadena con otra
+      que le digamos hasta que la longitud deseada sea alcanzada
     </p>
     <pre>
       let cadena = "XD";
       let nuevaCadena = cadena.padStart(5,"X");
       // XXXXD
     </pre>
-    <p>padStart() es un metodo de cadenas, para usar numeros, antes debemos
+    <p>
+      padStart() es un metodo de cadenas, para usar numeros, antes debemos
       convertir el numero a una cadena
     </p>
     <pre>
@@ -1129,12 +1340,14 @@
       let relleno = cadenita.padStart(4,"0");
       // 0025
     </pre>
-    <p>padStart() y padEnd() son caracteristicas de ES2017
-      por lo tanto no funcionan en navegadores previos a esa version
+    <p>
+      padStart() y padEnd() son caracteristicas de ES2017 por lo tanto no
+      funcionan en navegadores previos a esa version
     </p>
     <h4>padEnd()</h4>
-    <p>padEnd() es exactamente igual que padStart() solo que el relleno
-      se pone al final de la cadena
+    <p>
+      padEnd() es exactamente igual que padStart() solo que el relleno se pone
+      al final de la cadena
     </p>
     <pre>
       let txt = "cadena";
@@ -1156,8 +1369,9 @@
       // H
     </pre>
     <h4>JavaScript charCodeAt()</h4>
-    <p>Este metodo nos devuelve el unicode del caracter en la posicion que
-      le especifiquemos
+    <p>
+      Este metodo nos devuelve el unicode del caracter en la posicion que le
+      especifiquemos
     </p>
     <p>EL metodo retorna un codigo en UTF-16</p>
     <pre>
@@ -1173,11 +1387,13 @@
     </pre>
     <p>El acceso a la propiedad puede ser un poco impredecibel</p>
     <p>Hace que las cadenas parezcan arreglos</p>
-    <p>Si no se encuentra ningun caracter, [] retoruna indefinido, mientras Que
+    <p>
+      Si no se encuentra ningun caracter, [] retoruna indefinido, mientras Que
       charAt() retorna una cadena vacia
     </p>
-    <p>El uso de [] es solo de lectura si intentamos usar un operador de asignacion
-      no tira un error, PERO OJO, aun asi no sirve
+    <p>
+      El uso de [] es solo de lectura si intentamos usar un operador de
+      asignacion no tira un error, PERO OJO, aun asi no sirve
     </p>
     <pre>
       let texto = 'BLA';
@@ -1194,72 +1410,96 @@
       texto.split("|")
     </pre>
     <p>El argumento que acepta, son los separadores</p>
-    <p>Si el separador es omitido, el arreglo devuelto contendra toda la
-      caden en la posicion 0 del arreglo      
+    <p>
+      Si el separador es omitido, el arreglo devuelto contendra toda la caden en
+      la posicion 0 del arreglo
     </p>
-    <input type="text" id="separadorCadena">
+    <input type="text" id="separadorCadena" />
     <button onclick="cadenaArreglo()">Mostrar conversion</button>
     <p id="cadena"></p>
     <p>split() funciona de la siguiente manera</p>
-    <p>Dentro del metodo podemos poner un parametro donde se recibe el separador
+    <p>
+      Dentro del metodo podemos poner un parametro donde se recibe el separador
       cabiendo resaltar que la cadema a separar debe contener por lo menos un
-      caracter igual al que usamos de separador, es decir, que si tenemos en nuestra
-      cadena original varias comas, podemos elegir usar las comas como separador al 
-      convertir la cadena en un arreglo. Basicamente el parametro que acepta split()
-      define el separador, ya sea espacios, comas, puntos o incluso una misma letra
+      caracter igual al que usamos de separador, es decir, que si tenemos en
+      nuestra cadena original varias comas, podemos elegir usar las comas como
+      separador al convertir la cadena en un arreglo. Basicamente el parametro
+      que acepta split() define el separador, ya sea espacios, comas, puntos o
+      incluso una misma letra
     </p>
     <h2>Busqueda dentro de cadenas</h2>
     <h3>JavaScript indexOf() y lastIndexOf()</h3>
-    <p>El metodo indexOf() retorna la posicion de la primera coincidencia especificada a 
-      buscar dentro de una cadena, indexOf se traduciria como indiceDe()
+    <p>
+      El metodo indexOf() retorna la posicion de la primera coincidencia
+      especificada a buscar dentro de una cadena, indexOf se traduciria como
+      indiceDe()
     </p>
     <pre>
       var texto = 'encuentra la posicion de "encuentra"';
       var posicion = texto.indexOf("posicion");
     </pre>
     <p>Como ya sabemos, JS cuenta posiciones desde 0</p>
-    <p>lastIndexOf() por otra parte retorna la posicion de la ultima ocurrencia especificada
-      a buscar dentro de una cadena
+    <p>
+      lastIndexOf() por otra parte retorna la posicion de la ultima ocurrencia
+      especificada a buscar dentro de una cadena
     </p>
-    <p>Ambos indexOf() y lastIndexOf() retornan -1 si es texto a buscar no es encontrado</p>
-    <p>Ambos metodos aceptan un segundo parametro que indica desde que posicion empezar la busqueda</p>
-    <p>En el caso de lastIndexOf() se cuenta al reves, es decir, si se le especifica una posicion
-      de donde empezar la busqueda, entonces el metodo buscara desde esa posicion hasta el inicio de 
-      la cadena
+    <p>
+      Ambos indexOf() y lastIndexOf() retornan -1 si es texto a buscar no es
+      encontrado
+    </p>
+    <p>
+      Ambos metodos aceptan un segundo parametro que indica desde que posicion
+      empezar la busqueda
+    </p>
+    <p>
+      En el caso de lastIndexOf() se cuenta al reves, es decir, si se le
+      especifica una posicion de donde empezar la busqueda, entonces el metodo
+      buscara desde esa posicion hasta el inicio de la cadena
     </p>
     <h3>JavaScript search()</h3>
-    <p>El metodo search() busca una cadena(o expresion regular) dentro de una cadena y retorna
-      la posicion de la coincidencia
+    <p>
+      El metodo search() busca una cadena(o expresion regular) dentro de una
+      cadena y retorna la posicion de la coincidencia
     </p>
     <pre>
       let teseracto = 'Glorious Purpose!!!';
       let loki = teseracto.search("Glorious")
       let lokiRegex = teseracto.search(/Glorious/);
     </pre>
-    <p>La diferencia entre search() e indexOf() es que search acepta expresiones regulares, pero
-      no puede indicar una posicion desde donde emprezar a buscar, lo cual indexOf si puede hacer
-      pero no puede usar expresiones regulares.
+    <p>
+      La diferencia entre search() e indexOf() es que search acepta expresiones
+      regulares, pero no puede indicar una posicion desde donde emprezar a
+      buscar, lo cual indexOf si puede hacer pero no puede usar expresiones
+      regulares.
     </p>
     <h3>JavaScript match()</h3>
-    <p>El metodo match() devuelve un arreglo que contiene todas las coincidencias resultantes
-    al buscar una cadena dentro de otra cadena</p>
+    <p>
+      El metodo match() devuelve un arreglo que contiene todas las coincidencias
+      resultantes al buscar una cadena dentro de otra cadena
+    </p>
     <pre>
       let texto = "Pablito clavo un clavito en la calva de un calvito";
       texto.match("ito");
     </pre>
-    <p>Tambien podemos usar expresiones regulares dentro de match
-    y cabe resaltar que match por si solo solo devuelve la primera coincidencia
-    , si queremos que devuelva todas las coincidencias, debemos usar al igual que en los metodos
-    anteriores, la bandera global, /g, e i/ si queremos que no distinga entre mayusculas y minusculas</p>
+    <p>
+      Tambien podemos usar expresiones regulares dentro de match y cabe resaltar
+      que match por si solo solo devuelve la primera coincidencia , si queremos
+      que devuelva todas las coincidencias, debemos usar al igual que en los
+      metodos anteriores, la bandera global, /g, e i/ si queremos que no
+      distinga entre mayusculas y minusculas
+    </p>
     <pre>
       let texto = "Pablito clavo un clavito en la calva de un calvito";
       texto.match(/ito/g); //global sensible
       texto.match(/ito/gi); //global insensible
     </pre>
     <h3>JavaScript matchAll()</h3>
-    <p>Introducido en ES2020, matchAll() hace lo que dice, devuelve todas las cadenas que coinciden con la
-    busqueda en un arreglo, y al igual que replaceAll() acepta expresiones regulares, y la bandera global
-    /g es obligatoria</p>
+    <p>
+      Introducido en ES2020, matchAll() hace lo que dice, devuelve todas las
+      cadenas que coinciden con la busqueda en un arreglo, y al igual que
+      replaceAll() acepta expresiones regulares, y la bandera global /g es
+      obligatoria
+    </p>
     <pre>
       let pablo = "Pablito clavo un clavito en la calva de un calvito";
       let objetoIterable = pablo.matchAll("ito");
@@ -1267,20 +1507,27 @@
     </pre>
     <p>matchAll() devuelve un iterador, no un arreglo</p>
     <h3>JavaScript includes()</h3>
-    <p>El metodo includes() (incluye) retorna true si una cadena contiene un valor especificado
-    ademas tiene un segundo parametro que permite elegir la posicion desde la cual se empezara
-    a buscar, y al igual que en otros metodos, se puede usar numeros negativos para iniciar la busqueda
-    al rever</p>
+    <p>
+      El metodo includes() (incluye) retorna true si una cadena contiene un
+      valor especificado ademas tiene un segundo parametro que permite elegir la
+      posicion desde la cual se empezara a buscar, y al igual que en otros
+      metodos, se puede usar numeros negativos para iniciar la busqueda al rever
+    </p>
     <pre>
       let text = "Hello world, welcome to the universe.";
       text.includes("world", 12);
     </pre>
     <p>includes() es case sensitive, y fue agregado en ES6</p>
     <h3>JavaScript startsWith() y endsWith()</h3>
-    <p>Estos metodos retornan true si una cadena empieza o termina con un valor especificado
-    respectivamente</p>
-    <p>Al igual que el anterior metodo, tienen un segundo parametro para indicar desde donde buscar
-    en el caso de startsWith() y hasta donde buscar en el caso de endsWith()</p>
+    <p>
+      Estos metodos retornan true si una cadena empieza o termina con un valor
+      especificado respectivamente
+    </p>
+    <p>
+      Al igual que el anterior metodo, tienen un segundo parametro para indicar
+      desde donde buscar en el caso de startsWith() y hasta donde buscar en el
+      caso de endsWith()
+    </p>
     <p>Igualmente son case sensitive y fueron agregados en ES6</p>
     <pre>
       let hola = "Hola Mundo Hola mundo mundoso";
@@ -1298,23 +1545,23 @@
       <li>Back-Ticks Syntax</li>
     </ul>
     <h3>Sintaxis de acento invertido</h3>
-    <p>Las plantillas de literales en JavaScript usan acentos invertidos (`) en 
+    <p>
+      Las plantillas de literales en JavaScript usan acentos invertidos (`) en
       lugar de comillas ("")
     </p>
     <pre>
       let adios = `Nueva Sintaxis`
     </pre>
     <h3>Comillas dentro de cadenas</h3>
-    <p>Con plantillas de literales, puedes usar tanto comillas dobles como simples
-      al mismo tiempo
+    <p>
+      Con plantillas de literales, puedes usar tanto comillas dobles como
+      simples al mismo tiempo
     </p>
     <pre>
       var texto = `EL es la 'mejor' opcion "posible"`;
     </pre>
     <h3>Cadenas Multilineas</h3>
-    <p>
-      Las plantillas de literales permiten usar cadenas de multiples lineas
-    </p>
+    <p>Las plantillas de literales permiten usar cadenas de multiples lineas</p>
     <pre>
       let pag = 
       `Tres tristes
@@ -1322,13 +1569,49 @@
       que mas`;
     </pre>
     <h3>Interpolacion</h3>
-    <p>Este es quizas el metodo mas usado,  util y popular de los literales de cadena</p>
-    <p>Esta interpolacion provee una manera facil de interpolar variables Y
+    <p>
+      Este es quizas el metodo mas usado, util y popular de los literales de
+      cadena
+    </p>
+    <p>
+      Esta interpolacion provee una manera facil de interpolar variables Y
       expresiones dentro de cadenas
     </p>
     <p>La sintaxis es: ${...}</p>
     <h3>Substitucion de variables</h3>
-    <p>L</p>
+    <p>Las plantillas de literales permiten usar variables dentro de cadenas</p>
+    <pre>
+      let primerNombre = "Joel Aguirrez";
+      let edad = 24;
+      let texto = `Su nombre es ${primerNombre} y su edad es ${edad}`;
+    </pre>
+    <p>A esto se le llama interpolacion</p>
+    <h3>Substitucion de expresiones</h3>
+    <p>
+      Las plantillas de literales permiten tambien expresiones dentro de cadenas
+    </p>
+    <pre>
+      let valor = 13;
+      let impuesto = 45;
+      let total = `Total: ${valor*(1+impuesto).toFixed(3)}`
+    </pre>
+    <h3>Plantillas de HTML</h3>
+    <pre>
+      let cabecera = "Plantillas de literales";
+      let etiquetas = ["tag","literales","flutter"];
+      let html = `&lt;h2&gt;${cabecera}&lt;/h2&gt;`;
+      for(const x of etiquetas){
+        html = html+`&lt;li&gt;${x}&lt;/li&gt;`;
+      }
+      html+= `&lt;/ul&gt;`
+    </pre>
+    <button id="btnLiterals">Mostrar ejemplo</button>
+    <caption>
+      Doble click para ocultar
+    </caption>
+    <p id="demoLiterals"></p>
+    <h2>Numeros en JavaScript</h2>
+    <p>JavaScript solo tiene un tipo de numero, y puede ser escrito con o sin punto decimal</p>
     <script>
       function saludar() {
         document.getElementById("script").innerHTML = "Bienvenido a JS";

@@ -89,3 +89,37 @@ function cadenaArreglo() {
 let pablo = "Pablito clavo un clavito en la calva de un calvito";
 let objetoIterable = pablo.matchAll("ito");
 console.log(objetoIterable.next());
+
+
+document.getElementById('btnLiterals').addEventListener('click',()=>{
+  let cabecera = "Plantillas de literales";
+  let etiquetas = ["tag","literales","flutter"];
+  let html = `<h2>${cabecera}</h2>`;
+  for(const x of etiquetas){
+    html = html+`<li>${x}</li>`;
+  }
+  html+= `</ul>`;
+  document.getElementById('demoLiterals').innerHTML = html;
+});
+document.getElementById('btnLiterals').addEventListener('dblclick',()=>{
+  document.getElementById('demoLiterals').innerHTML = "";
+})
+
+/*
+This seems to be a valid approach, but its less efficient because the
+browser has to re-render the element, whereas if you just change the
+element's style it won't reload
+*/
+
+/* 
+GPT Solution
+document.getElementById("toggleButton").addEventListener("click", function() {
+	var x = document.getElementById("htmlContent");
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+});
+
+*/
