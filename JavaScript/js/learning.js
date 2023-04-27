@@ -123,4 +123,9 @@ document.getElementById("toggleButton").addEventListener("click", function() {
 });
 
 nice
+the quick fix keybinding is ctrl+.
 */
+
+
+// let gigante = 56n;
+// console.log(gigante/3);

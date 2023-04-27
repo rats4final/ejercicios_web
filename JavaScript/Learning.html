@@ -1612,6 +1612,260 @@
     <p id="demoLiterals"></p>
     <h2>Numeros en JavaScript</h2>
     <p>JavaScript solo tiene un tipo de numero, y puede ser escrito con o sin punto decimal</p>
+    <p>Como ya vimos anteriormente, los numeros en JavaScript pueden tambien ser escritos en 
+      notacion cientifica
+    </p>
+    <h3>Los numeros en JavaScript siempre son de 64 bits de coma flotante</h3>
+    <p>Por eso no hay short, long, etc en JavaScript , esto hay que tenerlo en cuenta
+      si probablemente vemos resultados no esperados en decimales(como 0.1+0.2) o si
+      trabajamos con numeros muy grandes
+    </p>
+    <h3>Precision de enteros</h3>
+    <p>Los enteros son exactos has 15 digitos</p>
+    <p>Ademas el maximo numero de decimales es 17</p>
+    <pre>
+      let x = 999999999999999;// x sera 999999999999999
+      let z = 9999999999999999;// z sera 10000000000000000
+    </pre>
+    <h3>Precision de coma flotante</h3>
+    <p>
+      Como dije anteriormente, la coma flotante a veces no es 100% exacta
+    </p>
+    <pre>
+      let sum = 0.1+0.2
+      //0.30000000000000004
+    </pre>
+    <p>Para resolver este problema, a veces ayuda multiplicar y dividir</p>
+    <pre>
+      let x = (0.2 * 10 + 0.1 * 10) / 10;
+    </pre>
+    <h3>Sumando numeros y cadenas</h3>
+    <p>JavaScript usa el operador + tanto para suma como para concatenacion</p>
+    <p>Los numeros son sumados, las cadenas concatenadas.</p>
+    <ul>
+      <li>Si sumas dos numeros, el resultado sera un numero</li>
+      <li>Si "sumas" dos cadenas, el resultado sera una concatenacion de las cadenas</li>
+      <li>Si sumas un numero y una cadena(o viceversa), el resultado sera una concatenacion de ambos valores</li>
+    </ul>
+    <p>El siguiente es un error comun, es esperar que el resultado sea 30</p>
+    <pre>
+      let x = 10;
+      let y = 20;
+      let z = "The result is: " + x + y;
+    </pre>
+    <p>Es un error comun esperar que el resultado sea 102030</p>
+    <pre>
+      let x = 10;
+      let y = 20;
+      let z = "30";
+      let result = x + y + z;
+    </pre>
+    <p>El interpretador de JavaScript funciona de izquierda a derecha</p>
+    <p>Lo que pasa en el segundo ejemplo, es que primero x,y son sumados, ya
+      que ambos son numeros, pero luego z es concatenada ya que es una cadena
+    </p>
+    <p>El el primer resultado debido a que primero estamos concatenando una cadena
+      con x, y tambien se concatena seguidamente, ya que el resultado de la cadena mas
+      x es una concatenacion, eso se puede evitar encerrando a x,y entre parentesis
+      ya que creo que JavaScript ejecutara lo que esta dentro de parentesis primero
+    </p>
+    <h3>Cadenas Numericas</h3>
+    <p>JavaScript intentara convertir cadenas a numeros in todas las operaciones numericas
+      (salvo la suma obviamente)
+    </p>
+    <pre>
+      let x = "100";
+      let y = "5";
+      let z = x / y;
+    </pre>
+    <p>usando / ** * -, funcionara e incluso podriamos hacer:</p>
+    <pre>
+      let x = "100";
+      let y = 5;
+      let z = x * y;
+    </pre>
+    <p>Y tambien funcionara</p>
+    <h3>NaN (Not a Number) No es un numero</h3>
+    <p>NaN es una palabra reservada que indica que un numero no es un numero "legal"</p>
+    <p>Intentar realizar operaciones aritmeticas con una cadena no numerica, resultara en NaN</p>
+    <pre>
+      let x = 1000*"Banana";
+    </pre>
+    <p>Pero como vimos si la cadena es numerica, entonces si tendremos un resultado valido</p>
+    <p>Se puede usar la funcion global isNaN() para verificar si un valor no es un numero
+      y esta funcion nos retorna true si el valor a evaluar efectivamente no es un numero
+    </p>
+    <p>
+      Hay que tener cuidado con NaN, si usas NaN en una operacion matematica, el
+      resultado tambien sera NaN, basicamente creando una reaccion en cadena
+    </p>
+    <pre>
+      let x = NaN;
+      let y = 5;
+      let z = x + y;
+      // esto tirara NaN
+    </pre>
+    <p>O el resultado podria ser tambien una concatenacion</p>
+    <pre>
+      let x = NaN;
+      let y = "5";
+      let z = x + y;
+      // esto tira NaN5
+    </pre>
+    <p>Curiosamente NaN es un numero, typeof NaN retorna number</p>
+    <h3>Infinity(infinito)</h3>
+    <p>Infinity o -Infinity, es el valor que JavaScript devolvera si calculas un numero fuera
+      del mayor numero posible
+    </p>
+    <pre>
+      let miNumero = 2;
+      while(miNumero != Infinity){
+        miNumero *= miNumero;
+      }
+    </pre>
+    <p>La division entre cero igual genera Infinity</p>
+    <p>Infinity es un numero, typeof Infinity retorna numero</p>
+    <h3>Hexadecimal</h3>
+    <p>JavaScript interpreta las constantes numericas como hexadecimales si estan precedidas
+      por 0x
+    </p>
+    <pre>
+      let x = 0xFF;
+    </pre>
+    <p>No es recomendable declarar numeros con un cero adelante ya que algunas versiones de JavaScript
+      podrian interpretar el numero como octal.
+    </p>
+    <p>Por defecto los numeros que JavaScript muestra, estan en base decimal</p>
+    <p>Pero con el metodo toString() podemos mostrar numeros desde base 2 a base 36</p>
+    <p>Basicamente si usamos el metodo toString() con un parametro numerico
+      que en este caso seria la base en la que queremos mostrar el numero, y nos devolvera
+      la el mismo numero en esa base que le especificamos
+    </p>
+    <pre>
+      let numerito = 4;
+      numerito.toString(2); 
+    </pre>
+    <p>Esta es una forma muy facil de convertir los numeros a x base que se nos pida</p>
+    <h3>Numeros de JavaScript como Objetos</h3>
+    <p>Como ya sabemos, normalmente los numeros son valores primitivos creados de literales</p>
+    <p>Pero tambien se pueden crear numeros como objetos usando la palabra reservada new</p>
+    <pre>
+      let x = new Number(123);
+    </pre>
+    <p>Pero como ya vimos anteriormente, no es recomendable hacer esto ya que puede llegar
+      a provocar resultados no deseados, ocupa mas memoria, etc
+    </p>
+    <p>Ademas de que los objetos en JavaScript no pueden ser comparados entre si, ergo
+      no podremos hacer operaciones con == por ejemplo si declaramos nuestros numeros como objetos
+    </p>
+    <h2>JavaScript BigInt()</h2>
+    <p>BigInt es usado para guardar valores que son demasiado grandes para ser representados 
+      por un numero de JavaScript normal
+    </p>
+    <h3>Precision de los enteros en JavaScript</h3>
+    <p>Como ya sabemos los enteros solo son precisos hasta 15 digitos</p>
+    <p>Al igual que todos los numeros son representados en el formato de 64 bits de coma flotante</p>
+    <p>Debido a eso numeros mas grandes a eso, no pueden ser representados y seran redondeados</p>
+    <p>Entonces el maximo de numeros que puede representar exactamente JavaScript es:</p>
+    <p>Hasta 9007199254740991+(2<sup>53</sup>-1)</p>
+    <p>y desde -9007199254740991-(2<sup>53</sup>-1).</p>
+    <h3>Como crear un BigInt</h3>
+    <p>Existen 2 formas de crear un BigInt en JavaScript</p>
+    <p>La primera es adjuntar una n al final del entero</p>
+    <p>La segunda el llamar al metodo BigInt()</p>
+    <pre>
+      let gigante = 99999999999999999n;
+    </pre>
+    <pre>
+      let otro = BigInt("123476950698675323");
+    </pre>
+    <p>Cabe resaltar que al usar n, esta solo puede ser usada en la declaracion y no asi despues
+      cuando el valor ya esta guardado en una variable
+    </p>
+    <p>Ademas al usar BigInt() el numero debe ser introducido como una cadena numerica, si no
+      no funcionara.
+    </p>
+    <h3>BigInt: un nuevo tipo de dato en JavaScript</h3>
+    <p>typeof BigInt() retorna bigint</p>
+    <p>Siendo asi bigint el segundo tipo de dato de tipo numerico y el octavo tipo de dato en JavaScript</p>
+    <h3>Operadores en BigInt</h3>
+    <p>Los operadores que pueden ser usados en numeros, tambien pueden ser usados en bigint</p>
+    <p>Pero ojo que solo se pueden hacer operaciones entre bigints y number entre number</p>
+    <p>Es decir que no puedes realizar operaciones entre bigint y number</p>
+    <p>Adicionalmente el uso del operador de desplazamiento hacia la derecha no firmado(&gt;&gt;&gt;)
+      (unsigned right shift), tampoco puede ser usado en bigint
+    </p>
+    <pre>
+      let x = 1435349583259340250n;
+      let y = 435903485092358903583n;
+      let z = y/x;
+    </pre>
+    <h3>Decimales en BigInt()</h3>
+    <p>BigInt no puede tener decimales, asi que usar algunos operadores, pierde precision</p>
+    <pre>
+      let x = 1n;
+      ley z = 2n;
+      let w = x/z;
+      // nos da 0
+    </pre>
+    <h3>BigInt en Hexadecimal, octal y binario</h3>
+    <p>En ES6 se agregaron los prefijos para las bases binarias, octales y hexadecimales</p>
+    <p>Por lo tanto puedes declarar tanto un numero como un bigint con un prefijo de
+      base binaria, octal o hexadecimal, y si necesitas otra base, usa toString()
+    </p>
+    <pre>
+      let binario = 0b100000000000000000000000000000000000000000000011n;
+      let octal = 0o2345758923475438954789325392458732589327n;
+      let hex = 0x200000000000000000003n;
+    </pre>
+    <p>En el ejemplo se usa bigint, pero esto tambien aplica a los numeros normales</p>
+    <p>Aunque hay que considerar que, si usas esos prefijos, no puedes usar decimales, tanto en number
+      como bigint
+    </p>
+    <p>Los prefijos no son case sensitive, osea que puedes usar x o X</p>
+    <p>Ademas si usas un valor de tipo number, puedes declararlo como octal, poniendo un 0 antes del mismo
+      numero, pero esto no funciona con bigint
+    </p>
+    <pre>
+      let oc = 045;//35 en octal
+      let ocbigint = 045n; // error!!
+    </pre>
+    <h3>Curiosidad sobre la precision</h3>
+    <p>El redondeo puede comprometer la seguridad de un programa</p>
+    <pre>
+      9007199254740992 === 9007199254740993; // es true !!!
+    </pre>
+    <h3>Valores maximos y minimos para enteros seguros</h3>  
+    <p>ES6 agrego las propiedades MAX_SAFE_INTEGER Y MIN_SAFE_INTEGER al objeto Number</p>
+    <p>Lo que hacen estas propiedades es basicamente devolver el maximo y minimo numero seguros
+      respectivamente
+    </p>
+    <pre>
+      let x = Number.MAX_SAFE_INTEGER;
+      let y = Number.MIN_SAFE_INTEGER;
+      //podrias que esa propiedad es constante, tipo como PI
+    </pre>
+    <h3>Nuevos metodos para el objeto Number</h3>
+    <p>ES6 tambien agrego 2 nuevos metodos, al objeto Number</p>
+    <ul>
+      <li>Number.isInteger()</li>
+      <li>Number.isSafeInteger()</li>
+    </ul>
+    <h4>El metodo Number.isInteger()</h4>
+    <p>Este metodo retorna true si su argumento es pues, un entero</p>
+    <pre>
+      Number.isInteger(10);//true
+      Number.isInteger(10.5);//false
+    </pre>
+    <h4>El metodo Number.isSafeInteger()</h4>
+    <p>Un entero seguro es un entero que puede ser exactamente representado como un numero de 
+      doble precision <!--ni verga idea de que signifique esto-->
+    </p>
+    <p>El metodo Number.isSafeInteger() retorna true, si el argumento es un entero seguro
+      basicamente que esta entre los limites maximos y minimos que puede representar number
+      sin perder precision o ser redondeado debido los 64 bits de coma flotante
+    </p>
+    <h2>JavaScript metodos para numeros</h2>
     <script>
       function saludar() {
         document.getElementById("script").innerHTML = "Bienvenido a JS";
