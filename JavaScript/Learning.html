@@ -1866,6 +1866,136 @@
       sin perder precision o ser redondeado debido los 64 bits de coma flotante
     </p>
     <h2>JavaScript metodos para numeros</h2>
+    <p>Estos metodos siguientes pueden ser usados en todos los numeros de JavaScript</p>
+    <ul>
+      <li>toString()</li>
+      <li>toExponential()</li>
+      <li>toFixed()</li>
+      <li>toPrecision()</li>
+      <li>valueOf()</li>
+    </ul>
+    <h3>El metodo toString()</h3>
+    <p>Este metodo retorna un numero como una cadena</p>
+    <p>Todos los metodos para numeros pueden ser usados en todos los tipos de numeros, es
+      decir, literales, variables o expresiones
+    </p>
+    <pre>
+      let x = 1432;
+      x.toString();
+      (1234).toString();
+      (1334+3432).toString();
+    </pre>
+    <p>Ademas como vimos, si ponemos un argumento dentro del metodo toString(), este nos 
+      devolvera la cadena con el numero en la base que queramos, decimal, binaria, hexadecimal, etc
+    </p>
+    <h3>El metodo toExponential()</h3>
+    <p>Este metodo devuelve una cadena a partir de un numero, que ha sido redondeado y escrito
+      en notacion cientifica
+    </p>
+    <p>El parametro que acepta este metodo, define el numero de caracteres despues del punto decimal</p>
+    <p>El parametro es opcional, si no lo indicas, JS no redondeara el numero</p>
+    <pre>
+      let y = 564.42
+      y.toExponential();
+      y.toExponential(5);
+    </pre>
+    <h3>El metodo toFixed()</h3>
+    <p>Este metodo retorna una cadena, con el numero escrito en una cantidad especificada de decimales</p>
+    <p>y pues el argumento que acepta este metodo es cuandos decimales habra despues del punto</p>
+    <pre>
+      let num = 133.2334
+      num.toFixed();
+      num.toFixed(2);
+    </pre>
+    <p>Si no se especifica un argumento, el numero sera redondeado a un entero</p>
+    <h3>El metodo toPrecision()</h3>
+    <p>Este retorna una cadena con un numero escrito con una longitud especificada</p>
+    <p>La diferencia entre este metodo y toFixed(), es que toFixed() cuenta desde el punto decimal
+      en cambio, toPrecision() cuenta desde todo el numero como tal, ademas de que toPrecision() usara
+      notacion cientifica cuando sea requerido
+    </p>
+    <pre>
+      let x = 12.1232
+      x.toPrecision()//12.1232
+      x.toPrecision(2)//12
+    </pre>
+    <h3>El metodo valueOf()</h3>
+    <p>Este metodo basicamente convierte numeros declarados como objetos, a primitivos</p>
+    <p>Esto es usado internamente por JavaScript asi que no es necesario, pero es bueno saberlo</p>
+    <pre>
+      let gg = new Number(123);
+      gg.valueOf();
+    </pre>
+    <p>Todos los tipos de datos en JavaScript tienen el metodo .valueOf() y .toString()</p>
+    <h3>Convirtiendo variables a numeros</h3>
+    <p>Existen 3 metodos que permiten convertir una variable a un numero</p>
+    <ul>
+      <li>Number()</li>
+      <li>parseFloat()</li>
+      <li>parseInt()</li>
+    </ul>
+    <p>Ojo que estos metodos, son metodos globales de JavaScript, y no son metodos del objeto Number</p>
+    <h4>El metodo Number()</h4>
+    <p>Este metodo se usa para convertir variables de JavaScript en numeros,
+      la variable que se quiere convertir, debe ponerse como argumento de este metodo
+    </p>
+    <p>Y si la variable no puede ser convertida, se retorna NaN</p>
+    <pre>
+      Number(true)
+      Number("10")
+      Number("10.33")
+    </pre>
+    <p>Este metodo se usa mas que todo si no te importa mucho la precision en dado momento</p>
+    <h4>El metodo Number() usado en fechas</h4>
+    <p>Si usas el metodo Number() con una fecha, este devolvera el numero de 
+      milisegundos desde la media noche del primero de enero de 1970
+    </p>
+    <pre>
+      Number(new Date("2017-09-30"))
+    </pre>
+    <h4>El metodo parseInt()</h4>
+    <p>Este metodo como dice su nombre, devuelve numeros enteros nada mas(y solo desde cadenas)</p>
+    <pre>
+      let x = "888"
+      x = parseInt(x,10);
+    </pre>
+    <p>Ademas, este acepta un segundo parametro que es el radix, que permite definir
+      la base numerica a la cual querramos convertir el numero en cuestion
+    </p>
+    <h4>El metodo parseFloat()</h4>
+    <p>Este metodo al igual que el anterior, analiza una cadena y retorna un numero,
+      solo que esta vez, tambien podemos usar decimales
+    </p>
+    <h3>Metodos del objeto Number</h3>
+    <p>Estos metodos son:</p>
+    <ul>
+      <li>Number.isInteger()</li>
+      <li>Number.isSafeInteger()</li>
+      <li>Number.parseFloat()</li>
+      <li>Number.parseInt()</li>
+    </ul>
+    <p>Estos metodos no pueden ser usados en una variable, ya que pertenecen al objeto Number de JavaScript</p>
+    <p>Estos metodos solo pueden ser accedidos asi: Number.isInteger()</p>
+    <p>Usando x.isInteger() resultara en error</p>
+    <!-- medio mamada si me preguntas pero XD-->
+    <p>Basicamente estos metodos se usan poniendo la variable que queremos evaluar como su argumento</p>
+    <h4>El metodo Number.isInteger()</h4>
+    <p>Este metodo retorna true, si efectivamente el metodo es un entero</p>
+    <pre>
+      Number.isInteger(10);//true
+      Number.isInteger(10.5)//false
+    </pre>
+    <h4>El metodo Number.isSafeInteger()</h4>
+    <p>Este metodo retorna true si el argumento es un entero seguro, como ya vimos anteriormente</p>
+    <pre>
+      Number.isSafeInteger(10);//true
+      Number.isSafeInteger(12345678901234567890);//false
+    </pre>
+    <h4>Los metodos Number.parseFloat() y Number.parseInt()</h4>
+    <p>Estos metodos son lo mismo que los anteriores, solo que no son globales y obviamente
+      no pueden ser encadenados a una variable
+    </p>
+    <h2>Propiedades del objeto Number</h2>
     <script>
       function saludar() {
         document.getElementById("script").innerHTML = "Bienvenido a JS";
