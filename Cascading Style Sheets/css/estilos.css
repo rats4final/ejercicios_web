@@ -1,0 +1,18 @@
+#elemento1 {
+    color: red;
+    text-align: center;
+}
+.center {
+    text-align: center;
+    color: blue;
+}
+p.left{
+    text-align: left;
+    color: yellow;
+}
+p.centro {
+    text-align: center;
+}
+p.largo {
+    font-size: 300%;
+}

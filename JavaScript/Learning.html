@@ -1996,6 +1996,289 @@
       no pueden ser encadenados a una variable
     </p>
     <h2>Propiedades del objeto Number</h2>
+    <p>Estas son mas que todo cosas tecnicas, asi que no son muy relevantes, mas que para alguna
+      u otra referencia
+    </p>
+    <h2>Arreglos en JavaScript</h2>
+    <p>Un arreglo es una variable especial que puede almacenar mas de un valor</p>
+    <pre>
+      const paises = ["Bolivia","Venezuela","Cuba"];
+    </pre>
+    <h3>Porque usar Arreglos?</h3>
+    <p>Si tu tienes una lista de elementos, no es para nada optimo almacenar cada elemento
+      dentro de su propia variable, ya que al ser mas grande la lista, la cosa se complicaria
+    </p>
+    <p>La solucion para esto es un arreglo!</p>
+    <p>Un arreglo puede almacenar muchos valores dentro de un mismo nombre, y puedes acceder
+      a los valores referenciando al numero de indice en el cual estan almacenados
+    </p>
+    <h3>Creando un Arreglo</h3>
+    <p>La manera mas facil de crear un arreglo es usando el literal de arreglo</p>
+    <pre>
+      const nombre_arreglo = [elemento1,elemento2,...];
+    </pre>
+    <p>Es una practica comun declarar los arreglos con la palabra reservada const</p>
+    <p>Los espacios y saltos de linea no son importantes, una declaracion puede ocupar multiples linesas</p>
+    <pre>
+      const comida = [
+        "manzana",
+        "pera",
+        "pizza"
+      ]; <!--i love syntactic sugar-->
+    </pre>
+    <p>Tambien puedes primero crear un arreglo y luego proveer los elementos</p>
+    <pre>
+      const arreglo = [];
+      arreglo[0] = "Saab";
+      arreglo[1] = "Volvo";
+      arreglo[2] = "Toshiba";
+    </pre>
+    <h3>Usando la palabra reservada new para crear un Arreglo</h3>
+    <p>EL siguiente ejemplo tambien crea un arreglo</p>
+    <pre>
+      const autos = new Array("Mazda","BMW","Hyundai");
+    </pre>
+    <p>Basicamente ambas forman logran crear un arreglo de forma exitosa, sin embargo, existen
+      algunas diferencias entre ellos
+    </p>
+    <ul>
+      <li>Sintaxis: [] es mucho mas corta que new Array() ademas de que esta ultima
+        es una funcion constructora que retorna un nuevo arreglo
+      </li>
+      <li>
+        Parametros: new Array() puede aceptar un parametro que especifica la longitud del arreglo,
+        en cambio [] no toma ningun parametro
+      </li>
+      <li>
+        Consistencia: new Array(n) crea un arreglo de longitud n pero con todos los elementos
+        definidos como undefined, en cambio [] siempre crea un arreglo vacio
+      </li>
+      <li>
+        Compatibilidad: new Array(n) puede causar confusion cuando el parametro no es un numero
+      </li>
+    </ul>
+    <p>Cabe mencionar que si usamos new Array() con una cadena como parametro, se insertara esa
+      cadena en la primera posicion del arreglo, en cambio si usamos un entero se creara el arreglo
+      con la longitud especificada por el entero
+    </p>
+    <pre>
+      new Array(5)   // [ , , , , ]
+      new Array('5') // ['5']
+
+      [5]   // [5]
+      ['5'] // ['5']
+    </pre>
+    <p>Finalmente tambien podemos crear un arreglo con elementos undefined usando []</p>
+    <pre>
+      const vacios = [,,]//[undefined,undefined]
+    </pre>
+    <p>Por lo tanto es casi seguro que el 99% de las veces es mejor usar [], aunque si por
+      alguna razon necesitaramos un arreglo con una longitud especifica, new Array() estara ahi.
+    </p>
+    <h3>Accediendo a los elementos de un arreglo</h3>
+    <p>Puedes acceder a los elementos de un arreglo al hacer referencia al numero de indice</p>
+    <pre>
+      const coches = ["Mazda","Volvo","Suzuki"];
+      const coche = coches[1];
+    </pre>
+    <p>Los indices en los arreglos empiezan con 0</p>
+    <h3>Cambiando los elementos de una arreglo</h3>
+    <p>Esta directiva cambia el valor del primer elemento en coches</p>
+    <pre>
+      coches[0] = "Citroen"; 
+    </pre>
+    <h3>Accediendo al arreglo completo</h3>
+    <p>En JavaScript el arreglo completo puede ser accedido referenciando al nombre del arreglo</p>
+    <pre>
+      const frutas = ["pera","uva","coco"];
+      console.log(frutas);//['pera','uva','coco'];
+    </pre>
+    <h3>Los arreglos son objetos</h3>
+    <!--Como todo en javascript tbh-->
+    <p>Los arreglos son un tipo especial de objeto, typeof retorna "object" para los arreglos</p>
+    <p>
+      Pero los arreglos en JavaScript, es mejor pues describirlos como arreglos
+    </p>
+    <p>Como ya vimos, los arreglos usan <b>numeros</b> para acceder a sus elementos</p>
+    <p>En cambio los objetos usan nombres para acceder a sus <b>miembros</b></p>
+    <h3>Los elementos de un Arreglo pueden ser objetos</h3>
+    <p>Las variables de javascript pueden ser objetos, y los arreglos son un tipo especial de objeto</p>
+    <p>Por esta razon y por la naturaleza dinamica de JavaScript, puedes tener variables de 
+      diferentes tipos dentro de un mismo arreglo
+      Puedes tener objetos dentro de un arreglo, puedes tener funciones, puedes tener arreglos
+      dentro de arreglos
+    </p>
+    <pre>
+      myArray[0] = Date.now;
+      myArray[1] = myFunction;
+      myArray[2] = myCars;
+    </pre>
+    <h3>Propiedades y Metodos de un arreglo</h3>
+    <p>La verdadera fuerza de los arreglos en JavaScript son sus propiedades y metodos incorporados
+      por defecto en el lenguaje
+    </p>
+    <pre>
+      cars.length   // Retorna el numero de elementos
+      cars.sort()   // Ordena el arreglo
+    </pre>
+    <p>Los metodos seran vistos a profundidad mas adelante</p>
+    <h4>La propiedad length</h4>
+    <p>La propiedad length retorna la longitud de un arreglo, es decir el numero de elementos que contiene</p>
+    <pre>
+      const objetos = ['papel','sobre','lapiz'];
+      let longitud = objetos.length;
+    </pre>
+    <p>La longitud siempre es uno mas que el maximo indice del arreglo</p>
+    <h4>Accediendo al primer elemento de una arreglo</h4>
+    <pre>
+      const cosas = ['control','mouse','esp32'];
+      let cosa = cosas[0];
+    </pre>
+    <h4>Accediendo al ultimo elemento de un arreglo</h4>
+    <pre>
+      const letras = ['a','b','c'];
+      let letraFinal = letras[letras.length - 1];
+    </pre>
+    <h3>Recorriendo los elementos de un arreglo</h3>
+    <p>Una forma de recorrer cada elemento de una arreglo(iterar) es usando el bucle for</p>
+    <pre>
+      const cosas = ['control','mouse','esp32'];
+      for(let indice = 0; indice&lt;cosas.length;indice++){
+        cosas[indice];
+      }
+    </pre>
+    <p>Tambien puedes usar la funcion Array.forEach()</p>
+    <pre>
+      const cosas = ['control','mouse','esp32'];
+      cosas.forEach((cosa)=&gt;{
+        console.log(cosa);
+      });
+    </pre>
+    <h3>Agregando elementos a un arreglo</h3>
+    <p>La manera mas facil de agregar un nuevo elemento a un arreglo es usando el metodo push()</p>
+    <pre>
+      const cosas = ['control','mouse','esp32'];
+      cosas.push("Tele");
+    </pre>
+    <p>Tambien podemos agregar un nuevo elemento usando la propiedad length</p>
+    <pre>
+      const cosas = ['control','mouse','esp32'];
+      cosas[cosas.length] = 'Tele';
+    </pre>
+    <p>
+      Ojo que agregar elementos con indices altos puede crear hoyos de undefined dentro de los arreglos
+      es decir espacios donde hay undefined
+    </p>
+    <pre>
+      const fruits = ["Banana", "Orange", "Apple"];
+      fruits[6] = "Lemon";  // Creates undefined "holes" in fruits
+    </pre>
+    <h3>Arreglos Asociativos</h3>
+    <p>Los arreglos con indices como nombres son llamados asi o tambien "hashes"</p>
+    <p>JavaScript no soporta arreglos asociativos.</p>
+    <p>Si usas nombres como indices, JavaScript redefinira el arreglo a un objeto</p>
+    <p>Luego de eso no se podran usar ciertos metodos o propiedades, pues porque ya no es un arreglo como tal</p>
+    <pre>
+      const person = [];
+      person["firstName"] = "John";
+      person["lastName"] = "Doe";
+      person["age"] = 46;
+      person.length;     // Will return 0
+      person[0];         // Will return undefined
+    </pre>
+    <h3>La diferencia entre Arreglos y Objetos</h3>
+    <p>Como ya vimos, la diferencia entre objetos y arreglos en JavaScript es que
+      los arreglos usan indices numericos y los objetos usan indices nombrables por asi decirlo
+    </p>
+    <p>Podrias ver a los arreglos como un tipo de objeto que usa indices numericos en vez de nombrables</p>
+    <h4>Cuando usar Arreglos y cuando usar Objetos</h4>
+    <p>JS no soporta arreglos asociativos</p>
+    <p>Deberias usar objetos cuando quieres que los nombres de sus elementos sean texto basicamente y que puedas
+      referenciarlos por nombre
+    </p>
+    <p>En cambio deberias usar arreglos si quieres referenciar a los elementos mediante numeros como en un
+      indice de un libro que te lleve a una pagina segun su numero
+    </p>
+    <h3>Como reconocer un arreglo</h3>
+    <p>El problema para reconocer si un elemento es un arreglo en JavaScript es Que
+      al ser un arreglo un objeto, pues typeof devolvera object y no sabremos si es en realidad un arreglo
+    </p>
+    <h4>Primera solucion</h4>
+    <p>Para solventar este problema ES5, definio un nuevo metodo: Array.isArray()</p>
+    <pre>
+      const arr = ['a',1,'23'];
+      Array.isArray(arr);//true
+    </pre>
+    <h4>Segunda solucion</h4>
+    <p>El operador instanceof retorna true si un objeto es creado por un constructor especifico</p>
+    <pre>
+      const fruits = ["Banana","Manzana","Coco"];
+      console.log(fruits instanceof Array);//true
+      //es como si estuvieras preguntado: es frutas una instancia de un Arreglo?
+    </pre>
+    <h2>Metodos de los Arreglos</h2>
+    <p>Los metodos para arreglos en JavaScript son los siguientes</p>
+    <ul>
+      <li>Array lenght (esto no es un metodo, sino una propiedad)</li>
+      <li>Array toString() // podriamos decir aCadena()</li>
+      <li>Array pop()</li>
+      <li>Array push()</li>
+      <li>Array shift()</li>
+      <li>Array unshift()</li>
+      <li>Array join()</li>
+      <li>Array delete()</li>
+      <li>Array concat()</li>
+      <li>Array flat()</li>
+      <li>Array splice()</li>
+      <li>Array slice()</li>
+    </ul>
+    <h3>Array length</h3>
+    <p>Esta es una propiedad de un arreglo, no un metodo, y retorna pues la longitud(tamanio) 
+      de un arreglo
+    </p>
+    <pre>
+      const frutas = ["Banana","Mango"];
+      conts tamanio = frutas.size;//2
+    </pre>
+    <p>Como ya sabemos, los indices de un arreglo se empiezan a contar desde cero, es por eso
+      que al iterar sobre un arreglo le hacemos -1 al Array.length, para que los indices y el tamanio
+      del arreglo coincidan
+    </p>
+    <h3>Array toString()</h3>
+    <p>Algo asi como aCadena()</p>
+    <p>Basicamente este metodo conviertes un arreglo a una cadena separada por comas</p>
+    <p>Donde cada elemento del arreglo es separado por comas</p>
+    <pre>
+      const autos = ['porsche','shelby','volvo'];
+      const autosJuntos = autos.toSring();
+    </pre>
+    <p>Adicionalmente el medoto join(), igualmente junta todos los elementos de un arreglo en una
+      cadena, la unica diferencia siendo de que se puede especificar el separador
+    </p>
+    <pre>
+      const gatos = ['pishi','bolaDeNieve','pelusa'];
+      const gatosUnidos = gatos.join(" * ")
+    </pre>
+    <p>El separador va dentro de comillas, como una cadena, asi que si ponemos espacios, estos
+      seran tomados como parte del separador
+    </p>
+    <h3>Pop y Push</h3>
+    <p>Algo asi como Estallar o explotar y empujar, pues cuando trabajamos con arreglos es facil
+      remover(pop) y agregar(push) nuevos objetos al arreglo,
+      Es como decir que estamos explotando elementos fuera de un arreglo y empujando elementos dentro de 
+      un arreglo
+    </p>
+    <h3>Array pop()</h3>
+    <p>El metodo pop() remueve el ultimo elemento de un Arreglo</p>
+    <pre>
+      const gatos = ['pishi','bolaDeNieve','pelusa'];
+      gatos.pop();
+    </pre>
+    <p>Como la mayoria de las cosas en JS este metodo devuelve el elemento que fue "explotado"</p>
+    <pre>
+      const gatos = ['pishi','bolaDeNieve','pelusa'];
+      gatoExplotado = gatos.pop();
+    </pre>
     <script>
       function saludar() {
         document.getElementById("script").innerHTML = "Bienvenido a JS";

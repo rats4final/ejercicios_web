@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Cascading Style Sheets</title>
+</head>
+<body>
+  <h1>Que es CSS?</h1>
+    <p>Css significa Cascading Style Sheets u Hojas de Estilo en Cascada</p>
+    <p>Basicamente CSS sirve para estilizar el html y definir como se van
+      a mostrar dichos elementos
+    </p>
+    <p>Las hojas de estilo externas son almacenadas en archivos con la extension
+      .css
+    </p>
+  <h2>Sintaxis de CSS</h2>
+  <p>Una regla de css consiste de un selector y un bloque de declaracion</p>
+  <pre>
+    h1 {color: blue; font-size:12px;}
+  </pre>
+  <img src="https://www.w3schools.com/css/img_selector.gif" alt="" srcset="">
+  <p>El selector se refiere o apunta al elemento de html que queremos estilizar</p>
+  <p>El bloque de declaracion contiene una o mas declaraciones separadas por
+    punto y coma
+  </p>
+  <p>Cada declaracion contiene una propiedad y valor, separado por puntos dobles</p>
+  <p>Multiples declaraciones son separadas por punto y coma, y los bloques de 
+    declaracion son rodeados por llaves
+  </p>
+  <pre>
+    p {
+      color: red;
+      text-align: center;
+    }
+  </pre>
+  <p style="color: red; text-align: center;" >Ejemplo</p>
+  <p>En este ejemplo todos los elementos &lt;p&gt; seran alineados al centro 
+    y tendran un color rojo
+  </p>
+  <p>p es el selector, todo lo que esta dentro de {} es el bloque de declaracion,
+    y tenemos las propiedades color y text-align con sus respectivos valores de
+    red y center
+  </p>
+  <h2>Selectores en CSS</h2>
+  <p>Un selector en css, selecciona el elemento html que quieres estilizar</p>
+  <p>Podemos dividir los selectores de CSS en 5 categorias</p>
+  <ul>
+    <li>Selectores Simples(seleccionan elementos basados en nombre, id o clase)</li>
+    <li>Selectores Combinatorios(seleccionan elementos en base a una relacion especifica entre ellos)</li>
+    <li>Selectores de pseudo-clases(seleccionan elementos basados en un cierto estado)</li>
+    <li>Selectores de pseudo-elementos(seleccionan y estilizan una parte de un elemento)</li>
+    <li>Selectores de atributo(seleccionan elementos basados en un atributo o en el valor de un atributo)</li>
+  </ul>
+    <h3>El selector de elementos de CSS</h3>
+    <p>El selector de elementos, selecciona elementos HTML, basandose en el nombre
+      del elemento, o sea el nombre del tag
+    </p>
+    <pre>
+      p {
+        color: red;
+        text-align: center;
+      }
+    </pre>
+    <p style="color: red; text-align: center;" >Ejemplo</p>
+    <p>Como vimos anteriormente, aqui todos los elementos seran alineados al centro, con un color rojo</p>
+    <h3>El selector de id de CSS</h3>
+    <p>El selector por id de CSS, usa el atributo "id" de un elemento HTML, para seleccionar un elemento especifico</p>
+    <p>El id de un elemento es unico dentro de un pagina, por lo tanto el selector de id lo usa para seleccionar
+      un unico elemento
+    </p>
+    <p>Para seleccionar un elemento con una id especifica, se escribe un #(hash), seguido del id del elemento</p>
+    <pre>
+      #elemento1 {
+        text-align: center;
+        color: red;
+      }
+    </pre>
+    <p id="elemento1">Elemento1</p>
+    <p>Ojo que un id no puede empezar con un numero</p>
+    <h3>El selector por clase de CSS</h3>
+    <p>Este selector selecciona elementos con un atributo de clase especifica</p>
+    <p>Para seleccionar elementos con una clase especifica, escribe un punto(.)
+      seguido por el nombre de la clase
+    </p>
+    <pre>
+      .center{
+        text-align: center;
+        color: blue
+      }
+    </pre>
+    <p class="center">Clase center</p>
+    <p>Tambien puedes especificar que solo elementos especificos de HTML deberian
+      ser afectados por una clase
+    </p>
+    <pre>
+      p.left{
+        text-align: left;
+        color: yellow;
+      }
+    </pre>
+    <p class="left">Solo parrafos</p>
+    <p>Ademas, los elementos HTMl pueden referirse a mas de una clase,
+      esta es la tecnica que usan la mayoria de librerias y frameworks de css para
+      proporcionar una experiencia rica en clases
+    </p>
+    <p class="centro largo">Este parrafo se refiere a dos clases</p>
+    <h3>El selector universal de CSS</h3>
+    <p>Este selector, selecciona a todos los elementos HTML de una pagina</p>
+    <pre>
+      *{
+        text-align: center;
+        color: blue;
+      }
+    </pre>
+    <h3>El selector por grupos de CSS</h3>
+    <p>Este selector selecciona a todos los elementos HTML con las mismas
+      definiciones de estilos
+    </p>
+    <p>Por ejemplo, en el siguiente fragmento tenemos varios elementos
+      que usan los mismos estilos
+    </p>
+    <pre>
+      h1 {
+        text-align: center;
+        color: red;
+      }
+      
+      h2 {
+        text-align: center;
+        color: red;
+      }
+      
+      p {
+        text-align: center;
+        color: red;
+      }
+    </pre>
+    <p>Para minimizar el codigo seria mejor agrupar a los selectores</p>
+    <p>Para agrupar selectores, separa cada selector con una coma</p>
+    <pre>
+      h1, h2, p {
+        text-align: center;
+        color: red;
+      }
+    </pre>
+    <p>Inclusive se pueden agrupar diferentes tipos de selectores con esta tecnica</p>
+    <pre>
+      #car, .point, h2 {
+        color:blue
+      }
+    </pre>
+  <h2>Como agregar CSS?</h2>
+  <p>Bien ya vimos las caracteristicas principales de CSS, sin embargo
+    aun no hemos visto como podemos agregar CSS a nuestra pagina y las distintas
+    formas que hay para hacerlo
+  </p>
+  <p>Existen 3 maneras de agregar CSS</p>
+  <ul>
+    <li>CSS Externo</li>
+    <li>CSS Interno</li>
+    <li>CSS Dentro de linea(elemento)</li>
+  </ul>
+    <h3>CSS Externo</h3>
+    <p>Con una hoja de estilo externa, puedes cambiar la apariencia de un
+      sitio web entero con solo un archivo
+    </p>
+    <p>Cada pagina HTML debe incluir una referencia a una hoja de estilo
+      externa dentro del elemento &lt;link&gt;, dentro de la seccion head
+    </p>
+    <pre>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;mystyle.css&quot;&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+
+      &lt;h1&gt;Este es un encabezado&lt;/h1&gt;
+      &lt;p&gt;Este es un parrafo&lt;/p&gt;
+
+      &lt;/body&gt;
+      &lt;/html&gt;
+    </pre>
+    <p>Una hoja de estilo externa puede ser escrita en cualquier editor 
+      y debe ser guardada con la extension .css
+    </p>
+    <p>La hoja de estilo externa no deberia contener ninguna etiqueta HTML</p>
+    <p>Asi es como se ve el archivo "mystyle.css" :</p>
+    <pre>
+      body{
+        background-color: lightblue;
+      }
+      h1{
+        color: navy;
+        margin-left: 20px;
+      }
+    </pre>
+    <p><b>Nota:</b>No se debe agregar un espacio entre el valor de las 
+    propiedades que tienen unidades, por eso es 20px, no 20 px</p>
+    <h3>CSS Interno</h3>
+    <p>Una hoja de estilo interna puede ser usada si una solo pagina 
+      de HTML tiene un estilo unico
+    </p>
+    <p>La hoja de estilo interna es definida dentro del tag &lt;style&gt;
+      dentro de la seccion head 
+    </p>
+    <pre>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+      &lt;style&gt;
+      body {
+        background-color: linen;
+      }
+
+      h1 {
+        color: maroon;
+        margin-left: 40px;
+      }
+      &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+
+      &lt;h1&gt;This is a heading&lt;/h1&gt;
+      &lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+      &lt;/body&gt;
+      &lt;/html&gt;
+    </pre>
+    <h3>CSS en linea</h3>
+    <p>Un estilo dentro de linea puede ser usado para aplicar un estilo unico
+      a un solo elemento
+    </p>
+    <p>Para usar estilos dentro de linea, agregar el atributo style al elemento
+      relevante. El atributo style puede contener cualquier propiedad de CSS
+    </p>
+    <pre>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;body&gt;
+
+      &lt;h1 style=&quot;color:blue;text-align:center;&quot;&gt;This is a heading&lt;/h1&gt;
+      &lt;p style=&quot;color:red;&quot;&gt;This is a paragraph.&lt;/p&gt;
+
+      &lt;/body&gt;
+      &lt;/html&gt;
+    </pre>
+    <p>Usar estilos dentro de linea hace que perdamos una de las ventajas de una hoja
+      de estilo(debido a que mezclamos contenido con presentacion). Use este metodo
+      escasamente
+    </p>
+    <h3>Multiples hojas de estilo</h3>
+    <p>Si algunas propiedades han sido definidas para el mismo selector(elemento)
+      en diferentes hojas de estilo, el valor de la ultima hoja de estilo leida
+      sera usada
+    </p>
+    <p>Por ejemplo asumamos que una hoja de estilo externo tiene los siguientes
+      estilos para el elemento &lt;h1&gt;
+    </p>
+    <pre>
+      h1{
+        color: navy;
+      }
+    </pre>
+    <p>Luego asumamos que una hoja de estilo interna tambien tiene el 
+      siguiente estilo para el tag h1
+    </p>
+    <pre>
+      h1{
+        color: orange;
+      }
+    </pre>
+    <p>Si la hoja de estilo interna es definida despues del link a la hoja externa,
+      entonces los elementos h1 seran color naranja
+    </p>
+    <p>Sin embargo, si la hoja de estilo interna es definida antes del link
+      a la hoja de estilo externa, entonces los elementos h1 seran color azul marino
+    </p>
+    <h3>Orden de cascada</h3>
+    <p>Que estilo sera usado cuando hay mas de un estilo especificado para 
+      un elemento HTML
+    </p>
+    <p>Todos los estilos en una pagina se "ordenaran en forma de cascada" hacia
+      una nueva hoja de estilo "virtual" siguiendo el siguiente orden, donde
+      el numero 1 tiene la mayor prioridad
+    </p>
+    <ol>
+      <li>Declaraciones con !important</li>
+      <li>Estilo dentro de linea</li>
+      <li>Hojas de estilo externas e internas(en la seccion head)</li>
+      <li>Estilos por defecto del navegador</li>
+    </ol>
+  <h2>Comentarios en CSS</h2>
+  <p>Los comentarios no son mostrados en el navegador, pero ayudan a
+    documentar el codigo fuente
+  </p>
+  <p>Vamos directo al grano, los comentarios en css empiezan con
+    /* y terminan con */;
+  </p>
+  <p>Ademas los comentarios pueden abarcar multiples lineas</p>
+  <pre>
+    /*Este es un comentario de una sola linea*/
+    h1{
+      color: yellow;
+    }
+    /* Este es un
+    comentario 
+    multilinea*/
+  </pre>
+  <h2>Colores en CSS</h2>
+  <p>Los colores son especificados usando nombres de colores predefinidos, o valores 
+    rgb, hex, hsl, rgba y hsla.
+  </p>
+    <h3>Nombres de colores en CSS</h3>
+    <p>En css, un color puede ser especificado un nombre de color predefinido</p>
+    <pre>
+      div{
+        color:tomato;
+      }
+    </pre>
+    <div style="background-color: tomato;">
+      Este es el color tomato
+    </div>
+    <p>CSS/HTML soportan 140 nombres de colores estandar</p>
+    <a href="https://www.w3schools.com/colors/colors_names.asp">Referencia</a>
+    <h3>Color de fondo en CSS</h3>
+    <p>Puedes definir el color de fondo para los elementos HTML</p>
+    <p style="background-color: dodgerblue;">Hola Mundo</p>
+    <p style="background-color: tomato;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat debitis error iure nesciunt nemo officiis vero saepe odit nobis eos.</p>
+    <p>El color de fondo se define con la propiedad background-color</p>
+    <pre>
+      &lt;h1 style=&quot;background-color:DodgerBlue;&quot;&gt;Hola Mundo&lt;/h1&gt;
+      &lt;p style=&quot;background-color:Tomato;&quot;&gt;Lorem ipsum...&lt;/p&gt;
+    </pre>
+    <h3>Color del texto en CSS</h3>
+    <p> El color del texto se define con la propiedad "color" y es la que
+      hemos estado usando todo este tiempo
+    </p>
+    <pre>
+      p{
+        color: dodgerblue
+      }
+    </pre>
+    <p style="color: dodgerblue;">dodgerBlue</p>
+    <h3>Color del borde en CSS</h3>
+    <p>Tambien puedes definir el color de los bordes</p>
+    <pre>
+      p{
+        border: 5px solid red;
+      }
+    </pre>
+    <p style="border: 5px solid red;">Hola mundo mundoso</p>
+    <h3>Valores de los colores en CSS</h3>
+    <p>En CSS los colores tambien pueden ser especificados usando valores RGB,
+      HEX, RGBA y HSLA
+    </p>
+    <p style="background-color: tomato;">tomato</p>
+    <p style="background-color: rgb(255, 99, 71);">rgb(255,99,71)</p>
+    <p style="background-color: #ff6347;">#ff6347</p>
+    <p style="background-color: hsl(9, 100%, 64%);">hsl(9,100%,64%)</p>
+    <p>Mismo color que tomato pero 50% transparente</p>
+    <p style="background-color: rgba(255, 99, 71, 0.5);">rgba(255,99,71,0.5)</p>
+    <p style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5);</p>
+    <h3>Colores RGB en CSS</h3>
+    <p>Un color RGB representa, fuentes de luz Red, Green y Blue</p>
+    <p>En css un color puede ser especificado como un valor rgb usando la siguiente
+      formula
+    </p>
+    <p>rgb(red,green,blue)</p>
+    <p>Cada parametro define la intensidad del color entre 0 y 255</p>
+    <p>Por ejemplo, rgb(255,0,0) is mostrado como rojo, porque rojo esta puesto
+      a su maximo valor (255) y los otros estan puestos a 0 
+    </p>
+    <p>Para mostrar negro todos los valores deben estar 0</p>
+    <p>Y para mostrar blanco todos los valores deben estar en 255</p>
+    <p>Experimenta cambiando los valores en el siguiente ejemplo</p>
+    <p id="rgbSlider">Hola Mundo</p>
+    <div>
+      <input type="range" class="sliderColor" name="red" id="red" min="0" max="255">
+      <input type="range" class="sliderColor" name="green" id="green" min="0" max="255">
+      <input type="range" class="sliderColor" name="blue" id="blue" min="0" max="255">
+    </div>
+    <p>Las intensidades o sombras del gris son definidas usando valores iguales
+      para las 3 fuentes de luz
+    </p>
+      <h4>Valor RGBA</h4>
+      <p>El parametro alpha is un numero entre 0.0 y 1.0</p>
+      <p>Esto define la transparencia del color, 0.0 es transparente y 1.0
+        es nada transparente
+      </p>
+
+
+
+
+
+
+
+<script>
+let rgbSlider = document.getElementById("rgbSlider");
+// definimos el elemento al cual se le va a cambiar el estilo
+let colorInputs = document.querySelectorAll(".sliderColor");
+// definimos todos los elementos que tengan la clase color input
+let colorValues = {};
+//definimos el objeto que almacenara los valores de los colores
+
+colorInputs.forEach(input => {
+  colorValues[input.id] = input.value;
+  input.addEventListener("input", updateColor);
+});
+//usamos el metodo .forEach para iterar sobre todos los inputs
+// ademas usamos una funcion flecha
+//agregamos los valores llave:valor al objeto, segun la id y el valor del input
+//agregamos un escuchador de evento de tipo input, a cada input, y llamamos a la funcion
+// updateColor
+
+
+function updateColor(event) {
+  if (event.target.classList.contains("sliderColor")) {
+    colorValues[event.target.id] = event.target.value;
+    rgbSlider.style.backgroundColor = `rgb(${colorValues.red}, ${colorValues.green}, ${colorValues.blue})`;
+  }
+}
+//Definimos la funcion que acepta un evento como parametro
+//verificamos que si el target del eveneto contiene la clase sliderColor
+//si es cierto entonces actualizamos el valor dentro del objeto con el valor mas reciente
+//disparado por el eventListener
+//finalmente actualizamos el estilo segun el rgb y usamos la dot notation para poner los
+//valores dentro de la propiedad css 
+
+
+</script>
+</body>
+</html>
